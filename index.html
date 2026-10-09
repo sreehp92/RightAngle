@@ -1,0 +1,2783 @@
+<!DOCTYPE html>
+<html lang="ta" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Google Search Console Meta Tags (Dynamic via CMS) -->
+  <title id="seoPageTitle">RightAngle | Premium Home Interiors & Portfolio</title>
+  <meta id="seoMetaDesc" name="description" content="RightAngle - Premier turnkey home interior designers in Coimbatore. Bespoke modular kitchens, luxury living rooms, and bedroom interior architectures with 45-day move-in guarantee.">
+  <meta id="seoMetaKeywords" name="keywords" content="interior designers coimbatore, home interiors, modular kitchen, luxury interior design, living room interiors, turnkey interior architecture">
+  <meta name="author" content="RightAngle Interiors">
+  <meta name="robots" content="index, follow">
+  <meta id="seoGoogleConsole" name="google-site-verification" content="google-site-verification-token-here">
+  <link id="seoCanonicalUrl" rel="canonical" href="https://rightangleinteriors.com">
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta id="ogTitle" property="og:title" content="RightAngle | Premium Home Interiors">
+  <meta id="ogDescription" property="og:description" content="Transforming living spaces into architectural masterpieces. Explore our completed residential interior portfolio.">
+  <meta id="ogImage" property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+  <meta id="ogUrl" property="og:url" content="https://rightangleinteriors.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RightAngle Interiors">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twTitle" name="twitter:title" content="RightAngle | Premium Home Interiors">
+  <meta id="twDesc" name="twitter:description" content="Turnkey residential interior architecture and custom modular design.">
+  <meta id="twImage" name="twitter:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Schema.org JSON-LD Structured Data for Local Business in Coimbatore -->
+  <script type="application/ld+json" id="schemaOrgJson">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "RightAngle Interiors",
+    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+919876543210",
+    "email": "design@auraluxeinteriors.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 42, Luxury Design Corridor, Race Course Road",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641018",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹10,000 - ₹10,00,000+",
+    "openingHours": "Mo-Sa 09:00-20:00"
+  }
+  </script>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#DC2626',
+              redDark: '#B91C1C',
+              redDeep: '#991B1B',
+              orange: '#F97316',
+              orangeDark: '#EA580C',
+              orangeLight: '#FED7AA',
+              cream: '#FFFBF7',
+              ivory: '#FFF7ED',
+              dark: '#0F172A',
+              slate: '#1E293B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          },
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+            'marquee-slow': 'marquee 35s linear infinite',
+            'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'fade-in': 'fadeIn 0.25s ease-out forwards',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(6px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #FFF7ED; }
+    ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #DC2626; }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #DC2626 0%, #EA580C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #DC2626 0%, #EA580C 100%);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(249, 115, 22, 0.15);
+    }
+    
+    .marquee-container:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    .modal-backdrop {
+      background-color: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .cms-subtab-btn.active {
+      background-color: #DC2626 !important;
+      color: #ffffff !important;
+      border-color: #DC2626 !important;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-slate font-sans antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
+
+  <!-- Minimal Instant Top Centered Save Alert (Replaces intrusive sliding right toast) -->
+  <div id="minimalSaveAlert" class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] bg-slate-900 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-2xl border border-slate-700 pointer-events-none opacity-0 transition-opacity duration-200 flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span id="minimalSaveAlertText">✓ Changes Saved</span>
+  </div>
+
+  <!-- ================= TOP SCROLLING MARQUEE ================= -->
+  <div id="topMarqueeSection" class="relative z-40 bg-gradient-to-r from-brand-redDark via-brand-red to-brand-orange text-white text-xs sm:text-sm font-medium py-2.5 overflow-hidden shadow-md">
+    <div class="marquee-container flex overflow-hidden whitespace-nowrap">
+      <div id="marqueeContent" class="marquee-content flex items-center shrink-0 animate-marquee space-x-8"></div>
+      <div id="marqueeContentClone" class="marquee-content flex items-center shrink-0 animate-marquee space-x-8" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVIGATION (CENTERED LINKS, NO WHATSAPP BUTTON, NO BROKEN ICONS) ================= -->
+  <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[4.75rem] py-2 gap-4">
+        
+        <!-- Left: Logo & Brand Name (Zero Hardcoded 'LUXE', Clean Dynamic Text / Image) -->
+        <a href="#home" id="headerLogoContainer" class="flex items-center space-x-3 group shrink-0">
+          <div id="headerLogoIconWrapper" class="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center text-white shadow-lg shadow-orange-500/20 transform group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <i class="fa-solid fa-couch text-lg"></i>
+          </div>
+          <img id="headerCustomLogoImg" src="" alt="Logo" class="hidden h-11 w-auto object-contain">
+          <div id="headerBrandTextWrapper">
+            <div class="flex items-center">
+              <span id="navBrandName" class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-brand-dark">RightAngle</span>
+            </div>
+            <p id="navBrandTagline" class="text-[10px] tracking-widest uppercase font-semibold text-orange-600">PREMIUM HOME INTERIORS</p>
+          </div>
+        </a>
+
+        <!-- Center: Navigation Links (PERFECTLY CENTER-ALIGNED AS REQUESTED) -->
+        <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold flex-1">
+          <a href="#home" id="navLinkHome" class="text-brand-dark hover:text-brand-red transition-colors">Home</a>
+          <a href="#about" id="navLinkAbout" class="text-gray-600 hover:text-brand-red transition-colors">About Us</a>
+          <a href="#gallery" id="navLinkGallery" class="text-gray-600 hover:text-brand-red transition-colors">Portfolio</a>
+          <a href="#feedback" id="navLinkFeedback" class="text-gray-600 hover:text-brand-red transition-colors">Feedback</a>
+          <a href="#contact" id="navLinkContact" class="text-gray-600 hover:text-brand-red transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right: ONLY 'Get Your Valuable Quote' Button -->
+        <div class="flex items-center space-x-3 shrink-0 ml-auto md:ml-0">
+          <a href="#enquiry" id="navCtaBtn" class="inline-flex items-center space-x-2 gradient-bg hover:opacity-95 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md shadow-red-600/20 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap">
+            <i class="fa-regular fa-calendar-check text-xs"></i>
+            <span id="navCtaText">Get Your Valuable Quote</span>
+          </a>
+
+          <!-- Clean Mobile Menu Toggle for small screens only -->
+          <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700 hover:text-brand-red p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-orange-100 px-4 pt-3 pb-6 space-y-3">
+      <a href="#home" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">About Us</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">Portfolio Gallery</a>
+      <a href="#feedback" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">Customer Reviews</a>
+      <a href="#enquiry" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">Get Your Valuable Quote</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red py-1">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="relative bg-brand-dark min-h-[580px] lg:min-h-[660px] flex items-center overflow-hidden">
+    <div id="heroSliderContainer" class="absolute inset-0 z-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-white">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 bg-black/40 backdrop-blur-md border border-orange-500/40 rounded-full px-4 py-1.5 mb-6 text-xs uppercase tracking-wider font-semibold text-orange-300">
+          <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+          <span id="heroBadgeText">Signature Architectural Interior Projects</span>
+        </div>
+        <h1 id="heroMainHeading" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] mb-6 drop-shadow-lg">
+          Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-200">Luxury Homes</span> With Timeless Elegance
+        </h1>
+        <p id="heroSubHeading" class="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed font-light drop-shadow">
+          From concept sketches to custom modular executions, explore our premier turnkey interior design portfolio crafted across premium residences and villas.
+        </p>
+        <div class="glass-card !bg-white/10 !border-white/20 rounded-2xl p-4 sm:p-5 mb-8 max-w-lg shadow-xl">
+          <div class="flex items-center justify-between text-xs text-orange-300 font-semibold uppercase tracking-wider mb-1">
+            <span id="heroCurrentSlideCategory">LIVING ROOM SHOWCASE</span>
+            <span class="bg-red-600/90 text-white px-2.5 py-0.5 rounded text-[10px] font-bold">Featured Design</span>
+          </div>
+          <h3 id="heroCurrentSlideTitle" class="text-lg sm:text-xl font-bold text-white font-display">The Grand Velvet Residence</h3>
+          <p id="heroCurrentSlideDesc" class="text-xs sm:text-sm text-gray-300 mt-1 line-clamp-1">Italian leather sofas with customized fluted acoustic wall paneling and warm indirect LED cove lighting.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <button onclick="openSeparateGalleryPage('All')" id="heroBtnGallery" class="gradient-bg text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-red-600/40 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-200 flex items-center gap-2">
+            <span id="heroBtnGalleryText">Explore Portfolio Gallery</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+          <a href="#enquiry" id="heroBtnEnquiry" class="bg-white/95 hover:bg-white text-brand-dark hover:text-brand-red font-bold px-7 py-3.5 rounded-full shadow-lg backdrop-blur hover:scale-105 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
+            <span id="heroBtnEnquiryText">Get WhatsApp Estimate</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-6 right-6 z-20 flex items-center space-x-3">
+      <button onclick="prevHeroSlide()" class="w-11 h-11 rounded-full bg-black/50 hover:bg-brand-red border border-white/20 text-white flex items-center justify-center transition-all duration-200" title="Previous Slide">
+        <i class="fa-solid fa-chevron-left text-sm"></i>
+      </button>
+      <div id="heroSlideDots" class="flex items-center space-x-1.5 px-2"></div>
+      <button onclick="nextHeroSlide()" class="w-11 h-11 rounded-full bg-black/50 hover:bg-brand-red border border-white/20 text-white flex items-center justify-center transition-all duration-200" title="Next Slide">
+        <i class="fa-solid fa-chevron-right text-sm"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= STATS COUNTER ================= -->
+  <section class="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-orange-950/5 border border-orange-100">
+      <div class="text-center border-r border-orange-100 last:border-r-0">
+        <div id="stat_1_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">350+</div>
+        <p id="stat_1_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Completed Sites</p>
+      </div>
+      <div class="text-center sm:border-r border-orange-100">
+        <div id="stat_2_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">45 Days</div>
+        <p id="stat_2_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Move-in Guarantee</p>
+      </div>
+      <div class="text-center border-r border-orange-100 last:border-r-0">
+        <div id="stat_3_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">100%</div>
+        <p id="stat_3_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Custom Modular</p>
+      </div>
+      <div class="text-center">
+        <div id="stat_4_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">10 Yrs</div>
+        <p id="stat_4_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Material Warranty</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Interior Craftsmanship" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="bg-brand-red text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 inline-block">Design Philosophy</span>
+            <h4 class="text-xl font-bold font-display">Bespoke Aesthetics Meet Functional Precision</h4>
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -right-4 sm:right-6 bg-gradient-to-br from-brand-orange to-brand-red text-white p-5 rounded-2xl shadow-xl max-w-[200px] text-center hidden sm:block">
+          <i class="fa-solid fa-award text-3xl mb-1"></i>
+          <p class="text-xs font-bold uppercase tracking-wider">Top Rated Interior Studio</p>
+        </div>
+      </div>
+      <div class="lg:col-span-6">
+        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
+          <span id="aboutBadgeText">About RightAngle</span>
+        </div>
+        <h2 id="aboutHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight leading-tight mb-6">
+          Transforming Living Spaces into <span class="gradient-text">Architectural Masterpieces</span>
+        </h2>
+        <p id="aboutParagraph" class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+          We specialize in high-end residential interiors, luxury villa makeovers, and custom modular kitchens. With an obsessive eye for detail, German hardware integrations, and bespoke lighting designs, we turn dream spaces into breathtaking reality.
+        </p>
+        <div class="space-y-3.5 mb-8">
+          <div class="flex items-start space-x-3">
+            <div class="w-6 h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+            <p id="aboutPoint1" class="text-sm font-semibold text-gray-700">Photorealistic 3D virtual walkthroughs before civil execution</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+            <p id="aboutPoint2" class="text-sm font-semibold text-gray-700">Dedicated Project Manager for daily site progress updates</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-6 h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+            <p id="aboutPoint3" class="text-sm font-semibold text-gray-700">Direct factory manufacturing ensuring 30% savings vs traditional decorators</p>
+          </div>
+        </div>
+        <button onclick="openSeparateGalleryPage('All')" class="inline-flex items-center space-x-2 text-brand-red hover:text-brand-orange font-bold text-sm group">
+          <span>Browse our completed residential categories</span>
+          <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1.5 transition-transform"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FRONT PAGE GALLERY SECTION (SHOWING EXACTLY 6 CATEGORIES) ================= -->
+  <section id="gallery" class="py-20 bg-white border-y border-orange-100 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 bg-orange-50 border border-orange-200 text-brand-orangeDark font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
+          <i class="fa-solid fa-images"></i>
+          <span id="galleryBadgeText">Interior Portfolio</span>
+        </div>
+        <h2 id="galleryMainHeading" class="font-display font-extrabold text-3xl sm:text-5xl text-brand-dark tracking-tight mb-4">
+          Bespoke <span class="gradient-text">Design Gallery</span>
+        </h2>
+        <p id="gallerySubHeading" class="text-gray-500 text-sm sm:text-base">
+          Explore curated interior collections across living rooms, kitchens, bedrooms, and luxury villas.
+        </p>
+      </div>
+
+      <!-- Exactly 6 Category Preview Cards on Front Page -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="frontCategoryCardsGrid"></div>
+
+      <!-- Explore All Categories Button (Opens Separate Fullscreen Page View) -->
+      <div class="text-center pt-10">
+        <button onclick="openSeparateGalleryPage('All')" class="gradient-bg text-white font-bold px-9 py-4 rounded-full shadow-lg shadow-red-600/30 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 inline-flex items-center gap-3 text-sm sm:text-base">
+          <i class="fa-solid fa-table-cells-large text-lg"></i>
+          <span id="galleryExploreBtnText">Explore All Categories</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FEEDBACK SECTION ================= -->
+  <section id="feedback" class="py-20 bg-brand-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-star"></i>
+            <span id="feedbackBadgeText">Real Client Testimonials</span>
+          </div>
+          <h2 id="feedbackHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight">
+            Loved By Over <span class="gradient-text">350+ Homeowners</span>
+          </h2>
+          <p id="feedbackSubHeading" class="text-gray-500 text-sm mt-1">Read feedback from clients across various completed residential sites.</p>
+        </div>
+        <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg flex items-center space-x-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Leave Your Feedback</span>
+        </button>
+      </div>
+      <div id="feedbackGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"></div>
+    </div>
+  </section>
+
+  <!-- ================= ENQUIRY SECTION (WHATSAPP INTEGRATION & BUDGET ₹10,000 - ₹10,00,000) ================= -->
+  <section id="enquiry" class="py-20 bg-gradient-to-b from-brand-cream via-orange-50/50 to-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-2xl border border-orange-200/80 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <div class="lg:col-span-5 gradient-bg p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
+            <div class="relative z-10">
+              <span class="bg-white/20 backdrop-blur text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-4">Direct WhatsApp Response</span>
+              <h3 id="enquiryCardTitle" class="font-display font-extrabold text-2xl sm:text-3xl tracking-tight leading-snug mb-4">
+                Plan Your Dream Interior With Us
+              </h3>
+              <p id="enquiryCardSubtitle" class="text-xs sm:text-sm text-orange-100 leading-relaxed mb-6 font-light">
+                Fill out the quick design requirements form. It instantly creates a formatted project brief and connects you directly with our Principal Architect on WhatsApp!
+              </p>
+              <div class="space-y-4 text-xs">
+                <div class="flex items-center space-x-3">
+                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-stopwatch"></i></div>
+                  <div>
+                    <p class="font-bold">Instant Estimate in 15 Mins</p>
+                    <p class="text-orange-200 text-[11px]">Free budget and material breakdown</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-brands fa-whatsapp text-base"></i></div>
+                  <div>
+                    <p class="font-bold">Dedicated WhatsApp Architect</p>
+                    <p class="text-orange-200 text-[11px]">No spam, direct one-on-one consultation</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-gift"></i></div>
+                  <div>
+                    <p class="font-bold">Complimentary 3D Render</p>
+                    <p class="text-orange-200 text-[11px]">Worth ₹15,000 free with consultation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10 mt-8 pt-6 border-t border-white/20 flex items-center justify-between text-xs">
+              <span class="text-orange-100">WhatsApp Hotline:</span>
+              <span id="enquiryHotlineDisplay" class="font-mono font-bold bg-white/20 px-2.5 py-1 rounded-lg">+91 98765 43210</span>
+            </div>
+            <div class="absolute -right-12 -bottom-12 opacity-10 text-white pointer-events-none">
+              <i class="fa-solid fa-house-chimney-window text-9xl"></i>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 p-8 sm:p-10">
+            <h4 class="font-display font-bold text-xl text-gray-900 mb-2">Get Free Quote & 3D Walkthrough</h4>
+            <p class="text-xs text-gray-500 mb-6">Your submission will launch WhatsApp prefilled with your requirements.</p>
+
+            <form id="enquiryForm" onsubmit="handleEnquirySubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name *</label>
+                  <input type="text" id="eqName" required placeholder="e.g. Anand Kumar" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">WhatsApp Mobile Number *</label>
+                  <input type="tel" id="eqPhone" required placeholder="e.g. 9876543210" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Category / Space Needed *</label>
+                  <select id="eqCategory" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+                    <option value="Full Home Interior">Full Home Interior (Turnkey)</option>
+                    <option value="Modular Kitchen">Modular Kitchen</option>
+                    <option value="Living Room Interior">Living Room Interior</option>
+                    <option value="Master Bedroom">Master Bedroom Suite</option>
+                    <option value="Luxury Villa Design">Luxury Villa Design</option>
+                    <option value="Renovation / Makeover">Complete Renovation</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Property Type *</label>
+                  <select id="eqProperty" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+                    <option value="2 BHK Apartment">2 BHK Apartment</option>
+                    <option value="3 BHK Apartment">3 BHK Apartment</option>
+                    <option value="4 BHK / Penthouse">4 BHK / Penthouse</option>
+                    <option value="Independent Villa / Row House">Independent Villa / Row House</option>
+                    <option value="Commercial Space">Commercial Space</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- BUDGET STARTING FROM ₹10,000 TO ₹10,00,000+ -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Estimated Budget *</label>
+                  <select id="eqBudget" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white font-medium">
+                    <option value="₹10,000 - ₹50,000">₹10,000 - ₹50,000 (Consultation & 3D Design)</option>
+                    <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 (Room Styling & Decor)</option>
+                    <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000 (Modular / Kitchen)</option>
+                    <option value="₹3,00,000 - ₹5,00,000" selected>₹3,00,000 - ₹5,00,000 (Essential 2/3 BHK)</option>
+                    <option value="₹5,00,000 - ₹10,00,000">₹5,00,000 - ₹10,00,000 (Premium Full Home)</option>
+                    <option value="₹10,00,000+">₹10,00,000+ (Luxury Turnkey Villa)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">City / Site Location *</label>
+                  <input type="text" id="eqLocation" required placeholder="e.g. Coimbatore / Chennai" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-700 mb-1">Specific Design Requirements or Ideas</label>
+                <textarea id="eqMessage" rows="3" placeholder="Tell us about your preferences (e.g., Italian marble finish, false ceiling with warm LEDs, island kitchen counter, etc.)" class="w-full text-xs p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+              </div>
+
+              <button type="submit" id="enquirySubmitBtn" class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:-translate-y-0.5">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span id="enquirySubmitBtnText">Submit & Send to WhatsApp</span>
+              </button>
+              
+              <p class="text-[11px] text-center text-gray-400">
+                🔒 We respect your privacy. No spam. You will be redirected immediately to chat with our design team.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT US SECTION ================= -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-2">
+          <i class="fa-solid fa-headset"></i>
+          <span id="contactBadgeText">Get In Touch</span>
+        </div>
+        <h2 id="contactHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight">
+          Visit Our Design Experience Centre
+        </h2>
+        <p id="contactSubHeading" class="text-gray-500 text-sm mt-1">
+          Touch and feel our mockups, modular shutter finishes, and lighting automations in person.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-phone-volume"></i></div>
+          <h4 class="font-bold text-gray-800 text-base mb-1">Direct Call & WhatsApp</h4>
+          <p class="text-xs text-gray-500 mb-3">Speak directly with design consultants</p>
+          <a id="contactPhoneLink" href="tel:+919876543210" class="text-brand-red font-bold text-sm hover:underline block mb-1">+91 98765 43210</a>
+          <span class="text-[11px] text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full">Available 9:00 AM - 8:00 PM</span>
+        </div>
+
+        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 rounded-2xl bg-red-100 text-brand-red mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h4 class="font-bold text-gray-800 text-base mb-1">Experience Studio</h4>
+          <p class="text-xs text-gray-500 mb-3">Walk-ins welcome with appointment</p>
+          <p id="contactAddressText" class="text-xs font-semibold text-gray-700 leading-relaxed">
+            Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore, Tamil Nadu - 641018
+          </p>
+        </div>
+
+        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h4 class="font-bold text-gray-800 text-base mb-1">Official Email</h4>
+          <p class="text-xs text-gray-500 mb-3">Send project floor plans & blueprints</p>
+          <a id="contactEmailLink" href="mailto:design@auraluxeinteriors.com" class="text-brand-orangeDark font-bold text-sm hover:underline block mb-1">design@auraluxeinteriors.com</a>
+          <span class="text-[11px] text-gray-500">24/7 Blueprint Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER (STAFF PORTAL & WHATSAPP DIRECT CLEANED OUT) ================= -->
+  <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800 text-xs text-gray-400">
+        
+        <div class="md:col-span-1 space-y-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold"><i class="fa-solid fa-couch text-sm"></i></div>
+            <span id="footerBrandTitle" class="font-display font-extrabold text-lg text-white">RightAngle</span>
+          </div>
+          <p id="footerAboutText" class="leading-relaxed">
+            Crafting tailored home interiors with premium modular woodwork, ambient lighting, and bespoke architectural elements.
+          </p>
+          <div class="flex items-center space-x-3 text-base text-gray-400">
+            <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Interior Categories</h5>
+          <ul class="space-y-2.5">
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Living Room')" class="hover:text-white">Living Room Interiors</a></li>
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Modular Kitchen')" class="hover:text-white">Modular Kitchen Designs</a></li>
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Master Bedroom')" class="hover:text-white">Master Bedroom Suites</a></li>
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Luxury Villa')" class="hover:text-white">Luxury Villa Architecture</a></li>
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Bath & Wardrobe')" class="hover:text-white">Bath & Wardrobes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Quick Links</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#home" class="hover:text-white">Home Showcase</a></li>
+            <li><a href="#about" class="hover:text-white">Design Philosophy</a></li>
+            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('All')" class="hover:text-white">All Categories</a></li>
+            <li><a href="#feedback" class="hover:text-white">Customer Reviews</a></li>
+            <li><a href="#enquiry" class="hover:text-white">Get Instant Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Experience Centre</h5>
+          <p class="mb-3 text-gray-400 leading-relaxed">Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore.</p>
+          <button onclick="quickWhatsappChat()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-md">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Chat on WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom: Clean Centered Copyright Line -->
+      <div class="pt-8 text-center text-xs text-gray-500">
+        <p id="footerCopyright">© 2026 RightAngle Interiors. All rights reserved. Designed with Red, White & Orange Theme.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <div class="fixed bottom-6 right-6 z-30">
+    <button onclick="quickWhatsappChat()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl flex items-center justify-center text-2xl transform hover:scale-110 transition-all duration-300 group" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="absolute right-16 bg-slate-900 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+        Chat with Designer
+      </span>
+    </button>
+  </div>
+
+  <!-- ================= DEDICATED SEPARATE FULLSCREEN GALLERY PAGE ================= -->
+  <div id="separateGalleryPage" class="fixed inset-0 z-50 bg-white hidden overflow-y-auto">
+    <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-orange-100 px-4 sm:px-8 py-4 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <button onclick="closeSeparateGalleryPage()" class="gradient-bg text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 hover:opacity-95 shadow">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Home</span>
+          </button>
+          <div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-brand-dark">Portfolio Gallery</h3>
+            <p class="text-[11px] text-gray-500 hidden sm:block">Select a category to view high-resolution interior designs</p>
+          </div>
+        </div>
+        <button onclick="closeSeparateGalleryPage()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-brand-red flex items-center justify-center text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
+      <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-3" id="separateCategoryTabsContainer"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between pb-3 border-b border-gray-100 gap-3">
+        <h4 class="font-display font-bold text-xl text-gray-900 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
+          <span id="separateCategoryHeading">All Categories</span>
+        </h4>
+        <div class="relative w-full sm:w-72">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+          <input type="text" id="separateGallerySearchInput" oninput="handleSeparateGallerySearch(this.value)" placeholder="Search room designs..." class="w-full text-xs pl-9 pr-4 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+        </div>
+      </div>
+
+      <div id="separateGalleryImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+
+      <div id="separateGalleryEmptyState" class="hidden text-center py-16">
+        <div class="w-16 h-16 rounded-full bg-orange-100 text-brand-orange mx-auto flex items-center justify-center text-2xl mb-4">
+          <i class="fa-regular fa-folder-open"></i>
+        </div>
+        <h4 class="text-lg font-bold text-gray-800">No images in this category yet</h4>
+        <p class="text-xs text-gray-500 mt-1 mb-4">You can add photos to this category from the Admin Panel.</p>
+        <button onclick="filterSeparateGallery('All')" class="gradient-bg text-white text-xs font-bold px-4 py-2 rounded-full">Show All Categories</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="imageLightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
+    <div class="relative max-w-5xl w-full bg-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col">
+      <div class="flex items-center justify-between px-6 py-4 bg-slate-900/80 border-b border-slate-800 text-white">
+        <div class="flex items-center space-x-3">
+          <span id="lightboxCategoryBadge" class="bg-brand-red text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">Category</span>
+          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white truncate max-w-md">Project Title</h4>
+        </div>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-white text-xl p-1.5 rounded-lg hover:bg-slate-800"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="relative bg-black flex items-center justify-center min-h-[350px] sm:min-h-[500px] max-h-[75vh] overflow-hidden">
+        <img id="lightboxImage" src="" alt="Enlarged Interior" class="max-h-[70vh] max-w-full object-contain mx-auto transition-transform duration-300">
+        <button onclick="prevLightboxImage()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-left text-lg"></i></button>
+        <button onclick="nextLightboxImage()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-right text-lg"></i></button>
+      </div>
+      <div class="px-6 py-4 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <p id="lightboxDesc" class="text-gray-300">Detailed interior architectural notes and custom material specs.</p>
+        <button onclick="enquireFromLightbox()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-2 shrink-0">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Enquire for this Design</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SUBMIT FEEDBACK MODAL ================= -->
+  <div id="feedbackModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
+    <div class="relative max-w-md w-full bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-orange-100">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-100 mb-5">
+        <h4 class="font-display font-bold text-lg text-gray-900">Share Your Experience</h4>
+        <button onclick="closeFeedbackModal()" class="text-gray-400 hover:text-gray-600 text-lg"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form onsubmit="handleFeedbackSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Your Name</label>
+          <input type="text" id="fbName" required placeholder="e.g. Priya Sundaram" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Completed Project</label>
+          <input type="text" id="fbProject" required placeholder="e.g. 3 BHK Full Home Interior" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Rating</label>
+          <select id="fbRating" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+            <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Outstanding)</option>
+            <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
+            <option value="3">⭐⭐⭐ (3 Stars - Good)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Your Review / Comments</label>
+          <textarea id="fbComment" rows="3" required placeholder="Share what you liked about the design execution, finishing, and timeline..." class="w-full p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full gradient-bg text-white font-bold py-3 rounded-xl shadow-md hover:shadow-lg transition-all">Post Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN PASSWORD VERIFICATION MODAL (#admin access with Right2026) ================= -->
+  <div id="adminPasswordModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
+    <div class="relative max-w-sm w-full bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-700">
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl gradient-bg mx-auto flex items-center justify-center text-white text-2xl shadow-lg mb-3">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h4 class="font-display font-bold text-xl text-white">Admin Security Access</h4>
+        <p class="text-xs text-gray-400 mt-1">Please enter the security password to open the CMS Control Panel.</p>
+      </div>
+
+      <form onsubmit="handleAdminPasswordSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-gray-300 mb-1.5">Admin Password</label>
+          <div class="relative">
+            <input type="password" id="adminPasswordInput" required placeholder="Enter password" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none font-mono">
+            <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+              <i id="pwdToggleIcon" class="fa-regular fa-eye text-sm"></i>
+            </button>
+          </div>
+          <p id="adminPasswordError" class="hidden text-red-400 text-[11px] mt-1.5 flex items-center gap-1">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Incorrect password. Access denied.</span>
+          </p>
+        </div>
+
+        <div class="flex items-center space-x-3 pt-2">
+          <button type="button" onclick="closeAdminPasswordModal()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-gray-300 font-bold py-2.5 rounded-xl transition-colors">
+            Cancel
+          </button>
+          <button type="submit" class="w-1/2 gradient-bg hover:opacity-95 text-white font-bold py-2.5 rounded-xl transition-all shadow-md">
+            Unlock CMS
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= COMPREHENSIVE ADMIN PANEL / CMS MODAL ================= -->
+  <div id="adminPanelModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-2 sm:p-4">
+    <div class="relative max-w-6xl w-full h-[92vh] bg-white rounded-3xl shadow-2xl border border-orange-200 flex flex-col overflow-hidden">
+      
+      <!-- Admin Header -->
+      <div class="flex items-center justify-between px-6 py-4 bg-slate-900 text-white shrink-0">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold">
+            <i class="fa-solid fa-sliders text-base"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white flex items-center gap-2">
+              <span id="adminPortalTitleText">Admin CMS Portal</span>
+              <span class="text-[10px] bg-red-600 text-white px-2 py-0.5 rounded font-mono font-bold">Authenticated</span>
+            </h3>
+            <p class="text-xs text-orange-200">Full control over images, categories, live sync, SEO, and text CMS.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <button onclick="saveAdminChanges()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Save All Changes</span>
+          </button>
+          <button onclick="closeAdminPanel()" class="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-slate-800 text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Body: Sidebar Tabs + Content Area -->
+      <div class="flex-1 flex overflow-hidden">
+        
+        <!-- Admin Navigation Sidebar -->
+        <aside class="w-56 sm:w-64 bg-slate-50 border-r border-gray-200 p-4 space-y-1.5 shrink-0 overflow-y-auto">
+          <button onclick="switchAdminTab('gallery_tab')" id="tabBtn_gallery_tab" class="admin-tab-btn active w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 bg-orange-100 text-brand-orangeDark">
+            <i class="fa-regular fa-images w-4 text-center"></i>
+            <span>Image Gallery</span>
+          </button>
+          <button onclick="switchAdminTab('cats_tab')" id="tabBtn_cats_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
+            <i class="fa-solid fa-layer-group w-4 text-center"></i>
+            <span>Categories</span>
+          </button>
+          <button onclick="switchAdminTab('text_cms_tab')" id="tabBtn_text_cms_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
+            <i class="fa-solid fa-pen-nib w-4 text-center"></i>
+            <span>All Wording & Text CMS</span>
+          </button>
+          <button onclick="switchAdminTab('enquiries_tab')" id="tabBtn_enquiries_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
+            <i class="fa-brands fa-whatsapp w-4 text-center text-emerald-600"></i>
+            <span>WhatsApp Leads (<span id="adminLeadsCount">0</span>)</span>
+          </button>
+          <button onclick="switchAdminTab('feedback_tab')" id="tabBtn_feedback_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
+            <i class="fa-regular fa-comments w-4 text-center"></i>
+            <span>Client Reviews</span>
+          </button>
+          
+          <!-- DEDICATED WHATSAPP TEMPLATE TAB RIGHT BELOW CLIENT REVIEWS -->
+          <button onclick="switchAdminTab('whatsapp_tpl_tab')" id="tabBtn_whatsapp_tpl_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100 border-l-2 border-emerald-500">
+            <i class="fa-solid fa-message w-4 text-center text-emerald-600"></i>
+            <span>WhatsApp Template CMS</span>
+          </button>
+
+          <!-- DEDICATED CLOUD LIVE SYNC (SUPABASE) TAB -->
+          <button onclick="switchAdminTab('cloud_sync_tab')" id="tabBtn_cloud_sync_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100 border-l-2 border-indigo-500">
+            <i class="fa-solid fa-cloud-bolt w-4 text-center text-indigo-600"></i>
+            <span>Cloud Live Sync (Supabase)</span>
+          </button>
+
+          <button onclick="switchAdminTab('settings_tab')" id="tabBtn_settings_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
+            <i class="fa-solid fa-gear w-4 text-center"></i>
+            <span>Backup & Reset</span>
+          </button>
+
+          <div class="pt-4 mt-4 border-t border-gray-200">
+            <button onclick="adminLogout()" class="w-full text-left px-3.5 py-2 rounded-xl text-xs font-bold text-red-600 hover:bg-red-50 flex items-center gap-2">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span>Lock / Exit Admin</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Admin Main Content View -->
+        <main class="flex-1 bg-white p-6 overflow-y-auto">
+
+          <!-- TAB 1: IMAGE GALLERY MANAGER -->
+          <div id="adminTab_gallery_tab" class="admin-tab-content space-y-6">
+            <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800">Gallery Image Management</h4>
+                <p class="text-xs text-gray-500">Upload photos directly into categories (Living Room, Kitchen, Bedroom, etc.).</p>
+              </div>
+              <span class="text-xs font-semibold bg-orange-100 text-orange-800 px-3 py-1 rounded-full">
+                Total Photos: <strong id="adminTotalImages">0</strong>
+              </span>
+            </div>
+
+            <div class="bg-orange-50/50 border border-orange-200 rounded-2xl p-5">
+              <h5 class="text-xs font-bold uppercase tracking-wider text-brand-dark mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-cloud-arrow-up text-brand-orange"></i>
+                <span>Add New Photo to Category</span>
+              </h5>
+
+              <form onsubmit="handleAdminAddImage(event)" class="space-y-4 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Select Category *</label>
+                    <select id="adminImgCategory" required class="w-full px-3 py-2 rounded-xl border border-gray-200 bg-white focus:border-brand-red outline-none"></select>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Photo / Project Title *</label>
+                    <input type="text" id="adminImgTitle" required placeholder="e.g. Modern Minimalist Island Kitchen" class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Image URL (High Resolution) *</label>
+                    <input type="url" id="adminImgUrl" oninput="previewAdminImage(this.value)" required placeholder="https://images.unsplash.com/..." class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                    <div class="mt-2 flex items-center gap-1.5 flex-wrap">
+                      <span class="text-[10px] text-gray-400">Sample Presets:</span>
+                      <button type="button" onclick="setAdminSampleImg('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80')" class="text-[10px] bg-white border border-gray-200 px-2 py-0.5 rounded hover:bg-orange-50">Living Room</button>
+                      <button type="button" onclick="setAdminSampleImg('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80')" class="text-[10px] bg-white border border-gray-200 px-2 py-0.5 rounded hover:bg-orange-50">Kitchen</button>
+                      <button type="button" onclick="setAdminSampleImg('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80')" class="text-[10px] bg-white border border-gray-200 px-2 py-0.5 rounded hover:bg-orange-50">Bedroom</button>
+                      <button type="button" onclick="setAdminSampleImg('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80')" class="text-[10px] bg-white border border-gray-200 px-2 py-0.5 rounded hover:bg-orange-50">Villa</button>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Architecture / Material Description</label>
+                    <input type="text" id="adminImgDesc" placeholder="e.g. Quartz countertops with acrylic matte shutter finish" class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-3">
+                    <img id="adminPreviewImg" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=300&q=80" alt="Preview" class="w-14 h-10 object-cover rounded-lg border border-gray-200">
+                    <span class="text-[11px] text-gray-400">Live preview thumbnail</span>
+                  </div>
+                  <button type="submit" class="gradient-bg text-white font-bold px-6 py-2.5 rounded-xl shadow hover:opacity-95 flex items-center gap-1.5">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add Photo</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <h5 class="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">All Active Photos</h5>
+              <div class="overflow-x-auto border border-gray-200 rounded-2xl">
+                <table class="w-full text-left text-xs text-gray-600">
+                  <thead class="bg-gray-50 text-[11px] font-bold text-gray-700 uppercase border-b border-gray-200">
+                    <tr>
+                      <th class="p-3">Thumbnail</th>
+                      <th class="p-3">Title</th>
+                      <th class="p-3">Category</th>
+                      <th class="p-3">Description</th>
+                      <th class="p-3 text-right">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminImagesTableBody" class="divide-y divide-gray-100"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: CATEGORIES MANAGER -->
+          <div id="adminTab_cats_tab" class="admin-tab-content hidden space-y-6">
+            <div class="pb-3 border-b border-gray-100">
+              <h4 class="font-display font-bold text-lg text-gray-800">Categories Management</h4>
+              <p class="text-xs text-gray-500">Create new room categories (e.g. Dressing Tables, Pooja Room, Balcony...).</p>
+            </div>
+
+            <div class="bg-red-50/50 border border-red-200/80 rounded-2xl p-5 text-xs max-w-xl">
+              <h5 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-folder-plus text-brand-red"></i>
+                <span>Add New Category</span>
+              </h5>
+              <form onsubmit="handleAdminAddCategory(event)" class="space-y-3">
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Category Name *</label>
+                  <input type="text" id="newCategoryName" required placeholder="e.g. Dressing Tables" class="w-full px-3 py-2 rounded-xl border border-gray-200 outline-none focus:border-brand-red">
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Cover Image URL (Optional)</label>
+                  <input type="url" id="newCategoryCover" placeholder="https://images.unsplash.com/..." class="w-full px-3 py-2 rounded-xl border border-gray-200 outline-none focus:border-brand-red">
+                </div>
+                <button type="submit" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-bold py-2 rounded-xl">Add Category</button>
+              </form>
+            </div>
+
+            <div>
+              <h5 class="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">All Active Categories</h5>
+              <div id="adminCategoriesList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ALL WORDING & TEXT CMS WITH 10 SEPARATE SUB-TABS (INCLUDING SEO & GOOGLE SEARCH CONSOLE) -->
+          <div id="adminTab_text_cms_tab" class="admin-tab-content hidden space-y-6">
+            <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800">All Wording & Text CMS</h4>
+                <p class="text-xs text-gray-500">Organized into separate sub-tabs for every single section and SEO meta tags.</p>
+              </div>
+              <button onclick="saveAdminChanges()" class="bg-emerald-600 text-white font-bold text-xs px-4 py-2 rounded-xl shadow">
+                Save All Wording
+              </button>
+            </div>
+
+            <!-- SUB-TABS NAV BAR -->
+            <div class="flex items-center flex-wrap gap-1.5 pb-2 border-b border-gray-200">
+              <button onclick="switchCmsSubtab('branding')" id="cmsSubtab_branding" class="cms-subtab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">1. Header & Logo</button>
+              <button onclick="switchCmsSubtab('marquee')" id="cmsSubtab_marquee" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">2. Top Ticker</button>
+              <button onclick="switchCmsSubtab('hero')" id="cmsSubtab_hero" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">3. Hero Section</button>
+              <button onclick="switchCmsSubtab('stats')" id="cmsSubtab_stats" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">4. Stats & Counters</button>
+              <button onclick="switchCmsSubtab('about')" id="cmsSubtab_about" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">5. About Us</button>
+              <button onclick="switchCmsSubtab('gallery')" id="cmsSubtab_gallery" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">6. Gallery Wording</button>
+              <button onclick="switchCmsSubtab('enquiry')" id="cmsSubtab_enquiry" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">7. Enquiry Form</button>
+              <button onclick="switchCmsSubtab('contact')" id="cmsSubtab_contact" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">8. Contact Info</button>
+              <button onclick="switchCmsSubtab('footer')" id="cmsSubtab_footer" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200">9. Footer</button>
+              <button onclick="switchCmsSubtab('seo')" id="cmsSubtab_seo" class="cms-subtab-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200 bg-amber-50 text-amber-900 border-amber-300">10. SEO & Google Console</button>
+            </div>
+
+            <!-- SUB-TAB 1: HEADER & LOGO -->
+            <div id="subtabContent_branding" class="cms-subtab-panel space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-4">
+                <h5 class="font-bold text-gray-800 text-sm">Header Branding & Logo Configuration</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Custom Image Logo URL (Optional)</label>
+                    <input type="url" id="cms_logo_url" placeholder="https://.../logo.png" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                    <p class="text-[10px] text-gray-500 mt-1">If set, the logo image will replace the text brand name in the header.</p>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Brand Name (Text Logo)</label>
+                    <input type="text" id="cms_brand_name" placeholder="Leave blank to completely remove name" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                    <p class="text-[10px] text-gray-500 mt-1">Note: What you type here is exactly what is shown (zero hardcoded LUXE attached).</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Brand Sub-Tagline</label>
+                    <input type="text" id="cms_brand_tagline" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Header Quote Button Text</label>
+                    <input type="text" id="cms_nav_cta" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 2: TOP MARQUEE -->
+            <div id="subtabContent_marquee" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Top Scrolling Announcement Ticker</h5>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Scrolling Announcement Content</label>
+                  <textarea id="cms_marquee_text" rows="3" class="w-full p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+                  <span class="text-[10px] text-gray-400">Use bullet points (•) to separate announcements.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 3: HERO -->
+            <div id="subtabContent_hero" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Hero Showcase Section</h5>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Hero Project Badge Text</label>
+                  <input type="text" id="cms_hero_badge" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Hero Main Headline</label>
+                  <input type="text" id="cms_hero_heading" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Hero Subheading</label>
+                  <textarea id="cms_hero_subheading" rows="2" class="w-full p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Hero Button 1 (Gallery) Text</label>
+                    <input type="text" id="cms_hero_btn_primary" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Hero Button 2 (WhatsApp) Text</label>
+                    <input type="text" id="cms_hero_btn_secondary" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 4: STATS -->
+            <div id="subtabContent_stats" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-4">
+                <h5 class="font-bold text-gray-800 text-sm">Stats & Highlights Section</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Stat 1 Value & Label</label>
+                    <div class="flex gap-2"><input type="text" id="cms_stat1_val" class="w-1/3 p-2 rounded-xl border border-gray-200"><input type="text" id="cms_stat1_label" class="w-2/3 p-2 rounded-xl border border-gray-200"></div>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Stat 2 Value & Label</label>
+                    <div class="flex gap-2"><input type="text" id="cms_stat2_val" class="w-1/3 p-2 rounded-xl border border-gray-200"><input type="text" id="cms_stat2_label" class="w-2/3 p-2 rounded-xl border border-gray-200"></div>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Stat 3 Value & Label</label>
+                    <div class="flex gap-2"><input type="text" id="cms_stat3_val" class="w-1/3 p-2 rounded-xl border border-gray-200"><input type="text" id="cms_stat3_label" class="w-2/3 p-2 rounded-xl border border-gray-200"></div>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Stat 4 Value & Label</label>
+                    <div class="flex gap-2"><input type="text" id="cms_stat4_val" class="w-1/3 p-2 rounded-xl border border-gray-200"><input type="text" id="cms_stat4_label" class="w-2/3 p-2 rounded-xl border border-gray-200"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 5: ABOUT -->
+            <div id="subtabContent_about" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">About Us Section</h5>
+                <div><label class="block font-semibold text-gray-700 mb-1">About Badge Text</label><input type="text" id="cms_about_badge" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">About Main Heading</label><input type="text" id="cms_about_heading" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">About Paragraph Content</label><textarea id="cms_about_para" rows="3" class="w-full p-3 rounded-xl border border-gray-200"></textarea></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Key Benefit 1</label><input type="text" id="cms_about_p1" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Key Benefit 2</label><input type="text" id="cms_about_p2" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Key Benefit 3</label><input type="text" id="cms_about_p3" class="w-full p-2 rounded-xl border border-gray-200"></div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 6: GALLERY -->
+            <div id="subtabContent_gallery" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Gallery Section Wording</h5>
+                <div><label class="block font-semibold text-gray-700 mb-1">Gallery Badge Text</label><input type="text" id="cms_gallery_badge" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Gallery Main Heading</label><input type="text" id="cms_gallery_heading" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Gallery Subheading</label><input type="text" id="cms_gallery_subheading" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Explore Button Label</label><input type="text" id="cms_gallery_btn" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 7: ENQUIRY -->
+            <div id="subtabContent_enquiry" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Enquiry Form Card Wording</h5>
+                <div><label class="block font-semibold text-gray-700 mb-1">Enquiry Card Title</label><input type="text" id="cms_enquiry_title" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Enquiry Card Subtitle</label><textarea id="cms_enquiry_subtitle" rows="2" class="w-full p-2.5 rounded-xl border border-gray-200"></textarea></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Submit Button Label</label><input type="text" id="cms_enquiry_btn" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 8: CONTACT -->
+            <div id="subtabContent_contact" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Contact Information</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div><label class="block font-semibold text-gray-700 mb-1">Display Phone Number</label><input type="text" id="cms_contact_phone" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Contact Email</label><input type="email" id="cms_contact_email" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                </div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Studio Address</label><textarea id="cms_contact_address" rows="2" class="w-full p-2.5 rounded-xl border border-gray-200"></textarea></div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 9: FOOTER -->
+            <div id="subtabContent_footer" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800 text-sm">Footer Section Wording</h5>
+                <div><label class="block font-semibold text-gray-700 mb-1">Footer Brand Title</label><input type="text" id="cms_footer_brand" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Footer About Summary</label><textarea id="cms_footer_about" rows="2" class="w-full p-2.5 rounded-xl border border-gray-200"></textarea></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Copyright Line</label><input type="text" id="cms_footer_copyright" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 10: SEO & GOOGLE SEARCH CONSOLE -->
+            <div id="subtabContent_seo" class="cms-subtab-panel hidden space-y-4 text-xs">
+              <div class="bg-amber-50/50 border border-amber-200 rounded-2xl p-5 space-y-4">
+                <h5 class="font-bold text-amber-900 text-sm flex items-center gap-2">
+                  <i class="fa-brands fa-google text-amber-600"></i>
+                  <span>SEO & Google Search Console Settings</span>
+                </h5>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Google Search Console Verification Meta Tag Content</label>
+                  <input type="text" id="cms_seo_google_console" placeholder="e.g. google-site-verification=abc123xyz..." class="w-full p-2.5 rounded-xl border border-gray-200 font-mono">
+                  <p class="text-[10px] text-gray-500 mt-1">Copy the verification code provided by Google Search Console for HTML tag verification.</p>
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Website Meta Title (Browser & Search)</label>
+                  <input type="text" id="cms_seo_title" class="w-full p-2.5 rounded-xl border border-gray-200">
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Meta Description (Search Engine Snippet)</label>
+                  <textarea id="cms_seo_desc" rows="2" class="w-full p-2.5 rounded-xl border border-gray-200"></textarea>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Target SEO Keywords (Comma Separated)</label>
+                    <input type="text" id="cms_seo_keywords" class="w-full p-2.5 rounded-xl border border-gray-200">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Canonical Domain URL</label>
+                    <input type="url" id="cms_seo_canonical" class="w-full p-2.5 rounded-xl border border-gray-200">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button onclick="saveAdminChanges()" class="gradient-bg text-white font-bold px-8 py-3 rounded-xl shadow-lg">Save All Changes Now</button>
+            </div>
+          </div>
+
+          <!-- TAB 4: WHATSAPP LEADS -->
+          <div id="adminTab_enquiries_tab" class="admin-tab-content hidden space-y-6">
+            <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800">Received WhatsApp Leads</h4>
+                <p class="text-xs text-gray-500">Every client submission through the enquiry form is archived here.</p>
+              </div>
+              <button onclick="clearAllLeads()" class="text-xs text-red-600 hover:underline">Clear History</button>
+            </div>
+            <div id="adminLeadsList" class="space-y-3"></div>
+          </div>
+
+          <!-- TAB 5: CLIENT REVIEWS -->
+          <div id="adminTab_feedback_tab" class="admin-tab-content hidden space-y-6">
+            <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800">Customer Feedback & Reviews</h4>
+                <p class="text-xs text-gray-500">Manage client reviews displayed on the website.</p>
+              </div>
+              <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs font-bold px-3 py-1.5 rounded-lg">+ Add New Review</button>
+            </div>
+            <div id="adminReviewsList" class="space-y-3"></div>
+          </div>
+
+          <!-- TAB 6: DEDICATED WHATSAPP TEMPLATE CMS (RIGHT BELOW CLIENT REVIEWS) -->
+          <div id="adminTab_whatsapp_tpl_tab" class="admin-tab-content hidden space-y-6 text-xs">
+            <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800 flex items-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
+                  <span>WhatsApp Message Template CMS</span>
+                </h4>
+                <p class="text-xs text-gray-500">Customize the exact simple, neat formatting and wordings of messages forwarded to WhatsApp.</p>
+              </div>
+              <button onclick="saveAdminChanges()" class="bg-emerald-600 text-white font-bold text-xs px-4 py-2 rounded-xl shadow">Save Template</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <div class="lg:col-span-7 bg-emerald-50/40 border border-emerald-200/80 rounded-2xl p-5 space-y-4">
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Target WhatsApp Receiver Phone (Country Code + Number)</label>
+                  <input type="text" id="cms_whatsapp_phone" placeholder="919876543210" class="w-full p-2.5 rounded-xl border border-gray-200 font-mono focus:border-brand-red outline-none">
+                  <span class="text-[10px] text-gray-500">Format: 919876543210 (Numbers only, no + or spaces)</span>
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Message Header / Greeting</label>
+                  <input type="text" id="cms_wa_header" class="w-full p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none font-medium">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div><label class="block font-semibold text-gray-700 mb-1">Client Name Label</label><input type="text" id="cms_wa_label_name" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Phone Number Label</label><input type="text" id="cms_wa_label_phone" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Service / Category Label</label><input type="text" id="cms_wa_label_service" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Property Type Label</label><input type="text" id="cms_wa_label_property" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Budget Label</label><input type="text" id="cms_wa_label_budget" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                  <div><label class="block font-semibold text-gray-700 mb-1">Site Location Label</label><input type="text" id="cms_wa_label_location" class="w-full p-2 rounded-xl border border-gray-200"></div>
+                </div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Design Notes Label</label><input type="text" id="cms_wa_label_notes" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+                <div><label class="block font-semibold text-gray-700 mb-1">Footer Signature / Credit</label><input type="text" id="cms_wa_footer" class="w-full p-2.5 rounded-xl border border-gray-200"></div>
+              </div>
+
+              <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center space-x-2 text-emerald-400 font-bold mb-3 pb-2 border-b border-slate-800">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Live Message Preview</span>
+                  </div>
+                  <pre id="adminWhatsappLivePreview" class="text-[11px] font-mono whitespace-pre-wrap text-emerald-100 bg-slate-950 p-4 rounded-xl border border-slate-800 leading-relaxed"></pre>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-4">This message is automatically constructed when a visitor clicks "Submit & Send to WhatsApp".</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 7: CLOUD LIVE SYNC (SUPABASE & REST API) -->
+          <div id="adminTab_cloud_sync_tab" class="admin-tab-content hidden space-y-6 text-xs">
+            <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800 flex items-center gap-2">
+                  <i class="fa-solid fa-cloud-bolt text-indigo-600"></i>
+                  <span>Cloud Live Sync (Supabase Integration)</span>
+                </h4>
+                <p class="text-xs text-gray-500">Connect to Supabase or Cloud API for realtime cloud database sync across devices.</p>
+              </div>
+              <span id="cloudStatusBadge" class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-semibold text-[11px]">
+                ⚪ Standalone (Local Mode)
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <div class="lg:col-span-7 bg-indigo-50/40 border border-indigo-200/80 rounded-2xl p-5 space-y-4">
+                <div class="flex items-center justify-between">
+                  <label class="font-bold text-gray-800 text-sm">Enable Cloud Database Sync</label>
+                  <input type="checkbox" id="cms_cloud_enabled" class="w-4 h-4 text-indigo-600 rounded">
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Supabase Project URL</label>
+                  <input type="url" id="cms_supabase_url" placeholder="https://your-project.supabase.co" class="w-full p-2.5 rounded-xl border border-gray-200 font-mono">
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Supabase Public Anon API Key</label>
+                  <input type="password" id="cms_supabase_key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6..." class="w-full p-2.5 rounded-xl border border-gray-200 font-mono">
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-gray-700 mb-1">Supabase Table Name</label>
+                  <input type="text" id="cms_supabase_table" placeholder="rightangle_cms" class="w-full p-2.5 rounded-xl border border-gray-200 font-mono">
+                </div>
+
+                <div class="flex items-center space-x-2 pt-1">
+                  <input type="checkbox" id="cms_cloud_autosync" class="w-4 h-4 text-indigo-600 rounded">
+                  <label for="cms_cloud_autosync" class="font-semibold text-gray-700">Automatically sync to cloud every time I click Save Changes</label>
+                </div>
+
+                <div class="pt-2 flex flex-wrap gap-3">
+                  <button type="button" onclick="testCloudSync()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-5 py-2.5 rounded-xl shadow flex items-center gap-2">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Push & Sync to Cloud Now</span>
+                  </button>
+                  <button type="button" onclick="fetchFromCloud()" class="bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-bold px-4 py-2.5 rounded-xl flex items-center gap-2">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <span>Pull from Cloud</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-5 flex flex-col justify-between">
+                <div>
+                  <h5 class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2">Supabase Table Quick Setup</h5>
+                  <p class="text-[11px] text-gray-300 mb-3 leading-relaxed">Run this SQL in your Supabase SQL Editor to prepare your cloud database table:</p>
+                  <pre class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[10px] text-amber-300 font-mono overflow-x-auto whitespace-pre">create table if not exists rightangle_cms (
+  id text primary key,
+  content jsonb not null,
+  updated_at timestamp with time zone default timezone('utc'::text, now())
+);
+
+-- Enable public read/write policy for anon key
+alter table rightangle_cms enable row level security;
+create policy "Allow all operations" on rightangle_cms for all using (true);</pre>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-gray-400">
+                  <span>Last Cloud Sync:</span>
+                  <span id="lastCloudSyncLabel" class="font-mono text-emerald-400">Never</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 8: BACKUP & RESET -->
+          <div id="adminTab_settings_tab" class="admin-tab-content hidden space-y-6 text-xs">
+            <div class="pb-3 border-b border-gray-100">
+              <h4 class="font-display font-bold text-lg text-gray-800">Data Management & Reset</h4>
+              <p class="text-xs text-gray-500">Export your configured site data or reset to factory defaults anytime.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-gray-800">Export / Backup Configuration</h5>
+                <p class="text-gray-500">Download current gallery images, categories, and CMS texts as a JSON file.</p>
+                <button onclick="exportSiteData()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-2">
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download JSON Backup</span>
+                </button>
+              </div>
+              <div class="bg-red-50 border border-red-200 rounded-2xl p-5 space-y-3">
+                <h5 class="font-bold text-red-800">Reset to Factory Defaults</h5>
+                <p class="text-red-600">Restores all original sample interior photography, categories, and default wording.</p>
+                <button onclick="resetFactoryDefaults()" class="bg-brand-red hover:bg-brand-redDark text-white font-bold px-4 py-2 rounded-xl flex items-center gap-2">
+                  <i class="fa-solid fa-rotate-left"></i>
+                  <span>Reset All Data</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT STATE ENGINE ================= -->
+  <script>
+    const DEFAULT_DATA = {
+      branding: {
+        name: "RightAngle",
+        tagline: "PREMIUM HOME INTERIORS",
+        logoUrl: "",
+        contactPhone: "+91 98765 43210",
+        whatsappPhone: "919876543210",
+        contactEmail: "design@auraluxeinteriors.com",
+        contactAddress: "Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore, Tamil Nadu - 641018",
+        navCta: "Get Your Valuable Quote",
+        aboutSummary: "Crafting tailored home interiors with premium modular woodwork, ambient lighting, and bespoke architectural elements."
+      },
+      marquee: {
+        text: "✨ FESTIVE OFFER: Flat 15% Off On Full Home Interior Designs • 🏆 Over 350+ Luxury Homes Completed • 📞 Book Free Consultation: +91 98765 43210 • 🚀 45-Day Move-in Guarantee • 🌟 10-Year Warranty On Modular Hardware"
+      },
+      hero: {
+        badge: "Signature Architectural Interior Projects",
+        heading: "Crafting Luxury Homes With Timeless Elegance",
+        subheading: "From concept sketches to custom modular executions, explore our premier turnkey interior design portfolio crafted across premium residences and villas.",
+        btnPrimary: "Explore Portfolio Gallery",
+        btnSecondary: "Get WhatsApp Estimate"
+      },
+      stats: {
+        s1_val: "350+", s1_label: "Completed Sites",
+        s2_val: "45 Days", s2_label: "Move-in Guarantee",
+        s3_val: "100%", s3_label: "Custom Modular",
+        s4_val: "10 Yrs", s4_label: "Material Warranty"
+      },
+      about: {
+        badge: "About RightAngle",
+        heading: "Transforming Living Spaces into Architectural Masterpieces",
+        para: "We specialize in high-end residential interiors, luxury villa makeovers, and custom modular kitchens. With an obsessive eye for detail, German hardware integrations, and bespoke lighting designs, we turn dream spaces into breathtaking reality.",
+        p1: "Photorealistic 3D virtual walkthroughs before civil execution",
+        p2: "Dedicated Project Manager for daily site progress updates",
+        p3: "Direct factory manufacturing ensuring 30% savings vs traditional decorators"
+      },
+      galleryWording: {
+        badge: "Interior Portfolio",
+        heading: "Bespoke Design Gallery",
+        subheading: "Explore curated interior collections across living rooms, kitchens, bedrooms, and luxury villas.",
+        exploreBtn: "Explore All Categories"
+      },
+      enquiryWording: {
+        cardTitle: "Plan Your Dream Interior With Us",
+        cardSubtitle: "Fill out the quick design requirements form. It instantly creates a formatted project brief and connects you directly with our Principal Architect on WhatsApp!",
+        submitBtn: "Submit & Send to WhatsApp"
+      },
+      whatsappTemplate: {
+        header: "🏡 *New Interior Enquiry*",
+        labelName: "• *Client:*",
+        labelPhone: "• *Phone:*",
+        labelService: "• *Category:*",
+        labelProperty: "• *Property:*",
+        labelBudget: "• *Budget:*",
+        labelLocation: "• *Location:*",
+        labelNotes: "• *Requirements:*",
+        footer: "_Sent via RightAngle Interiors Website_"
+      },
+      footerWording: {
+        brand: "RightAngle",
+        about: "Crafting tailored home interiors with premium modular woodwork, ambient lighting, and bespoke architectural elements.",
+        copyright: "© 2026 RightAngle Interiors. All rights reserved. Designed with Red, White & Orange Theme."
+      },
+      seo: {
+        title: "RightAngle | Premium Home Interiors & Portfolio",
+        description: "RightAngle - Premier turnkey home interior designers in Coimbatore. Bespoke modular kitchens, luxury living rooms, and bedroom interior architectures with 45-day move-in guarantee.",
+        keywords: "interior designers coimbatore, home interiors, modular kitchen, luxury interior design, living room interiors, turnkey interior architecture",
+        canonical: "https://rightangleinteriors.com",
+        googleConsole: "google-site-verification-token-here"
+      },
+      cloudSync: {
+        enabled: false,
+        provider: "supabase",
+        supabaseUrl: "",
+        supabaseKey: "",
+        tableName: "rightangle_cms",
+        autoSync: true,
+        lastSync: "Never"
+      },
+      categories: [
+        {
+          id: "cat_living",
+          name: "Living Room",
+          cover: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          id: "cat_kitchen",
+          name: "Modular Kitchen",
+          cover: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          id: "cat_bedroom",
+          name: "Master Bedroom",
+          cover: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          id: "cat_villa",
+          name: "Luxury Villa",
+          cover: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          id: "cat_bath",
+          name: "Bath & Wardrobe",
+          cover: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          id: "cat_dressing",
+          name: "Dressing Tables",
+          cover: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80"
+        }
+      ],
+      galleryImages: [
+        {
+          id: "img_1",
+          title: "The Grand Velvet Residence",
+          category: "Living Room",
+          url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+          desc: "Italian leather sofas with customized fluted acoustic wall paneling and warm indirect LED cove lighting."
+        },
+        {
+          id: "img_2",
+          title: "Skyline Minimalist Atrium",
+          category: "Living Room",
+          url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+          desc: "Double-height living space with micro-cement textures and floor-to-ceiling glass panoramic view."
+        },
+        {
+          id: "img_3",
+          title: "Lakeview Contemporary Lounge",
+          category: "Living Room",
+          url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+          desc: "Custom teak wood media console with integrated bio-ethanol fireplace and travertine stone backdrops."
+        },
+        {
+          id: "img_4",
+          title: "The Gourmet Island Haven",
+          category: "Modular Kitchen",
+          url: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+          desc: "German Blum soft-close fittings with Calacatta gold quartz waterfall counter and built-in Bosch ovens."
+        },
+        {
+          id: "img_5",
+          title: "Charcoal Matte Acrylic Kitchen",
+          category: "Modular Kitchen",
+          url: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
+          desc: "Anti-fingerprint nano-finish shutters with motorized touch-to-open overhead cabinets and spice racks."
+        },
+        {
+          id: "img_6",
+          title: "Serenity Suite with Tufted Headboard",
+          category: "Master Bedroom",
+          url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+          desc: "Plush king-sized bed with ceiling-height velvet tufting, integrated reading lamps, and warm timber flooring."
+        },
+        {
+          id: "img_7",
+          title: "Zen Minimalist Sanctuary",
+          category: "Master Bedroom",
+          url: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+          desc: "Japandi aesthetic with floating bedside pedestals, concealed AC diffuser grilles, and linen sheer drapes."
+        },
+        {
+          id: "img_8",
+          title: "Casa Bella Estate Living & Dining",
+          category: "Luxury Villa",
+          url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+          desc: "12-seater Onyx dining table with Swarovski crystal drop chandelier and seamless outdoor patio flow."
+        },
+        {
+          id: "img_9",
+          title: "Hilltop Manor Master Lounge",
+          category: "Luxury Villa",
+          url: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80",
+          desc: "Luxury indoor lounge overlooking hillside infinity pool with smart automated circadian rhythm lighting."
+        },
+        {
+          id: "img_10",
+          title: "Walk-in Glass Dressing Suite",
+          category: "Bath & Wardrobe",
+          url: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1200&q=80",
+          desc: "Tinted tempered glass wardrobe wardrobes with sensored internal strip lighting and vanity island."
+        },
+        {
+          id: "img_11",
+          title: "Spa Bathroom with Free-Standing Tub",
+          category: "Bath & Wardrobe",
+          url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80",
+          desc: "Statuary white Italian marble with brushed rose gold Kohler fittings and rain sky-shower."
+        },
+        {
+          id: "img_12",
+          title: "Custom Illuminated Dressing Vanity",
+          category: "Dressing Tables",
+          url: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+          desc: "Frameless LED backlit mirror with fluted drawers, velvet stool, and organized cosmetic organizer drawers."
+        }
+      ],
+      feedback: [
+        {
+          id: "fb_1",
+          name: "Arun & Kavitha",
+          project: "4 BHK Luxury Villa",
+          rating: 5,
+          comment: "The team delivered our full villa interior within 42 days! The 3D render matched the exact final finishing. The modular kitchen and false ceiling work are world-class."
+        },
+        {
+          id: "fb_2",
+          name: "Dr. Rajeshwar Rao",
+          project: "Modular Kitchen & Living",
+          rating: 5,
+          comment: "Obsessive attention to detail. Every Blum drawer and quartz counter was laser-aligned. Transparent pricing and seamless WhatsApp communication throughout."
+        },
+        {
+          id: "fb_3",
+          name: "Meenakshi Sundaram",
+          project: "Master Bedroom & Wardrobes",
+          rating: 5,
+          comment: "Our master bedroom feels like a 7-star resort presidential suite! The concealed lighting and walk-in wardrobe exceeded our expectations."
+        }
+      ],
+      leads: []
+    };
+
+    const STORAGE_KEY = "RIGHTANGLE_INTERIORS_DATA_V4";
+    let appData = {};
+
+    function loadAppData() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          appData = JSON.parse(saved);
+        } catch (e) {
+          appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+        }
+      } else {
+        appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+        saveAppData();
+      }
+      if (!appData.whatsappTemplate) appData.whatsappTemplate = JSON.parse(JSON.stringify(DEFAULT_DATA.whatsappTemplate));
+      if (!appData.stats) appData.stats = JSON.parse(JSON.stringify(DEFAULT_DATA.stats));
+      if (!appData.about) appData.about = JSON.parse(JSON.stringify(DEFAULT_DATA.about));
+      if (!appData.footerWording) appData.footerWording = JSON.parse(JSON.stringify(DEFAULT_DATA.footerWording));
+      if (!appData.galleryWording) appData.galleryWording = JSON.parse(JSON.stringify(DEFAULT_DATA.galleryWording));
+      if (!appData.seo) appData.seo = JSON.parse(JSON.stringify(DEFAULT_DATA.seo));
+      if (!appData.cloudSync) appData.cloudSync = JSON.parse(JSON.stringify(DEFAULT_DATA.cloudSync));
+    }
+
+    function saveAppData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+    }
+
+    let activeSeparateCategory = "All";
+    let separateSearchQuery = "";
+    let currentHeroIndex = 0;
+    let heroAutoTimer = null;
+    let currentLightboxIndex = 0;
+    let filteredGalleryItems = [];
+
+    const ADMIN_SECRET_PASSWORD = "Right2026";
+    let isAdminAuthenticated = false;
+
+    // --- ROBUST #admin HASH DETECTION (BUG-FREE) ---
+    function checkAdminHash() {
+      if (window.location.hash.toLowerCase().includes('admin')) {
+        // Reset hash cleanly in browser address bar to allow re-triggering anytime
+        try {
+          history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        } catch (e) {}
+
+        if (!isAdminAuthenticated) {
+          openAdminPasswordModal();
+        } else {
+          openAdminPanel();
+        }
+      }
+    }
+
+    window.addEventListener('hashchange', checkAdminHash);
+    window.addEventListener('popstate', checkAdminHash);
+    window.addEventListener('DOMContentLoaded', () => {
+      loadAppData();
+      renderAll();
+      startHeroAutoplay();
+      checkAdminHash();
+    });
+    window.addEventListener('load', checkAdminHash);
+
+    // Periodic check guarantees #admin is NEVER missed
+    setInterval(checkAdminHash, 350);
+
+    function openAdminPasswordModal() {
+      document.getElementById('adminPasswordInput').value = '';
+      document.getElementById('adminPasswordError').classList.add('hidden');
+      document.getElementById('adminPasswordModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      setTimeout(() => {
+        document.getElementById('adminPasswordInput').focus();
+      }, 100);
+    }
+
+    function closeAdminPasswordModal() {
+      document.getElementById('adminPasswordModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function togglePasswordVisibility() {
+      const pwd = document.getElementById('adminPasswordInput');
+      const icon = document.getElementById('pwdToggleIcon');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        pwd.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+
+    function handleAdminPasswordSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('adminPasswordInput').value.trim();
+      const err = document.getElementById('adminPasswordError');
+
+      if (input === ADMIN_SECRET_PASSWORD) {
+        isAdminAuthenticated = true;
+        closeAdminPasswordModal();
+        openAdminPanel();
+        showInstantSave("✓ Admin Access Granted");
+      } else {
+        err.classList.remove('hidden');
+        document.getElementById('adminPasswordInput').select();
+      }
+    }
+
+    function adminLogout() {
+      isAdminAuthenticated = false;
+      closeAdminPanel();
+      showInstantSave("Admin Locked");
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        if (!isAdminAuthenticated) openAdminPasswordModal(); else openAdminPanel();
+      }
+    });
+
+    // --- SLEEK INSTANT SAVE ALERT (Fraction of a second auto-fadeout) ---
+    function showInstantSave(msg = "✓ Changes Saved") {
+      const banner = document.getElementById('minimalSaveAlert');
+      const text = document.getElementById('minimalSaveAlertText');
+      if (!banner || !text) return;
+
+      text.textContent = msg;
+      banner.classList.remove('hidden', 'opacity-0');
+      banner.classList.add('opacity-100');
+
+      setTimeout(() => {
+        banner.classList.remove('opacity-100');
+        banner.classList.add('opacity-0');
+        setTimeout(() => {
+          banner.classList.add('hidden');
+        }, 200);
+      }, 850);
+    }
+
+    function renderAll() {
+      renderMarquee();
+      renderHeroSlider();
+      renderWordingAndBranding();
+      applySeoMetaTags();
+      renderFront6Categories();
+      renderFeedback();
+      renderAdminCategoriesList();
+      renderAdminImagesTable();
+      populateAdminCategorySelects();
+      populateAdminWordingForm();
+      populateCloudSyncForm();
+      renderAdminLeads();
+      renderAdminReviews();
+      updateWhatsappPreview();
+      updateCloudStatusBadge();
+    }
+
+    function applySeoMetaTags() {
+      if (!appData.seo) return;
+      const s = appData.seo;
+      if (s.title) {
+        document.title = s.title;
+        const ogT = document.getElementById('ogTitle'); if (ogT) ogT.content = s.title;
+        const twT = document.getElementById('twTitle'); if (twT) twT.content = s.title;
+      }
+      if (s.description) {
+        const d = document.getElementById('seoMetaDesc'); if (d) d.content = s.description;
+        const ogD = document.getElementById('ogDescription'); if (ogD) ogD.content = s.description;
+        const twD = document.getElementById('twDesc'); if (twD) twD.content = s.description;
+      }
+      if (s.keywords) {
+        const k = document.getElementById('seoMetaKeywords'); if (k) k.content = s.keywords;
+      }
+      if (s.googleConsole) {
+        const g = document.getElementById('seoGoogleConsole'); if (g) g.content = s.googleConsole;
+      }
+      if (s.canonical) {
+        const c = document.getElementById('seoCanonicalUrl'); if (c) c.href = s.canonical;
+        const ogU = document.getElementById('ogUrl'); if (ogU) ogU.content = s.canonical;
+      }
+    }
+
+    function renderMarquee() {
+      const text = appData.marquee.text;
+      const html = `<span class="inline-flex items-center gap-2 font-semibold"><i class="fa-solid fa-sparkles text-amber-300"></i>${text}</span>`;
+      document.getElementById('marqueeContent').innerHTML = html + html;
+      document.getElementById('marqueeContentClone').innerHTML = html + html;
+    }
+
+    function renderHeroSlider() {
+      const container = document.getElementById('heroSliderContainer');
+      const dotsContainer = document.getElementById('heroSlideDots');
+      const heroSlides = appData.galleryImages.slice(0, 4);
+      if (heroSlides.length === 0) return;
+
+      if (currentHeroIndex >= heroSlides.length) currentHeroIndex = 0;
+
+      container.innerHTML = heroSlides.map((slide, index) => `
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentHeroIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'}">
+          <img src="${slide.url}" alt="${slide.title}" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/30"></div>
+        </div>
+      `).join('');
+
+      dotsContainer.innerHTML = heroSlides.map((_, i) => `
+        <button onclick="setHeroSlide(${i})" class="w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentHeroIndex ? 'w-8 bg-brand-orange' : 'bg-white/40 hover:bg-white'}"></button>
+      `).join('');
+
+      const current = heroSlides[currentHeroIndex];
+      if (current) {
+        document.getElementById('heroCurrentSlideCategory').textContent = `${current.category.toUpperCase()} SHOWCASE`;
+        document.getElementById('heroCurrentSlideTitle').textContent = current.title;
+        document.getElementById('heroCurrentSlideDesc').textContent = current.desc;
+      }
+    }
+
+    function nextHeroSlide() {
+      const len = Math.min(appData.galleryImages.length, 4);
+      if (len === 0) return;
+      currentHeroIndex = (currentHeroIndex + 1) % len;
+      renderHeroSlider();
+    }
+
+    function prevHeroSlide() {
+      const len = Math.min(appData.galleryImages.length, 4);
+      if (len === 0) return;
+      currentHeroIndex = (currentHeroIndex - 1 + len) % len;
+      renderHeroSlider();
+    }
+
+    function setHeroSlide(idx) {
+      currentHeroIndex = idx;
+      renderHeroSlider();
+    }
+
+    function startHeroAutoplay() {
+      if (heroAutoTimer) clearInterval(heroAutoTimer);
+      heroAutoTimer = setInterval(nextHeroSlide, 5500);
+    }
+
+    // --- BRANDING (CLEAN: EXACT MATCH, ZERO HARDCODED 'LUXE') ---
+    function renderWordingAndBranding() {
+      const b = appData.branding;
+      const iconWrapper = document.getElementById('headerLogoIconWrapper');
+      const customImg = document.getElementById('headerCustomLogoImg');
+      const textWrapper = document.getElementById('headerBrandTextWrapper');
+      const navBrand = document.getElementById('navBrandName');
+      const navTagline = document.getElementById('navBrandTagline');
+
+      if (b.logoUrl && b.logoUrl.trim() !== '') {
+        iconWrapper.classList.add('hidden');
+        customImg.classList.remove('hidden');
+        customImg.src = b.logoUrl.trim();
+        textWrapper.classList.add('hidden');
+      } else {
+        customImg.classList.add('hidden');
+        iconWrapper.classList.remove('hidden');
+        
+        if (b.name && b.name.trim() !== '') {
+          textWrapper.classList.remove('hidden');
+          navBrand.textContent = b.name.trim();
+          navBrand.classList.remove('hidden');
+        } else {
+          navBrand.textContent = '';
+          navBrand.classList.add('hidden');
+        }
+
+        if (b.tagline && b.tagline.trim() !== '') {
+          navTagline.textContent = b.tagline.trim();
+          navTagline.classList.remove('hidden');
+        } else {
+          navTagline.classList.add('hidden');
+        }
+
+        if ((!b.name || b.name.trim() === '') && (!b.tagline || b.tagline.trim() === '')) {
+          textWrapper.classList.add('hidden');
+        }
+      }
+
+      document.getElementById('navCtaText').textContent = b.navCta || "Get Your Valuable Quote";
+      
+      const footerBrandTitle = (appData.footerWording && appData.footerWording.brand) || b.name || "";
+      document.getElementById('footerBrandTitle').textContent = footerBrandTitle;
+      
+      document.getElementById('footerAboutText').textContent = (appData.footerWording && appData.footerWording.about) || b.aboutSummary;
+      document.getElementById('footerCopyright').textContent = (appData.footerWording && appData.footerWording.copyright) || `© 2026 ${b.name || 'RightAngle'} Interiors. All rights reserved.`;
+
+      document.getElementById('contactPhoneLink').textContent = b.contactPhone;
+      document.getElementById('contactPhoneLink').href = `tel:${b.contactPhone.replace(/\s+/g, '')}`;
+      document.getElementById('contactAddressText').textContent = b.contactAddress;
+      document.getElementById('contactEmailLink').textContent = b.contactEmail;
+      document.getElementById('contactEmailLink').href = `mailto:${b.contactEmail}`;
+      document.getElementById('enquiryHotlineDisplay').textContent = b.contactPhone;
+
+      document.getElementById('heroBadgeText').textContent = appData.hero.badge;
+      document.getElementById('heroMainHeading').innerHTML = appData.hero.heading.replace(/(Luxury Homes|Architectural Masterpieces)/gi, '<span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-200">$1</span>');
+      document.getElementById('heroSubHeading').textContent = appData.hero.subheading;
+      document.getElementById('heroBtnGalleryText').textContent = appData.hero.btnPrimary;
+      document.getElementById('heroBtnEnquiryText').textContent = appData.hero.btnSecondary;
+
+      if (appData.stats) {
+        document.getElementById('stat_1_val').textContent = appData.stats.s1_val;
+        document.getElementById('stat_1_label').textContent = appData.stats.s1_label;
+        document.getElementById('stat_2_val').textContent = appData.stats.s2_val;
+        document.getElementById('stat_2_label').textContent = appData.stats.s2_label;
+        document.getElementById('stat_3_val').textContent = appData.stats.s3_val;
+        document.getElementById('stat_3_label').textContent = appData.stats.s3_label;
+        document.getElementById('stat_4_val').textContent = appData.stats.s4_val;
+        document.getElementById('stat_4_label').textContent = appData.stats.s4_label;
+      }
+
+      if (appData.about) {
+        document.getElementById('aboutBadgeText').textContent = appData.about.badge;
+        document.getElementById('aboutHeading').innerHTML = appData.about.heading.replace(/(Architectural Masterpieces|Living Spaces)/gi, '<span class="gradient-text">$1</span>');
+        document.getElementById('aboutParagraph').textContent = appData.about.para;
+        document.getElementById('aboutPoint1').textContent = appData.about.p1;
+        document.getElementById('aboutPoint2').textContent = appData.about.p2;
+        document.getElementById('aboutPoint3').textContent = appData.about.p3;
+      }
+
+      document.getElementById('galleryBadgeText').textContent = appData.galleryWording.badge;
+      document.getElementById('galleryMainHeading').innerHTML = appData.galleryWording.heading.replace(/(Design Gallery|Portfolio)/gi, '<span class="gradient-text">$1</span>');
+      document.getElementById('gallerySubHeading').textContent = appData.galleryWording.subheading;
+      document.getElementById('galleryExploreBtnText').textContent = appData.galleryWording.exploreBtn || "Explore All Categories";
+
+      document.getElementById('enquiryCardTitle').textContent = appData.enquiryWording.cardTitle;
+      document.getElementById('enquiryCardSubtitle').textContent = appData.enquiryWording.cardSubtitle;
+      document.getElementById('enquirySubmitBtnText').textContent = appData.enquiryWording.submitBtn;
+
+      document.getElementById('adminPortalTitleText').textContent = `${b.name || 'RightAngle'} - Admin CMS Portal`;
+    }
+
+    // --- 4. RENDER 6 CATEGORY CARDS ON FRONT PAGE ---
+    function renderFront6Categories() {
+      const container = document.getElementById('frontCategoryCardsGrid');
+      if (!container) return;
+
+      const sixCats = appData.categories.slice(0, 6);
+
+      container.innerHTML = sixCats.map(cat => {
+        const coverImg = cat.cover || "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80";
+        const count = appData.galleryImages.filter(img => img.category.toLowerCase() === cat.name.toLowerCase()).length;
+        
+        return `
+          <div onclick="openSeparateGalleryPage('${cat.name}')" class="group cursor-pointer relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 bg-slate-900 h-80 flex flex-col justify-end p-6">
+            <img src="${coverImg}" alt="${cat.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
+            
+            <div class="relative z-10 text-white">
+              <span class="bg-brand-red text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full mb-2 inline-block">
+                ${count} Designs
+              </span>
+              <h4 class="font-display font-bold text-2xl text-white group-hover:text-brand-orange transition-colors">${cat.name}</h4>
+              
+              <div class="mt-4 flex items-center gap-2 text-xs font-bold text-orange-300 group-hover:text-white transition-colors">
+                <span>View Collection</span>
+                <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // --- 5. DEDICATED SEPARATE FULLSCREEN GALLERY OVERLAY ---
+    function openSeparateGalleryPage(category) {
+      activeSeparateCategory = category || "All";
+      separateSearchQuery = "";
+      const searchInput = document.getElementById('separateGallerySearchInput');
+      if (searchInput) searchInput.value = "";
+
+      renderSeparateCategoryTabs();
+      renderSeparateGalleryImages();
+
+      document.getElementById('separateGalleryPage').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeSeparateGalleryPage() {
+      document.getElementById('separateGalleryPage').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function renderSeparateCategoryTabs() {
+      const container = document.getElementById('separateCategoryTabsContainer');
+      const cats = ["All", ...appData.categories.map(c => c.name)];
+
+      container.innerHTML = cats.map(cat => {
+        const isActive = activeSeparateCategory.toLowerCase() === cat.toLowerCase();
+        return `
+          <button onclick="filterSeparateGallery('${cat}')" class="px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-200 ${isActive ? 'gradient-bg text-white shadow-md shadow-red-500/30' : 'bg-gray-100 hover:bg-orange-100 text-gray-700'}">
+            ${cat}
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('separateCategoryHeading').textContent = activeSeparateCategory === "All" ? "All Categories" : `${activeSeparateCategory} Collection`;
+    }
+
+    function filterSeparateGallery(category) {
+      activeSeparateCategory = category;
+      renderSeparateCategoryTabs();
+      renderSeparateGalleryImages();
+    }
+
+    function handleSeparateGallerySearch(val) {
+      separateSearchQuery = val.toLowerCase().trim();
+      renderSeparateGalleryImages();
+    }
+
+    function renderSeparateGalleryImages() {
+      const grid = document.getElementById('separateGalleryImagesGrid');
+      const emptyState = document.getElementById('separateGalleryEmptyState');
+
+      filteredGalleryItems = appData.galleryImages.filter(item => {
+        const matchCat = (activeSeparateCategory === "All" || item.category.toLowerCase() === activeSeparateCategory.toLowerCase());
+        const matchSearch = (!separateSearchQuery || 
+          item.title.toLowerCase().includes(separateSearchQuery) ||
+          item.category.toLowerCase().includes(separateSearchQuery) ||
+          (item.desc && item.desc.toLowerCase().includes(separateSearchQuery))
+        );
+        return matchCat && matchSearch;
+      });
+
+      if (filteredGalleryItems.length === 0) {
+        grid.innerHTML = "";
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filteredGalleryItems.map((item, index) => `
+        <div class="group relative bg-brand-cream rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col">
+          <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(${index})">
+            <img src="${item.url}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 z-10">
+              <span class="bg-brand-red text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md">
+                ${item.category}
+              </span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-white/90 text-brand-red flex items-center justify-center text-base shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between bg-white">
+            <div>
+              <h4 class="font-display font-bold text-base sm:text-lg text-gray-900 mb-1.5 group-hover:text-brand-red transition-colors">
+                ${item.title}
+              </h4>
+              <p class="text-xs text-gray-500 leading-relaxed line-clamp-2">
+                ${item.desc || "Bespoke customized residential execution with German hardware and architectural lighting."}
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+              <button onclick="openLightbox(${index})" class="text-brand-orangeDark font-bold hover:underline flex items-center gap-1">
+                <span>View Full Size</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+              <button onclick="quickEnquireForImage('${item.title}', '${item.category}')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold px-3 py-1.5 rounded-lg flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Enquire</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // --- 6. LIGHTBOX FUNCTIONALITY ---
+    function openLightbox(index) {
+      if (!filteredGalleryItems || filteredGalleryItems.length === 0) return;
+      currentLightboxIndex = index;
+      const item = filteredGalleryItems[currentLightboxIndex];
+      if (!item) return;
+
+      document.getElementById('lightboxImage').src = item.url;
+      document.getElementById('lightboxCategoryBadge').textContent = item.category;
+      document.getElementById('lightboxTitle').textContent = item.title;
+      document.getElementById('lightboxDesc').textContent = item.desc || "High-end bespoke interior architecture and finishing.";
+
+      document.getElementById('imageLightboxModal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('imageLightboxModal').classList.add('hidden');
+    }
+
+    function nextLightboxImage() {
+      if (filteredGalleryItems.length === 0) return;
+      currentLightboxIndex = (currentLightboxIndex + 1) % filteredGalleryItems.length;
+      openLightbox(currentLightboxIndex);
+    }
+
+    function prevLightboxImage() {
+      if (filteredGalleryItems.length === 0) return;
+      currentLightboxIndex = (currentLightboxIndex - 1 + filteredGalleryItems.length) % filteredGalleryItems.length;
+      openLightbox(currentLightboxIndex);
+    }
+
+    function enquireFromLightbox() {
+      const item = filteredGalleryItems[currentLightboxIndex];
+      if (item) {
+        quickEnquireForImage(item.title, item.category);
+        closeLightbox();
+      }
+    }
+
+    function quickEnquireForImage(title, category) {
+      const whatsapp = appData.branding.whatsappPhone;
+      const brandName = appData.branding.name || "RightAngle";
+      const message = encodeURIComponent(`Hello ${brandName}! 👋\nI am interested in this design from your portfolio:\n• Project: ${title}\n• Category: ${category}\nPlease share details & quote.`);
+      window.open(`https://wa.me/${whatsapp}?text=${message}`, '_blank');
+    }
+
+    // --- 7. REVIEWS / FEEDBACK ---
+    function renderFeedback() {
+      const grid = document.getElementById('feedbackGrid');
+      grid.innerHTML = appData.feedback.map(fb => `
+        <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-lg shadow-orange-950/5 border border-orange-100 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-amber-400 text-xs mb-3">
+              ${'<i class="fa-solid fa-star"></i>'.repeat(fb.rating)}
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed mb-6 font-light">"${fb.comment}"</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <h5 class="font-bold text-gray-900 text-xs sm:text-sm">${fb.name}</h5>
+              <p class="text-[11px] text-brand-orangeDark font-medium">${fb.project}</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs">
+              <i class="fa-solid fa-check-double"></i>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openFeedbackModal() {
+      document.getElementById('feedbackModal').classList.remove('hidden');
+    }
+
+    function closeFeedbackModal() {
+      document.getElementById('feedbackModal').classList.add('hidden');
+    }
+
+    function handleFeedbackSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fbName').value.trim();
+      const project = document.getElementById('fbProject').value.trim();
+      const rating = parseInt(document.getElementById('fbRating').value);
+      const comment = document.getElementById('fbComment').value.trim();
+
+      const newFb = { id: "fb_" + Date.now(), name, project, rating, comment };
+      appData.feedback.unshift(newFb);
+      saveAppData();
+      renderFeedback();
+      renderAdminReviews();
+      closeFeedbackModal();
+      showInstantSave("✓ Feedback Added");
+      e.target.reset();
+    }
+
+    // --- 8. SIMPLE & NEAT WHATSAPP ENQUIRY ROUTING ---
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('eqName').value.trim();
+      const phone = document.getElementById('eqPhone').value.trim();
+      const category = document.getElementById('eqCategory').value;
+      const property = document.getElementById('eqProperty').value;
+      const budget = document.getElementById('eqBudget').value;
+      const location = document.getElementById('eqLocation').value.trim();
+      const message = document.getElementById('eqMessage').value.trim() || "Standard Turnkey Consultation";
+
+      const tpl = appData.whatsappTemplate || DEFAULT_DATA.whatsappTemplate;
+
+      const whatsappText = `${tpl.header}
+${tpl.labelName} ${name}
+${tpl.labelPhone} ${phone}
+${tpl.labelService} ${category}
+${tpl.labelProperty} ${property}
+${tpl.labelBudget} ${budget}
+${tpl.labelLocation} ${location}
+${tpl.labelNotes} ${message}
+--------------------------------
+${tpl.footer}`;
+
+      const whatsappTarget = appData.branding.whatsappPhone || "919876543210";
+      const targetUrl = `https://wa.me/${whatsappTarget}?text=${encodeURIComponent(whatsappText)}`;
+
+      appData.leads = appData.leads || [];
+      appData.leads.unshift({
+        id: "lead_" + Date.now(),
+        date: new Date().toLocaleString(),
+        name, phone, category, property, budget, location, message
+      });
+      saveAppData();
+      renderAdminLeads();
+
+      showInstantSave("Connecting to WhatsApp...");
+      setTimeout(() => {
+        window.open(targetUrl, '_blank');
+      }, 350);
+
+      e.target.reset();
+    }
+
+    function quickWhatsappChat() {
+      const whatsappTarget = appData.branding.whatsappPhone || "919876543210";
+      const brand = appData.branding.name || "RightAngle";
+      const text = encodeURIComponent(`Hello ${brand}! 👋 I would like to consult with an interior designer.`);
+      window.open(`https://wa.me/${whatsappTarget}?text=${text}`, '_blank');
+    }
+
+    // --- 9. ADMIN PANEL FUNCTIONALITY ---
+    function openAdminPanel() {
+      populateAdminCategorySelects();
+      populateAdminWordingForm();
+      populateCloudSyncForm();
+      renderAdminCategoriesList();
+      renderAdminImagesTable();
+      renderAdminLeads();
+      renderAdminReviews();
+      updateWhatsappPreview();
+      updateCloudStatusBadge();
+      document.getElementById('adminPanelModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeAdminPanel() {
+      document.getElementById('adminPanelModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function switchAdminTab(tabId) {
+      document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-orange-100', 'text-brand-orangeDark');
+        btn.classList.add('text-gray-600');
+      });
+      document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.add('hidden'));
+
+      document.getElementById(`tabBtn_${tabId}`).classList.add('bg-orange-100', 'text-brand-orangeDark');
+      document.getElementById(`adminTab_${tabId}`).classList.remove('hidden');
+    }
+
+    function switchCmsSubtab(subtabId) {
+      document.querySelectorAll('.cms-subtab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.cms-subtab-panel').forEach(p => p.classList.add('hidden'));
+
+      document.getElementById(`cmsSubtab_${subtabId}`).classList.add('active');
+      document.getElementById(`subtabContent_${subtabId}`).classList.remove('hidden');
+    }
+
+    function populateAdminCategorySelects() {
+      const catSelect = document.getElementById('adminImgCategory');
+      const options = appData.categories.map(c => `<option value="${c.name}">${c.name}</option>`).join('');
+      if (catSelect) catSelect.innerHTML = options;
+    }
+
+    function previewAdminImage(url) {
+      const img = document.getElementById('adminPreviewImg');
+      if (url && url.startsWith('http')) {
+        img.src = url;
+      }
+    }
+
+    function setAdminSampleImg(url) {
+      document.getElementById('adminImgUrl').value = url;
+      previewAdminImage(url);
+    }
+
+    function handleAdminAddImage(e) {
+      e.preventDefault();
+      const category = document.getElementById('adminImgCategory').value;
+      const title = document.getElementById('adminImgTitle').value.trim();
+      const url = document.getElementById('adminImgUrl').value.trim();
+      const desc = document.getElementById('adminImgDesc').value.trim();
+
+      const newImg = { id: "img_" + Date.now(), title, category, url, desc };
+      appData.galleryImages.unshift(newImg);
+      saveAppData();
+      renderHeroSlider();
+      renderAdminImagesTable();
+      renderFront6Categories();
+      showInstantSave("✓ Photo Added");
+      e.target.reset();
+    }
+
+    function renderAdminImagesTable() {
+      const tbody = document.getElementById('adminImagesTableBody');
+      const totalBadge = document.getElementById('adminTotalImages');
+      if (!tbody) return;
+
+      totalBadge.textContent = appData.galleryImages.length;
+
+      tbody.innerHTML = appData.galleryImages.map(img => `
+        <tr class="hover:bg-gray-50">
+          <td class="p-3">
+            <img src="${img.url}" alt="${img.title}" class="w-12 h-9 object-cover rounded-lg border border-gray-200">
+          </td>
+          <td class="p-3 font-semibold text-gray-800">${img.title}</td>
+          <td class="p-3">
+            <span class="bg-red-100 text-brand-red font-bold px-2 py-0.5 rounded text-[10px]">${img.category}</span>
+          </td>
+          <td class="p-3 text-gray-400 max-w-xs truncate">${img.desc || '-'}</td>
+          <td class="p-3 text-right">
+            <button onclick="adminDeleteImage('${img.id}')" class="text-red-600 hover:text-red-800 font-bold p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function adminDeleteImage(id) {
+      if (confirm("Remove this photo from portfolio?")) {
+        appData.galleryImages = appData.galleryImages.filter(img => img.id !== id);
+        saveAppData();
+        renderHeroSlider();
+        renderAdminImagesTable();
+        renderFront6Categories();
+        showInstantSave("✓ Photo Removed");
+      }
+    }
+
+    function handleAdminAddCategory(e) {
+      e.preventDefault();
+      const name = document.getElementById('newCategoryName').value.trim();
+      const cover = document.getElementById('newCategoryCover').value.trim() || "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80";
+      if (!name) return;
+
+      if (appData.categories.some(c => c.name.toLowerCase() === name.toLowerCase())) {
+        alert("This category already exists!");
+        return;
+      }
+
+      appData.categories.push({ id: "cat_" + Date.now(), name, cover });
+      saveAppData();
+      populateAdminCategorySelects();
+      renderFront6Categories();
+      renderAdminCategoriesList();
+      showInstantSave("✓ Category Created");
+      e.target.reset();
+    }
+
+    function renderAdminCategoriesList() {
+      const container = document.getElementById('adminCategoriesList');
+      if (!container) return;
+
+      container.innerHTML = appData.categories.map(cat => {
+        const count = appData.galleryImages.filter(img => img.category.toLowerCase() === cat.name.toLowerCase()).length;
+        return `
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <img src="${cat.cover || 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=150&q=80'}" class="w-10 h-10 object-cover rounded-lg border border-gray-200">
+              <div>
+                <h5 class="font-bold text-gray-900 text-xs">${cat.name}</h5>
+                <span class="text-[10px] text-gray-400">${count} photos</span>
+              </div>
+            </div>
+            <button onclick="adminDeleteCategory('${cat.name}')" class="text-red-600 hover:text-red-800 text-xs p-1" title="Delete Category">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function adminDeleteCategory(catName) {
+      if (appData.categories.length <= 1) {
+        alert("You must keep at least one category!");
+        return;
+      }
+      if (confirm(`Delete category "${catName}" and all associated photo assignments?`)) {
+        appData.categories = appData.categories.filter(c => c.name !== catName);
+        saveAppData();
+        populateAdminCategorySelects();
+        renderFront6Categories();
+        renderAdminCategoriesList();
+        showInstantSave("✓ Category Deleted");
+      }
+    }
+
+    function populateAdminWordingForm() {
+      document.getElementById('cms_logo_url').value = appData.branding.logoUrl || "";
+      document.getElementById('cms_brand_name').value = appData.branding.name || "";
+      document.getElementById('cms_brand_tagline').value = appData.branding.tagline || "";
+      document.getElementById('cms_nav_cta').value = appData.branding.navCta || "";
+
+      document.getElementById('cms_marquee_text').value = appData.marquee.text || "";
+
+      document.getElementById('cms_hero_badge').value = appData.hero.badge || "";
+      document.getElementById('cms_hero_heading').value = appData.hero.heading || "";
+      document.getElementById('cms_hero_subheading').value = appData.hero.subheading || "";
+      document.getElementById('cms_hero_btn_primary').value = appData.hero.btnPrimary || "";
+      document.getElementById('cms_hero_btn_secondary').value = appData.hero.btnSecondary || "";
+
+      if (appData.stats) {
+        document.getElementById('cms_stat1_val').value = appData.stats.s1_val;
+        document.getElementById('cms_stat1_label').value = appData.stats.s1_label;
+        document.getElementById('cms_stat2_val').value = appData.stats.s2_val;
+        document.getElementById('cms_stat2_label').value = appData.stats.s2_label;
+        document.getElementById('cms_stat3_val').value = appData.stats.s3_val;
+        document.getElementById('cms_stat3_label').value = appData.stats.s3_label;
+        document.getElementById('cms_stat4_val').value = appData.stats.s4_val;
+        document.getElementById('cms_stat4_label').value = appData.stats.s4_label;
+      }
+
+      if (appData.about) {
+        document.getElementById('cms_about_badge').value = appData.about.badge;
+        document.getElementById('cms_about_heading').value = appData.about.heading;
+        document.getElementById('cms_about_para').value = appData.about.para;
+        document.getElementById('cms_about_p1').value = appData.about.p1;
+        document.getElementById('cms_about_p2').value = appData.about.p2;
+        document.getElementById('cms_about_p3').value = appData.about.p3;
+      }
+
+      document.getElementById('cms_gallery_badge').value = appData.galleryWording.badge;
+      document.getElementById('cms_gallery_heading').value = appData.galleryWording.heading;
+      document.getElementById('cms_gallery_subheading').value = appData.galleryWording.subheading;
+      document.getElementById('cms_gallery_btn').value = appData.galleryWording.exploreBtn || "Explore All Categories";
+
+      document.getElementById('cms_enquiry_title').value = appData.enquiryWording.cardTitle;
+      document.getElementById('cms_enquiry_subtitle').value = appData.enquiryWording.cardSubtitle;
+      document.getElementById('cms_enquiry_btn').value = appData.enquiryWording.submitBtn;
+
+      document.getElementById('cms_contact_phone').value = appData.branding.contactPhone;
+      document.getElementById('cms_contact_email').value = appData.branding.contactEmail;
+      document.getElementById('cms_contact_address').value = appData.branding.contactAddress;
+
+      if (appData.footerWording) {
+        document.getElementById('cms_footer_brand').value = appData.footerWording.brand || appData.branding.name || "";
+        document.getElementById('cms_footer_about').value = appData.footerWording.about;
+        document.getElementById('cms_footer_copyright').value = appData.footerWording.copyright;
+      }
+
+      // SEO & Google Console
+      if (appData.seo) {
+        document.getElementById('cms_seo_google_console').value = appData.seo.googleConsole || "";
+        document.getElementById('cms_seo_title').value = appData.seo.title || "";
+        document.getElementById('cms_seo_desc').value = appData.seo.description || "";
+        document.getElementById('cms_seo_keywords').value = appData.seo.keywords || "";
+        document.getElementById('cms_seo_canonical').value = appData.seo.canonical || "";
+      }
+
+      const t = appData.whatsappTemplate || DEFAULT_DATA.whatsappTemplate;
+      document.getElementById('cms_whatsapp_phone').value = appData.branding.whatsappPhone;
+      document.getElementById('cms_wa_header').value = t.header;
+      document.getElementById('cms_wa_label_name').value = t.labelName;
+      document.getElementById('cms_wa_label_phone').value = t.labelPhone;
+      document.getElementById('cms_wa_label_service').value = t.labelService;
+      document.getElementById('cms_wa_label_property').value = t.labelProperty;
+      document.getElementById('cms_wa_label_budget').value = t.labelBudget;
+      document.getElementById('cms_wa_label_location').value = t.labelLocation;
+      document.getElementById('cms_wa_label_notes').value = t.labelNotes;
+      document.getElementById('cms_wa_footer').value = t.footer;
+
+      ['cms_wa_header', 'cms_wa_label_name', 'cms_wa_label_phone', 'cms_wa_label_service', 'cms_wa_label_property', 'cms_wa_label_budget', 'cms_wa_label_location', 'cms_wa_label_notes', 'cms_wa_footer'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.oninput = updateWhatsappPreview;
+      });
+    }
+
+    function updateWhatsappPreview() {
+      const header = document.getElementById('cms_wa_header').value;
+      const lName = document.getElementById('cms_wa_label_name').value;
+      const lParam = document.getElementById('cms_wa_label_phone').value;
+      const lServ = document.getElementById('cms_wa_label_service').value;
+      const lProp = document.getElementById('cms_wa_label_property').value;
+      const lBud = document.getElementById('cms_wa_label_budget').value;
+      const lLoc = document.getElementById('cms_wa_label_location').value;
+      const lNotes = document.getElementById('cms_wa_label_notes').value;
+      const footer = document.getElementById('cms_wa_footer').value;
+
+      const previewText = `${header}
+${lName} Anand Kumar
+${lParam} 9876543210
+${lServ} Full Home Interior
+${lProp} 3 BHK Apartment
+${lBud} ₹3,00,000 - ₹5,00,000
+${lLoc} Race Course, Coimbatore
+${lNotes} Modern Italian finishes with warm cove LED
+--------------------------------
+${footer}`;
+
+      const pre = document.getElementById('adminWhatsappLivePreview');
+      if (pre) pre.textContent = previewText;
+    }
+
+    function populateCloudSyncForm() {
+      if (!appData.cloudSync) appData.cloudSync = JSON.parse(JSON.stringify(DEFAULT_DATA.cloudSync));
+      const c = appData.cloudSync;
+      document.getElementById('cms_cloud_enabled').checked = !!c.enabled;
+      document.getElementById('cms_supabase_url').value = c.supabaseUrl || "";
+      document.getElementById('cms_supabase_key').value = c.supabaseKey || "";
+      document.getElementById('cms_supabase_table').value = c.tableName || "rightangle_cms";
+      document.getElementById('cms_cloud_autosync').checked = !!c.autoSync;
+      document.getElementById('lastCloudSyncLabel').textContent = c.lastSync || "Never";
+    }
+
+    function updateCloudStatusBadge() {
+      const badge = document.getElementById('cloudStatusBadge');
+      if (!badge) return;
+      if (appData.cloudSync && appData.cloudSync.enabled && appData.cloudSync.supabaseUrl) {
+        badge.className = "bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-semibold text-[11px] flex items-center gap-1.5";
+        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span>🟢 Cloud Live Sync Active (Supabase)</span>`;
+      } else {
+        badge.className = "bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-semibold text-[11px]";
+        badge.textContent = "⚪ Standalone (Local Mode)";
+      }
+    }
+
+    // --- SUPABASE CLOUD LIVE SYNC LOGIC ---
+    async function testCloudSync() {
+      saveCloudFormValues();
+      const c = appData.cloudSync;
+      if (!c.supabaseUrl || !c.supabaseKey) {
+        alert("Please enter both Supabase Project URL and Public Anon Key first!");
+        return;
+      }
+      showInstantSave("Connecting to Supabase...");
+      try {
+        const table = c.tableName || "rightangle_cms";
+        const url = `${c.supabaseUrl.replace(/\/$/, '')}/rest/v1/${table}?on_conflict=id`;
+        const payload = [{
+          id: "main_config",
+          content: appData,
+          updated_at: new Date().toISOString()
+        }];
+
+        const res = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": c.supabaseKey,
+            "Authorization": `Bearer ${c.supabaseKey}`,
+            "Prefer": "resolution=merge-duplicates"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok || res.status === 201 || res.status === 204) {
+          c.enabled = true;
+          c.lastSync = new Date().toLocaleTimeString();
+          saveAppData();
+          updateCloudStatusBadge();
+          document.getElementById('lastCloudSyncLabel').textContent = c.lastSync;
+          showInstantSave("✓ Synced to Supabase Cloud");
+        } else {
+          const errText = await res.text();
+          alert(`Cloud Sync Error (${res.status}): ${errText}\nPlease ensure the table '${table}' exists in your Supabase project.`);
+        }
+      } catch (err) {
+        console.error("Cloud sync network error:", err);
+        alert("Network error connecting to Supabase: " + err.message);
+      }
+    }
+
+    async function fetchFromCloud() {
+      saveCloudFormValues();
+      const c = appData.cloudSync;
+      if (!c.supabaseUrl || !c.supabaseKey) {
+        alert("Please enter Supabase URL and Key first!");
+        return;
+      }
+      try {
+        const table = c.tableName || "rightangle_cms";
+        const url = `${c.supabaseUrl.replace(/\/$/, '')}/rest/v1/${table}?id=eq.main_config&select=*`;
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+            "apikey": c.supabaseKey,
+            "Authorization": `Bearer ${c.supabaseKey}`
+          }
+        });
+        if (res.ok) {
+          const rows = await res.json();
+          if (rows && rows.length > 0 && rows[0].content) {
+            appData = rows[0].content;
+            saveAppData();
+            renderAll();
+            showInstantSave("✓ Pulled from Supabase Cloud");
+          } else {
+            alert("No cloud config found in Supabase yet. Push your current settings first!");
+          }
+        } else {
+          alert("Error fetching from Supabase: " + res.status);
+        }
+      } catch (err) {
+        alert("Network error: " + err.message);
+      }
+    }
+
+    function saveCloudFormValues() {
+      if (!appData.cloudSync) appData.cloudSync = {};
+      appData.cloudSync.enabled = document.getElementById('cms_cloud_enabled').checked;
+      appData.cloudSync.supabaseUrl = document.getElementById('cms_supabase_url').value.trim();
+      appData.cloudSync.supabaseKey = document.getElementById('cms_supabase_key').value.trim();
+      appData.cloudSync.tableName = document.getElementById('cms_supabase_table').value.trim() || "rightangle_cms";
+      appData.cloudSync.autoSync = document.getElementById('cms_cloud_autosync').checked;
+    }
+
+    function saveAdminChanges() {
+      appData.branding.logoUrl = document.getElementById('cms_logo_url').value.trim();
+      appData.branding.name = document.getElementById('cms_brand_name').value.trim();
+      appData.branding.tagline = document.getElementById('cms_brand_tagline').value.trim();
+      appData.branding.navCta = document.getElementById('cms_nav_cta').value.trim();
+
+      appData.marquee.text = document.getElementById('cms_marquee_text').value.trim();
+
+      appData.hero.badge = document.getElementById('cms_hero_badge').value.trim();
+      appData.hero.heading = document.getElementById('cms_hero_heading').value.trim();
+      appData.hero.subheading = document.getElementById('cms_hero_subheading').value.trim();
+      appData.hero.btnPrimary = document.getElementById('cms_hero_btn_primary').value.trim();
+      appData.hero.btnSecondary = document.getElementById('cms_hero_btn_secondary').value.trim();
+
+      appData.stats = {
+        s1_val: document.getElementById('cms_stat1_val').value.trim(),
+        s1_label: document.getElementById('cms_stat1_label').value.trim(),
+        s2_val: document.getElementById('cms_stat2_val').value.trim(),
+        s2_label: document.getElementById('cms_stat2_label').value.trim(),
+        s3_val: document.getElementById('cms_stat3_val').value.trim(),
+        s3_label: document.getElementById('cms_stat3_label').value.trim(),
+        s4_val: document.getElementById('cms_stat4_val').value.trim(),
+        s4_label: document.getElementById('cms_stat4_label').value.trim()
+      };
+
+      appData.about = {
+        badge: document.getElementById('cms_about_badge').value.trim(),
+        heading: document.getElementById('cms_about_heading').value.trim(),
+        para: document.getElementById('cms_about_para').value.trim(),
+        p1: document.getElementById('cms_about_p1').value.trim(),
+        p2: document.getElementById('cms_about_p2').value.trim(),
+        p3: document.getElementById('cms_about_p3').value.trim()
+      };
+
+      appData.galleryWording.badge = document.getElementById('cms_gallery_badge').value.trim();
+      appData.galleryWording.heading = document.getElementById('cms_gallery_heading').value.trim();
+      appData.galleryWording.subheading = document.getElementById('cms_gallery_subheading').value.trim();
+      appData.galleryWording.exploreBtn = document.getElementById('cms_gallery_btn').value.trim() || "Explore All Categories";
+
+      appData.enquiryWording.cardTitle = document.getElementById('cms_enquiry_title').value.trim();
+      appData.enquiryWording.cardSubtitle = document.getElementById('cms_enquiry_subtitle').value.trim();
+      appData.enquiryWording.submitBtn = document.getElementById('cms_enquiry_btn').value.trim();
+
+      appData.branding.contactPhone = document.getElementById('cms_contact_phone').value.trim();
+      appData.branding.contactEmail = document.getElementById('cms_contact_email').value.trim();
+      appData.branding.contactAddress = document.getElementById('cms_contact_address').value.trim();
+
+      appData.footerWording = {
+        brand: document.getElementById('cms_footer_brand').value.trim(),
+        about: document.getElementById('cms_footer_about').value.trim(),
+        copyright: document.getElementById('cms_footer_copyright').value.trim()
+      };
+
+      appData.seo = {
+        googleConsole: document.getElementById('cms_seo_google_console').value.trim(),
+        title: document.getElementById('cms_seo_title').value.trim(),
+        description: document.getElementById('cms_seo_desc').value.trim(),
+        keywords: document.getElementById('cms_seo_keywords').value.trim(),
+        canonical: document.getElementById('cms_seo_canonical').value.trim()
+      };
+
+      appData.branding.whatsappPhone = document.getElementById('cms_whatsapp_phone').value.trim().replace(/[^0-9]/g, '');
+      appData.whatsappTemplate = {
+        header: document.getElementById('cms_wa_header').value.trim(),
+        labelName: document.getElementById('cms_wa_label_name').value.trim(),
+        labelPhone: document.getElementById('cms_wa_label_phone').value.trim(),
+        labelService: document.getElementById('cms_wa_label_service').value.trim(),
+        labelProperty: document.getElementById('cms_wa_label_property').value.trim(),
+        labelBudget: document.getElementById('cms_wa_label_budget').value.trim(),
+        labelLocation: document.getElementById('cms_wa_label_location').value.trim(),
+        labelNotes: document.getElementById('cms_wa_label_notes').value.trim(),
+        footer: document.getElementById('cms_wa_footer').value.trim()
+      };
+
+      saveCloudFormValues();
+      saveAppData();
+      renderAll();
+      showInstantSave("✓ Saved");
+
+      // Auto sync to cloud if enabled
+      if (appData.cloudSync && appData.cloudSync.enabled && appData.cloudSync.autoSync && appData.cloudSync.supabaseUrl) {
+        testCloudSync();
+      }
+    }
+
+    function renderAdminLeads() {
+      const container = document.getElementById('adminLeadsList');
+      const countBadge = document.getElementById('adminLeadsCount');
+      if (!container) return;
+
+      const leads = appData.leads || [];
+      countBadge.textContent = leads.length;
+
+      if (leads.length === 0) {
+        container.innerHTML = `<p class="text-xs text-gray-400 py-6 text-center">No leads recorded yet.</p>`;
+        return;
+      }
+
+      container.innerHTML = leads.map(l => `
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-xs">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200 mb-2">
+            <span class="font-bold text-gray-900">${l.name} (${l.phone})</span>
+            <span class="text-[10px] text-gray-400">${l.date}</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-gray-600 mb-2">
+            <div><strong>Category:</strong> ${l.category}</div>
+            <div><strong>Type:</strong> ${l.property}</div>
+            <div><strong>Budget:</strong> ${l.budget}</div>
+            <div><strong>Location:</strong> ${l.location}</div>
+          </div>
+          ${l.message ? `<p class="text-[11px] text-gray-500 italic bg-white p-2 rounded border border-gray-100">"${l.message}"</p>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function clearAllLeads() {
+      if (confirm("Clear lead history?")) {
+        appData.leads = [];
+        saveAppData();
+        renderAdminLeads();
+        showInstantSave("✓ Leads Cleared");
+      }
+    }
+
+    function renderAdminReviews() {
+      const container = document.getElementById('adminReviewsList');
+      if (!container) return;
+
+      container.innerHTML = appData.feedback.map(fb => `
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-xs flex items-center justify-between">
+          <div>
+            <div class="flex items-center space-x-2 mb-1">
+              <span class="font-bold text-gray-800">${fb.name}</span>
+              <span class="text-amber-500 text-[10px]">${'★'.repeat(fb.rating)}</span>
+              <span class="text-gray-400 text-[10px]">• ${fb.project}</span>
+            </div>
+            <p class="text-gray-600 text-[11px]">"${fb.comment}"</p>
+          </div>
+          <button onclick="adminDeleteFeedback('${fb.id}')" class="text-red-600 hover:text-red-800 font-bold p-2">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function adminDeleteFeedback(id) {
+      if (confirm("Delete this review?")) {
+        appData.feedback = appData.feedback.filter(fb => fb.id !== id);
+        saveAppData();
+        renderFeedback();
+        renderAdminReviews();
+        showInstantSave("✓ Review Removed");
+      }
+    }
+
+    function exportSiteData() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `rightangle_backup_${Date.now()}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function resetFactoryDefaults() {
+      if (confirm("Reset everything back to factory defaults?")) {
+        appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+        saveAppData();
+        renderAll();
+        showInstantSave("✓ Restored to Default");
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
