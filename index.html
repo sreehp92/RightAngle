@@ -2,9 +2,9 @@
 <html lang="ta" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   
-  <!-- SEO & Google Search Console Meta Tags (Dynamic via CMS) -->
+  <!-- SEO & Google Search Console Meta Tags -->
   <title id="seoPageTitle">RightAngle | Premium Home Interiors & Portfolio</title>
   <meta id="seoMetaDesc" name="description" content="RightAngle - Premier turnkey home interior designers in Coimbatore. Bespoke modular kitchens, luxury living rooms, and bedroom interior architectures with 45-day move-in guarantee.">
   <meta id="seoMetaKeywords" name="keywords" content="interior designers coimbatore, home interiors, modular kitchen, luxury interior design, living room interiors, turnkey interior architecture">
@@ -13,7 +13,7 @@
   <meta id="seoGoogleConsole" name="google-site-verification" content="google-site-verification-token-here">
   <link id="seoCanonicalUrl" rel="canonical" href="https://rightangleinteriors.com">
 
-  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <!-- Open Graph / WhatsApp Preview -->
   <meta id="ogTitle" property="og:title" content="RightAngle | Premium Home Interiors">
   <meta id="ogDescription" property="og:description" content="Transforming living spaces into architectural masterpieces. Explore our completed residential interior portfolio.">
   <meta id="ogImage" property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
@@ -63,6 +63,9 @@
       darkMode: 'class',
       theme: {
         extend: {
+          screens: {
+            'xs': '420px'
+          },
           colors: {
             brand: {
               red: '#DC2626',
@@ -103,9 +106,9 @@
   </script>
 
   <style>
-    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #FFF7ED; }
-    ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #DC2626; }
     
     .gradient-text {
@@ -142,40 +145,40 @@
 </head>
 <body class="bg-brand-cream text-brand-slate font-sans antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
 
-  <!-- Minimal Instant Top Centered Save Alert (Replaces intrusive sliding right toast) -->
-  <div id="minimalSaveAlert" class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] bg-slate-900 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-2xl border border-slate-700 pointer-events-none opacity-0 transition-opacity duration-200 flex items-center gap-2">
+  <!-- Minimal Instant Top Centered Save Alert -->
+  <div id="minimalSaveAlert" class="fixed top-4 sm:top-5 left-1/2 -translate-x-1/2 z-[100] bg-slate-900 text-white font-bold text-xs px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-2xl border border-slate-700 pointer-events-none opacity-0 transition-opacity duration-200 flex items-center gap-2 whitespace-nowrap">
     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
     <span id="minimalSaveAlertText">✓ Changes Saved</span>
   </div>
 
   <!-- ================= TOP SCROLLING MARQUEE ================= -->
-  <div id="topMarqueeSection" class="relative z-40 bg-gradient-to-r from-brand-redDark via-brand-red to-brand-orange text-white text-xs sm:text-sm font-medium py-2.5 overflow-hidden shadow-md">
+  <div id="topMarqueeSection" class="relative z-40 bg-gradient-to-r from-brand-redDark via-brand-red to-brand-orange text-white text-[11px] sm:text-sm font-medium py-2 overflow-hidden shadow-md">
     <div class="marquee-container flex overflow-hidden whitespace-nowrap">
-      <div id="marqueeContent" class="marquee-content flex items-center shrink-0 animate-marquee space-x-8"></div>
-      <div id="marqueeContentClone" class="marquee-content flex items-center shrink-0 animate-marquee space-x-8" aria-hidden="true"></div>
+      <div id="marqueeContent" class="marquee-content flex items-center shrink-0 animate-marquee space-x-6 sm:space-x-8"></div>
+      <div id="marqueeContentClone" class="marquee-content flex items-center shrink-0 animate-marquee space-x-6 sm:space-x-8" aria-hidden="true"></div>
     </div>
   </div>
 
-  <!-- ================= HEADER & NAVIGATION (CENTERED LINKS, NO WHATSAPP BUTTON, NO BROKEN ICONS) ================= -->
+  <!-- ================= HEADER & NAVIGATION (MOBILE OPTIMIZED: NO OVERFLOW, CENTERED LINKS) ================= -->
   <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between min-h-[4.75rem] py-2 gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[3.75rem] sm:min-h-[4.75rem] py-1.5 sm:py-2 gap-2 sm:gap-4">
         
-        <!-- Left: Logo & Brand Name (Zero Hardcoded 'LUXE', Clean Dynamic Text / Image) -->
-        <a href="#home" id="headerLogoContainer" class="flex items-center space-x-3 group shrink-0">
-          <div id="headerLogoIconWrapper" class="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center text-white shadow-lg shadow-orange-500/20 transform group-hover:scale-105 transition-transform duration-300 shrink-0">
-            <i class="fa-solid fa-couch text-lg"></i>
+        <!-- Left: Logo & Brand Name -->
+        <a href="#home" id="headerLogoContainer" class="flex items-center space-x-2 sm:space-x-3 group shrink-0">
+          <div id="headerLogoIconWrapper" class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl gradient-bg flex items-center justify-center text-white shadow-md shadow-orange-500/20 transform group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <i class="fa-solid fa-couch text-base sm:text-lg"></i>
           </div>
-          <img id="headerCustomLogoImg" src="" alt="Logo" class="hidden h-11 w-auto object-contain">
+          <img id="headerCustomLogoImg" src="" alt="Logo" class="hidden h-9 sm:h-11 w-auto object-contain">
           <div id="headerBrandTextWrapper">
             <div class="flex items-center">
-              <span id="navBrandName" class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-brand-dark">RightAngle</span>
+              <span id="navBrandName" class="font-display font-extrabold text-base sm:text-2xl tracking-tight text-brand-dark">RightAngle</span>
             </div>
-            <p id="navBrandTagline" class="text-[10px] tracking-widest uppercase font-semibold text-orange-600">PREMIUM HOME INTERIORS</p>
+            <p id="navBrandTagline" class="text-[8px] sm:text-[10px] tracking-widest uppercase font-semibold text-orange-600">PREMIUM HOME INTERIORS</p>
           </div>
         </a>
 
-        <!-- Center: Navigation Links (PERFECTLY CENTER-ALIGNED AS REQUESTED) -->
+        <!-- Center: Navigation Links (CENTER-ALIGNED) -->
         <nav class="hidden md:flex items-center justify-center space-x-8 text-sm font-semibold flex-1">
           <a href="#home" id="navLinkHome" class="text-brand-dark hover:text-brand-red transition-colors">Home</a>
           <a href="#about" id="navLinkAbout" class="text-gray-600 hover:text-brand-red transition-colors">About Us</a>
@@ -184,16 +187,16 @@
           <a href="#contact" id="navLinkContact" class="text-gray-600 hover:text-brand-red transition-colors">Contact</a>
         </nav>
 
-        <!-- Right: ONLY 'Get Your Valuable Quote' Button -->
-        <div class="flex items-center space-x-3 shrink-0 ml-auto md:ml-0">
-          <a href="#enquiry" id="navCtaBtn" class="inline-flex items-center space-x-2 gradient-bg hover:opacity-95 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md shadow-red-600/20 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap">
-            <i class="fa-regular fa-calendar-check text-xs"></i>
+        <!-- Right: 'Get Your Valuable Quote' Button (FITS CLEANLY IN FRAME ON MOBILE) -->
+        <div class="flex items-center space-x-2 shrink-0 ml-auto md:ml-0">
+          <a href="#enquiry" id="navCtaBtn" class="inline-flex items-center space-x-1.5 gradient-bg hover:opacity-95 text-white text-[11px] sm:text-sm font-bold px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full shadow-md shadow-red-600/20 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+            <i class="fa-regular fa-calendar-check text-[10px] sm:text-xs"></i>
             <span id="navCtaText">Get Your Valuable Quote</span>
           </a>
 
-          <!-- Clean Mobile Menu Toggle for small screens only -->
-          <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700 hover:text-brand-red p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <!-- Clean Mobile Menu Toggle for small screens -->
+          <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700 hover:text-brand-red p-1.5 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -211,42 +214,49 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section id="home" class="relative bg-brand-dark min-h-[580px] lg:min-h-[660px] flex items-center overflow-hidden">
+  <!-- ================= HERO SECTION (MOBILE OPTIMIZED: SIDE-BY-SIDE BUTTONS, HIDDEN ARROWS) ================= -->
+  <section id="home" class="relative bg-brand-dark min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] flex items-center overflow-hidden">
     <div id="heroSliderContainer" class="absolute inset-0 z-0"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-white">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 w-full text-white">
       <div class="max-w-3xl">
-        <div class="inline-flex items-center space-x-2 bg-black/40 backdrop-blur-md border border-orange-500/40 rounded-full px-4 py-1.5 mb-6 text-xs uppercase tracking-wider font-semibold text-orange-300">
-          <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+        <div class="inline-flex items-center space-x-2 bg-black/40 backdrop-blur-md border border-orange-500/40 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 mb-4 sm:mb-6 text-[10px] sm:text-xs uppercase tracking-wider font-semibold text-orange-300">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-orange animate-ping"></span>
           <span id="heroBadgeText">Signature Architectural Interior Projects</span>
         </div>
-        <h1 id="heroMainHeading" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] mb-6 drop-shadow-lg">
+        <h1 id="heroMainHeading" class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] mb-4 sm:mb-6 drop-shadow-lg">
           Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-200">Luxury Homes</span> With Timeless Elegance
         </h1>
-        <p id="heroSubHeading" class="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed font-light drop-shadow">
+        <p id="heroSubHeading" class="text-xs sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed font-light drop-shadow">
           From concept sketches to custom modular executions, explore our premier turnkey interior design portfolio crafted across premium residences and villas.
         </p>
-        <div class="glass-card !bg-white/10 !border-white/20 rounded-2xl p-4 sm:p-5 mb-8 max-w-lg shadow-xl">
-          <div class="flex items-center justify-between text-xs text-orange-300 font-semibold uppercase tracking-wider mb-1">
+        
+        <!-- Current Slide Info Callout (Compact on mobile) -->
+        <div class="glass-card !bg-white/10 !border-white/20 rounded-2xl p-3 sm:p-5 mb-6 sm:mb-8 max-w-lg shadow-xl">
+          <div class="flex items-center justify-between text-[10px] sm:text-xs text-orange-300 font-semibold uppercase tracking-wider mb-1">
             <span id="heroCurrentSlideCategory">LIVING ROOM SHOWCASE</span>
-            <span class="bg-red-600/90 text-white px-2.5 py-0.5 rounded text-[10px] font-bold">Featured Design</span>
+            <span class="bg-red-600/90 text-white px-2 py-0.5 rounded text-[9px] sm:text-[10px] font-bold">Featured Design</span>
           </div>
-          <h3 id="heroCurrentSlideTitle" class="text-lg sm:text-xl font-bold text-white font-display">The Grand Velvet Residence</h3>
-          <p id="heroCurrentSlideDesc" class="text-xs sm:text-sm text-gray-300 mt-1 line-clamp-1">Italian leather sofas with customized fluted acoustic wall paneling and warm indirect LED cove lighting.</p>
+          <h3 id="heroCurrentSlideTitle" class="text-base sm:text-xl font-bold text-white font-display">The Grand Velvet Residence</h3>
+          <p id="heroCurrentSlideDesc" class="text-[11px] sm:text-sm text-gray-300 mt-1 line-clamp-1">Italian leather sofas with customized fluted acoustic wall paneling and warm indirect LED cove lighting.</p>
         </div>
-        <div class="flex flex-wrap items-center gap-4">
-          <button onclick="openSeparateGalleryPage('All')" id="heroBtnGallery" class="gradient-bg text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-red-600/40 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-200 flex items-center gap-2">
-            <span id="heroBtnGalleryText">Explore Portfolio Gallery</span>
-            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+        <!-- HERO BUTTONS: SIDE-BY-SIDE ON MOBILE AS REQUESTED -->
+        <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none">
+          <button onclick="openSeparateGalleryPage('All')" id="heroBtnGallery" class="gradient-bg text-white font-bold px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-full shadow-md hover:scale-105 transition-all text-[11px] sm:text-sm flex items-center justify-center gap-1.5 text-center">
+            <span id="heroBtnGalleryText" class="truncate">Explore Gallery</span>
+            <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs shrink-0"></i>
           </button>
-          <a href="#enquiry" id="heroBtnEnquiry" class="bg-white/95 hover:bg-white text-brand-dark hover:text-brand-red font-bold px-7 py-3.5 rounded-full shadow-lg backdrop-blur hover:scale-105 transition-all duration-200 flex items-center gap-2">
-            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
-            <span id="heroBtnEnquiryText">Get WhatsApp Estimate</span>
+          <a href="#enquiry" id="heroBtnEnquiry" class="bg-white/95 hover:bg-white text-brand-dark hover:text-brand-red font-bold px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-full shadow-md hover:scale-105 transition-all text-[11px] sm:text-sm flex items-center justify-center gap-1.5 text-center">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-sm sm:text-lg shrink-0"></i>
+            <span id="heroBtnEnquiryText" class="truncate">WhatsApp Estimate</span>
           </a>
         </div>
+
       </div>
     </div>
-    <div class="absolute bottom-6 right-6 z-20 flex items-center space-x-3">
+
+    <!-- Slider Navigation Buttons: HIDDEN ON MOBILE AS REQUESTED (hidden md:flex) -->
+    <div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 z-20 hidden md:flex items-center space-x-3">
       <button onclick="prevHeroSlide()" class="w-11 h-11 rounded-full bg-black/50 hover:bg-brand-red border border-white/20 text-white flex items-center justify-center transition-all duration-200" title="Previous Slide">
         <i class="fa-solid fa-chevron-left text-sm"></i>
       </button>
@@ -258,200 +268,206 @@
   </section>
 
   <!-- ================= STATS COUNTER ================= -->
-  <section class="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-orange-950/5 border border-orange-100">
+  <section class="relative z-20 -mt-6 sm:-mt-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl shadow-orange-950/5 border border-orange-100">
       <div class="text-center border-r border-orange-100 last:border-r-0">
-        <div id="stat_1_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">350+</div>
-        <p id="stat_1_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Completed Sites</p>
+        <div id="stat_1_val" class="text-2xl sm:text-4xl font-extrabold font-display gradient-text">350+</div>
+        <p id="stat_1_label" class="text-[10px] sm:text-sm font-medium text-gray-500 mt-0.5 sm:mt-1">Completed Sites</p>
       </div>
       <div class="text-center sm:border-r border-orange-100">
-        <div id="stat_2_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">45 Days</div>
-        <p id="stat_2_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Move-in Guarantee</p>
+        <div id="stat_2_val" class="text-2xl sm:text-4xl font-extrabold font-display gradient-text">45 Days</div>
+        <p id="stat_2_label" class="text-[10px] sm:text-sm font-medium text-gray-500 mt-0.5 sm:mt-1">Move-in Guarantee</p>
       </div>
       <div class="text-center border-r border-orange-100 last:border-r-0">
-        <div id="stat_3_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">100%</div>
-        <p id="stat_3_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Custom Modular</p>
+        <div id="stat_3_val" class="text-2xl sm:text-4xl font-extrabold font-display gradient-text">100%</div>
+        <p id="stat_3_label" class="text-[10px] sm:text-sm font-medium text-gray-500 mt-0.5 sm:mt-1">Custom Modular</p>
       </div>
       <div class="text-center">
-        <div id="stat_4_val" class="text-3xl sm:text-4xl font-extrabold font-display gradient-text">10 Yrs</div>
-        <p id="stat_4_label" class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Material Warranty</p>
+        <div id="stat_4_val" class="text-2xl sm:text-4xl font-extrabold font-display gradient-text">10 Yrs</div>
+        <p id="stat_4_label" class="text-[10px] sm:text-sm font-medium text-gray-500 mt-0.5 sm:mt-1">Material Warranty</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT SECTION ================= -->
-  <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-6 relative">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Interior Craftsmanship" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+  <!-- ================= ABOUT SECTION (MOBILE OPTIMIZED: CENTERED COMPACT IMAGE & CENTERED CONTENT) ================= -->
+  <section id="about" class="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+      
+      <!-- Image: Centered and compact on mobile -->
+      <div class="lg:col-span-6 relative flex justify-center">
+        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white max-w-xs sm:max-w-none w-full">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Interior Craftsmanship" class="w-full h-44 sm:h-72 lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white">
-            <span class="bg-brand-red text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 inline-block">Design Philosophy</span>
-            <h4 class="text-xl font-bold font-display">Bespoke Aesthetics Meet Functional Precision</h4>
+          <div class="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 text-white text-center sm:text-left">
+            <span class="bg-brand-red text-white text-[9px] sm:text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full mb-1 inline-block">Design Philosophy</span>
+            <h4 class="text-sm sm:text-xl font-bold font-display">Bespoke Aesthetics Meet Functional Precision</h4>
           </div>
         </div>
-        <div class="absolute -bottom-6 -right-4 sm:right-6 bg-gradient-to-br from-brand-orange to-brand-red text-white p-5 rounded-2xl shadow-xl max-w-[200px] text-center hidden sm:block">
-          <i class="fa-solid fa-award text-3xl mb-1"></i>
-          <p class="text-xs font-bold uppercase tracking-wider">Top Rated Interior Studio</p>
+        <div class="absolute -bottom-4 -right-2 sm:-bottom-6 sm:right-6 bg-gradient-to-br from-brand-orange to-brand-red text-white p-3 sm:p-5 rounded-2xl shadow-xl max-w-[160px] sm:max-w-[200px] text-center hidden sm:block">
+          <i class="fa-solid fa-award text-2xl sm:text-3xl mb-1"></i>
+          <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Top Rated Interior Studio</p>
         </div>
       </div>
-      <div class="lg:col-span-6">
-        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-3">
-          <span class="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
+
+      <!-- Content: Centered on mobile as requested -->
+      <div class="lg:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-2 sm:mb-3">
+          <span class="w-2 h-2 rounded-full bg-brand-red"></span>
           <span id="aboutBadgeText">About RightAngle</span>
         </div>
-        <h2 id="aboutHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight leading-tight mb-6">
+        <h2 id="aboutHeading" class="font-display font-extrabold text-2xl sm:text-4xl text-brand-dark tracking-tight leading-tight mb-3 sm:mb-6">
           Transforming Living Spaces into <span class="gradient-text">Architectural Masterpieces</span>
         </h2>
-        <p id="aboutParagraph" class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+        <p id="aboutParagraph" class="text-gray-600 text-xs sm:text-base leading-relaxed mb-4 sm:mb-6 max-w-xl">
           We specialize in high-end residential interiors, luxury villa makeovers, and custom modular kitchens. With an obsessive eye for detail, German hardware integrations, and bespoke lighting designs, we turn dream spaces into breathtaking reality.
         </p>
-        <div class="space-y-3.5 mb-8">
+        
+        <div class="space-y-2.5 sm:space-y-3.5 mb-6 sm:mb-8 w-full max-w-md text-left">
           <div class="flex items-start space-x-3">
-            <div class="w-6 h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
-            <p id="aboutPoint1" class="text-sm font-semibold text-gray-700">Photorealistic 3D virtual walkthroughs before civil execution</p>
+            <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-[10px] sm:text-xs"></i></div>
+            <p id="aboutPoint1" class="text-xs sm:text-sm font-semibold text-gray-700">Photorealistic 3D virtual walkthroughs before civil execution</p>
           </div>
           <div class="flex items-start space-x-3">
-            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
-            <p id="aboutPoint2" class="text-sm font-semibold text-gray-700">Dedicated Project Manager for daily site progress updates</p>
+            <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-[10px] sm:text-xs"></i></div>
+            <p id="aboutPoint2" class="text-xs sm:text-sm font-semibold text-gray-700">Dedicated Project Manager for daily site progress updates</p>
           </div>
           <div class="flex items-start space-x-3">
-            <div class="w-6 h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
-            <p id="aboutPoint3" class="text-sm font-semibold text-gray-700">Direct factory manufacturing ensuring 30% savings vs traditional decorators</p>
+            <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-[10px] sm:text-xs"></i></div>
+            <p id="aboutPoint3" class="text-xs sm:text-sm font-semibold text-gray-700">Direct factory manufacturing ensuring 30% savings vs traditional decorators</p>
           </div>
         </div>
-        <button onclick="openSeparateGalleryPage('All')" class="inline-flex items-center space-x-2 text-brand-red hover:text-brand-orange font-bold text-sm group">
+
+        <button onclick="openSeparateGalleryPage('All')" class="inline-flex items-center space-x-2 text-brand-red hover:text-brand-orange font-bold text-xs sm:text-sm group">
           <span>Browse our completed residential categories</span>
           <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1.5 transition-transform"></i>
         </button>
       </div>
+
     </div>
   </section>
 
-  <!-- ================= FRONT PAGE GALLERY SECTION (SHOWING EXACTLY 6 CATEGORIES) ================= -->
-  <section id="gallery" class="py-20 bg-white border-y border-orange-100 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ================= GALLERY SECTION: 2*2 SIZE (4 CARDS ON MOBILE), COMPACT EXPLORE BUTTON ================= -->
+  <section id="gallery" class="py-12 sm:py-20 bg-white border-y border-orange-100 relative">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="inline-flex items-center space-x-2 bg-orange-50 border border-orange-200 text-brand-orangeDark font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <div class="inline-flex items-center space-x-2 bg-orange-50 border border-orange-200 text-brand-orangeDark font-bold text-[10px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-2 sm:mb-3">
           <i class="fa-solid fa-images"></i>
           <span id="galleryBadgeText">Interior Portfolio</span>
         </div>
-        <h2 id="galleryMainHeading" class="font-display font-extrabold text-3xl sm:text-5xl text-brand-dark tracking-tight mb-4">
+        <h2 id="galleryMainHeading" class="font-display font-extrabold text-2xl sm:text-5xl text-brand-dark tracking-tight mb-2 sm:mb-4">
           Bespoke <span class="gradient-text">Design Gallery</span>
         </h2>
-        <p id="gallerySubHeading" class="text-gray-500 text-sm sm:text-base">
+        <p id="gallerySubHeading" class="text-gray-500 text-xs sm:text-base">
           Explore curated interior collections across living rooms, kitchens, bedrooms, and luxury villas.
         </p>
       </div>
 
-      <!-- Exactly 6 Category Preview Cards on Front Page -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="frontCategoryCardsGrid"></div>
+      <!-- 2*2 on Mobile (4 cards), 3*2 on Desktop (6 cards) -->
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8" id="frontCategoryCardsGrid"></div>
 
-      <!-- Explore All Categories Button (Opens Separate Fullscreen Page View) -->
-      <div class="text-center pt-10">
-        <button onclick="openSeparateGalleryPage('All')" class="gradient-bg text-white font-bold px-9 py-4 rounded-full shadow-lg shadow-red-600/30 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 inline-flex items-center gap-3 text-sm sm:text-base">
-          <i class="fa-solid fa-table-cells-large text-lg"></i>
+      <!-- Compact Explore All Categories Button immediately below -->
+      <div class="text-center pt-6 sm:pt-10">
+        <button onclick="openSeparateGalleryPage('All')" class="gradient-bg text-white font-bold px-6 sm:px-9 py-2.5 sm:py-3.5 rounded-full shadow-md hover:scale-105 transition-all inline-flex items-center gap-2 text-xs sm:text-base">
+          <i class="fa-solid fa-table-cells-large text-xs sm:text-base"></i>
           <span id="galleryExploreBtnText">Explore All Categories</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px] sm:text-xs"></i>
         </button>
       </div>
 
     </div>
   </section>
 
-  <!-- ================= FEEDBACK SECTION ================= -->
-  <section id="feedback" class="py-20 bg-brand-cream relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
+  <!-- ================= FEEDBACK SECTION (2*2 SIDE-BY-SIDE ON MOBILE, CENTERED) ================= -->
+  <section id="feedback" class="py-12 sm:py-20 bg-brand-cream relative">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 sm:mb-12 gap-4 text-center sm:text-left">
         <div>
-          <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-2">
+          <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1.5 sm:mb-2">
             <i class="fa-solid fa-star"></i>
             <span id="feedbackBadgeText">Real Client Testimonials</span>
           </div>
-          <h2 id="feedbackHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight">
+          <h2 id="feedbackHeading" class="font-display font-extrabold text-2xl sm:text-4xl text-brand-dark tracking-tight">
             Loved By Over <span class="gradient-text">350+ Homeowners</span>
           </h2>
-          <p id="feedbackSubHeading" class="text-gray-500 text-sm mt-1">Read feedback from clients across various completed residential sites.</p>
+          <p id="feedbackSubHeading" class="text-gray-500 text-xs sm:text-sm mt-1">Read feedback from clients across various completed residential sites.</p>
         </div>
-        <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg flex items-center space-x-2">
+        <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md hover:shadow-lg flex items-center space-x-2">
           <i class="fa-solid fa-pen-to-square"></i>
           <span>Leave Your Feedback</span>
         </button>
       </div>
-      <div id="feedbackGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"></div>
+
+      <!-- Reviews 2*2 on Mobile/Tablet, Centered -->
+      <div id="feedbackGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8"></div>
     </div>
   </section>
 
-  <!-- ================= ENQUIRY SECTION (WHATSAPP INTEGRATION & BUDGET ₹10,000 - ₹10,00,000) ================= -->
-  <section id="enquiry" class="py-20 bg-gradient-to-b from-brand-cream via-orange-50/50 to-white relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl shadow-2xl border border-orange-200/80 overflow-hidden">
+  <!-- ================= ENQUIRY SECTION (MOBILE OPTIMIZED: INNER FRAME SIZING & PADDING) ================= -->
+  <section id="enquiry" class="py-12 sm:py-20 bg-gradient-to-b from-brand-cream via-orange-50/50 to-white relative">
+    <div class="max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-orange-200/80 overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-12">
           
-          <div class="lg:col-span-5 gradient-bg p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
+          <div class="lg:col-span-5 gradient-bg p-5 sm:p-8 lg:p-10 text-white flex flex-col justify-between relative overflow-hidden">
             <div class="relative z-10">
-              <span class="bg-white/20 backdrop-blur text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-4">Direct WhatsApp Response</span>
-              <h3 id="enquiryCardTitle" class="font-display font-extrabold text-2xl sm:text-3xl tracking-tight leading-snug mb-4">
+              <span class="bg-white/20 backdrop-blur text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 sm:py-1 rounded-full inline-block mb-3 sm:mb-4">Direct WhatsApp Response</span>
+              <h3 id="enquiryCardTitle" class="font-display font-extrabold text-xl sm:text-2xl lg:text-3xl tracking-tight leading-snug mb-3 sm:mb-4">
                 Plan Your Dream Interior With Us
               </h3>
-              <p id="enquiryCardSubtitle" class="text-xs sm:text-sm text-orange-100 leading-relaxed mb-6 font-light">
+              <p id="enquiryCardSubtitle" class="text-xs sm:text-sm text-orange-100 leading-relaxed mb-4 sm:mb-6 font-light">
                 Fill out the quick design requirements form. It instantly creates a formatted project brief and connects you directly with our Principal Architect on WhatsApp!
               </p>
-              <div class="space-y-4 text-xs">
+              <div class="space-y-3 sm:space-y-4 text-xs">
                 <div class="flex items-center space-x-3">
-                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-stopwatch"></i></div>
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-stopwatch text-xs sm:text-sm"></i></div>
                   <div>
-                    <p class="font-bold">Instant Estimate in 15 Mins</p>
-                    <p class="text-orange-200 text-[11px]">Free budget and material breakdown</p>
+                    <p class="font-bold text-[11px] sm:text-xs">Instant Estimate in 15 Mins</p>
+                    <p class="text-orange-200 text-[10px] sm:text-[11px]">Free budget and material breakdown</p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-3">
-                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-brands fa-whatsapp text-base"></i></div>
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-brands fa-whatsapp text-sm sm:text-base"></i></div>
                   <div>
-                    <p class="font-bold">Dedicated WhatsApp Architect</p>
-                    <p class="text-orange-200 text-[11px]">No spam, direct one-on-one consultation</p>
+                    <p class="font-bold text-[11px] sm:text-xs">Dedicated WhatsApp Architect</p>
+                    <p class="text-orange-200 text-[10px] sm:text-[11px]">No spam, direct one-on-one consultation</p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-3">
-                  <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-gift"></i></div>
+                  <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-gift text-xs sm:text-sm"></i></div>
                   <div>
-                    <p class="font-bold">Complimentary 3D Render</p>
-                    <p class="text-orange-200 text-[11px]">Worth ₹15,000 free with consultation</p>
+                    <p class="font-bold text-[11px] sm:text-xs">Complimentary 3D Render</p>
+                    <p class="text-orange-200 text-[10px] sm:text-[11px]">Worth ₹15,000 free with consultation</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="relative z-10 mt-8 pt-6 border-t border-white/20 flex items-center justify-between text-xs">
-              <span class="text-orange-100">WhatsApp Hotline:</span>
-              <span id="enquiryHotlineDisplay" class="font-mono font-bold bg-white/20 px-2.5 py-1 rounded-lg">+91 98765 43210</span>
-            </div>
-            <div class="absolute -right-12 -bottom-12 opacity-10 text-white pointer-events-none">
-              <i class="fa-solid fa-house-chimney-window text-9xl"></i>
+            <div class="relative z-10 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20 flex items-center justify-between text-xs">
+              <span class="text-orange-100 text-[11px] sm:text-xs">WhatsApp Hotline:</span>
+              <span id="enquiryHotlineDisplay" class="font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-[11px] sm:text-xs">+91 98765 43210</span>
             </div>
           </div>
 
-          <div class="lg:col-span-7 p-8 sm:p-10">
-            <h4 class="font-display font-bold text-xl text-gray-900 mb-2">Get Free Quote & 3D Walkthrough</h4>
-            <p class="text-xs text-gray-500 mb-6">Your submission will launch WhatsApp prefilled with your requirements.</p>
+          <div class="lg:col-span-7 p-5 sm:p-8 lg:p-10">
+            <h4 class="font-display font-bold text-lg sm:text-xl text-gray-900 mb-1">Get Free Quote & 3D Walkthrough</h4>
+            <p class="text-[11px] sm:text-xs text-gray-500 mb-4 sm:mb-6">Your submission will launch WhatsApp prefilled with your requirements.</p>
 
-            <form id="enquiryForm" onsubmit="handleEnquirySubmit(event)" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form id="enquiryForm" onsubmit="handleEnquirySubmit(event)" class="space-y-3 sm:space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name *</label>
-                  <input type="text" id="eqName" required placeholder="e.g. Anand Kumar" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none">
+                  <input type="text" id="eqName" required placeholder="e.g. Anand Kumar" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none">
                 </div>
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">WhatsApp Mobile Number *</label>
-                  <input type="tel" id="eqPhone" required placeholder="e.g. 9876543210" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  <input type="tel" id="eqPhone" required placeholder="e.g. 9876543210" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none">
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">Category / Space Needed *</label>
-                  <select id="eqCategory" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+                  <select id="eqCategory" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none bg-white">
                     <option value="Full Home Interior">Full Home Interior (Turnkey)</option>
                     <option value="Modular Kitchen">Modular Kitchen</option>
                     <option value="Living Room Interior">Living Room Interior</option>
@@ -462,7 +478,7 @@
                 </div>
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">Property Type *</label>
-                  <select id="eqProperty" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+                  <select id="eqProperty" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none bg-white">
                     <option value="2 BHK Apartment">2 BHK Apartment</option>
                     <option value="3 BHK Apartment">3 BHK Apartment</option>
                     <option value="4 BHK / Penthouse">4 BHK / Penthouse</option>
@@ -473,10 +489,10 @@
               </div>
 
               <!-- BUDGET STARTING FROM ₹10,000 TO ₹10,00,000+ -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">Estimated Budget *</label>
-                  <select id="eqBudget" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white font-medium">
+                  <select id="eqBudget" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none bg-white font-medium">
                     <option value="₹10,000 - ₹50,000">₹10,000 - ₹50,000 (Consultation & 3D Design)</option>
                     <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 (Room Styling & Decor)</option>
                     <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000 (Modular / Kitchen)</option>
@@ -487,22 +503,22 @@
                 </div>
                 <div>
                   <label class="block text-xs font-semibold text-gray-700 mb-1">City / Site Location *</label>
-                  <input type="text" id="eqLocation" required placeholder="e.g. Coimbatore / Chennai" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+                  <input type="text" id="eqLocation" required placeholder="e.g. Coimbatore / Chennai" class="w-full text-xs px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-gray-200 focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none">
                 </div>
               </div>
 
               <div>
                 <label class="block text-xs font-semibold text-gray-700 mb-1">Specific Design Requirements or Ideas</label>
-                <textarea id="eqMessage" rows="3" placeholder="Tell us about your preferences (e.g., Italian marble finish, false ceiling with warm LEDs, island kitchen counter, etc.)" class="w-full text-xs p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+                <textarea id="eqMessage" rows="2" placeholder="Tell us about your preferences (e.g., Italian marble finish, false ceiling with warm LEDs, island kitchen counter, etc.)" class="w-full text-xs p-3 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
               </div>
 
-              <button type="submit" id="enquirySubmitBtn" class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:-translate-y-0.5">
-                <i class="fa-brands fa-whatsapp text-xl"></i>
+              <button type="submit" id="enquirySubmitBtn" class="w-full py-3 sm:py-3.5 px-6 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/30 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:-translate-y-0.5">
+                <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
                 <span id="enquirySubmitBtnText">Submit & Send to WhatsApp</span>
               </button>
               
-              <p class="text-[11px] text-center text-gray-400">
-                🔒 We respect your privacy. No spam. You will be redirected immediately to chat with our design team.
+              <p class="text-[10px] text-center text-gray-400">
+                🔒 We respect your privacy. Direct WhatsApp forwarding.
               </p>
             </form>
           </div>
@@ -512,65 +528,67 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT US SECTION ================= -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-xs uppercase tracking-widest mb-2">
+  <!-- ================= CONTACT US SECTION (COMPACT 3 IN A ROW / 3*3 LAYOUT) ================= -->
+  <section id="contact" class="py-12 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+        <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1.5 sm:mb-2">
           <i class="fa-solid fa-headset"></i>
           <span id="contactBadgeText">Get In Touch</span>
         </div>
-        <h2 id="contactHeading" class="font-display font-extrabold text-3xl sm:text-4xl text-brand-dark tracking-tight">
+        <h2 id="contactHeading" class="font-display font-extrabold text-2xl sm:text-4xl text-brand-dark tracking-tight">
           Visit Our Design Experience Centre
         </h2>
-        <p id="contactSubHeading" class="text-gray-500 text-sm mt-1">
+        <p id="contactSubHeading" class="text-gray-500 text-xs sm:text-sm mt-1">
           Touch and feel our mockups, modular shutter finishes, and lighting automations in person.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-phone-volume"></i></div>
-          <h4 class="font-bold text-gray-800 text-base mb-1">Direct Call & WhatsApp</h4>
-          <p class="text-xs text-gray-500 mb-3">Speak directly with design consultants</p>
-          <a id="contactPhoneLink" href="tel:+919876543210" class="text-brand-red font-bold text-sm hover:underline block mb-1">+91 98765 43210</a>
-          <span class="text-[11px] text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full">Available 9:00 AM - 8:00 PM</span>
+      <!-- 3 In a Row Compact Contact Cards -->
+      <div class="grid grid-cols-3 gap-1.5 sm:gap-6 mb-8 sm:mb-12">
+        <div class="bg-brand-cream border border-orange-100 rounded-xl sm:rounded-2xl p-2.5 sm:p-6 text-center hover:shadow-lg transition-shadow flex flex-col items-center justify-center">
+          <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-sm sm:text-xl mb-1.5 sm:mb-3"><i class="fa-solid fa-phone-volume"></i></div>
+          <h4 class="font-bold text-gray-800 text-xs sm:text-base mb-0.5 sm:mb-1">Direct Call</h4>
+          <p class="text-[9px] sm:text-xs text-gray-500 mb-1 hidden sm:block">Speak directly with design consultants</p>
+          <a id="contactPhoneLink" href="tel:+919876543210" class="text-brand-red font-bold text-[10px] sm:text-sm hover:underline block mb-1 truncate max-w-full">+91 98765 43210</a>
+          <span class="text-[8px] sm:text-[11px] text-emerald-600 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded-full hidden sm:inline-block">9 AM - 8 PM</span>
         </div>
 
-        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl bg-red-100 text-brand-red mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-map-location-dot"></i></div>
-          <h4 class="font-bold text-gray-800 text-base mb-1">Experience Studio</h4>
-          <p class="text-xs text-gray-500 mb-3">Walk-ins welcome with appointment</p>
-          <p id="contactAddressText" class="text-xs font-semibold text-gray-700 leading-relaxed">
-            Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore, Tamil Nadu - 641018
+        <div class="bg-brand-cream border border-orange-100 rounded-xl sm:rounded-2xl p-2.5 sm:p-6 text-center hover:shadow-lg transition-shadow flex flex-col items-center justify-center">
+          <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-red-100 text-brand-red mx-auto flex items-center justify-center text-sm sm:text-xl mb-1.5 sm:mb-3"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h4 class="font-bold text-gray-800 text-xs sm:text-base mb-0.5 sm:mb-1">Experience Studio</h4>
+          <p class="text-[9px] sm:text-xs text-gray-500 mb-1 hidden sm:block">Walk-ins welcome with appointment</p>
+          <p id="contactAddressText" class="text-[9px] sm:text-xs font-semibold text-gray-700 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+            Race Course Road, Coimbatore
           </p>
         </div>
 
-        <div class="bg-brand-cream border border-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-envelope-open-text"></i></div>
-          <h4 class="font-bold text-gray-800 text-base mb-1">Official Email</h4>
-          <p class="text-xs text-gray-500 mb-3">Send project floor plans & blueprints</p>
-          <a id="contactEmailLink" href="mailto:design@auraluxeinteriors.com" class="text-brand-orangeDark font-bold text-sm hover:underline block mb-1">design@auraluxeinteriors.com</a>
-          <span class="text-[11px] text-gray-500">24/7 Blueprint Review</span>
+        <div class="bg-brand-cream border border-orange-100 rounded-xl sm:rounded-2xl p-2.5 sm:p-6 text-center hover:shadow-lg transition-shadow flex flex-col items-center justify-center">
+          <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-orange-100 text-brand-orangeDark mx-auto flex items-center justify-center text-sm sm:text-xl mb-1.5 sm:mb-3"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h4 class="font-bold text-gray-800 text-xs sm:text-base mb-0.5 sm:mb-1">Official Email</h4>
+          <p class="text-[9px] sm:text-xs text-gray-500 mb-1 hidden sm:block">Send project floor plans & blueprints</p>
+          <a id="contactEmailLink" href="mailto:design@auraluxeinteriors.com" class="text-brand-orangeDark font-bold text-[9px] sm:text-sm hover:underline block mb-1 truncate max-w-full">Email Us</a>
+          <span class="text-[8px] sm:text-[11px] text-gray-500 hidden sm:inline-block">24/7 Blueprint Review</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= FOOTER (STAFF PORTAL & WHATSAPP DIRECT CLEANED OUT) ================= -->
-  <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-slate-800">
+  <!-- ================= FOOTER (CENTERED BRAND, SIDE-BY-SIDE LINKS ON MOBILE, NO STAFF PORTAL / WHATSAPP DIRECT) ================= -->
+  <footer class="bg-brand-dark text-white pt-10 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800 text-xs text-gray-400">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-10 pb-8 sm:pb-12 border-b border-slate-800 text-xs text-gray-400">
         
-        <div class="md:col-span-1 space-y-4">
-          <div class="flex items-center space-x-2">
+        <!-- Brand & Socials (CENTERED ON MOBILE AS REQUESTED) -->
+        <div class="md:col-span-1 space-y-3 text-center md:text-left flex flex-col items-center md:items-start">
+          <div class="flex items-center space-x-2 justify-center md:justify-start">
             <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold"><i class="fa-solid fa-couch text-sm"></i></div>
             <span id="footerBrandTitle" class="font-display font-extrabold text-lg text-white">RightAngle</span>
           </div>
-          <p id="footerAboutText" class="leading-relaxed">
+          <p id="footerAboutText" class="leading-relaxed max-w-sm">
             Crafting tailored home interiors with premium modular woodwork, ambient lighting, and bespoke architectural elements.
           </p>
-          <div class="flex items-center space-x-3 text-base text-gray-400">
+          <div class="flex items-center space-x-3 text-base text-gray-400 justify-center md:justify-start pt-1">
             <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="hover:text-brand-orange"><i class="fa-brands fa-pinterest"></i></a>
@@ -578,51 +596,55 @@
           </div>
         </div>
 
-        <div>
-          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Interior Categories</h5>
-          <ul class="space-y-2.5">
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Living Room')" class="hover:text-white">Living Room Interiors</a></li>
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Modular Kitchen')" class="hover:text-white">Modular Kitchen Designs</a></li>
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Master Bedroom')" class="hover:text-white">Master Bedroom Suites</a></li>
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Luxury Villa')" class="hover:text-white">Luxury Villa Architecture</a></li>
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Bath & Wardrobe')" class="hover:text-white">Bath & Wardrobes</a></li>
-          </ul>
+        <!-- Interior Categories & Quick Links (SIDE-BY-SIDE ON MOBILE: grid-cols-2 AS REQUESTED) -->
+        <div class="grid grid-cols-2 gap-4 sm:gap-8 md:contents">
+          <div>
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-2 sm:mb-4">Categories</h5>
+            <ul class="space-y-1.5 sm:space-y-2">
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Living Room')" class="hover:text-white">Living Room</a></li>
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Modular Kitchen')" class="hover:text-white">Modular Kitchen</a></li>
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Master Bedroom')" class="hover:text-white">Master Bedroom</a></li>
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Luxury Villa')" class="hover:text-white">Luxury Villa</a></li>
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('Bath & Wardrobe')" class="hover:text-white">Bath & Wardrobe</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-2 sm:mb-4">Quick Links</h5>
+            <ul class="space-y-1.5 sm:space-y-2">
+              <li><a href="#home" class="hover:text-white">Home Showcase</a></li>
+              <li><a href="#about" class="hover:text-white">Design Philosophy</a></li>
+              <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('All')" class="hover:text-white">All Categories</a></li>
+              <li><a href="#feedback" class="hover:text-white">Reviews</a></li>
+              <li><a href="#enquiry" class="hover:text-white">Get Quote</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Quick Links</h5>
-          <ul class="space-y-2.5">
-            <li><a href="#home" class="hover:text-white">Home Showcase</a></li>
-            <li><a href="#about" class="hover:text-white">Design Philosophy</a></li>
-            <li><a href="javascript:void(0)" onclick="openSeparateGalleryPage('All')" class="hover:text-white">All Categories</a></li>
-            <li><a href="#feedback" class="hover:text-white">Customer Reviews</a></li>
-            <li><a href="#enquiry" class="hover:text-white">Get Instant Quote</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-4">Experience Centre</h5>
-          <p class="mb-3 text-gray-400 leading-relaxed">Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore.</p>
-          <button onclick="quickWhatsappChat()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-md">
-            <i class="fa-brands fa-whatsapp"></i>
+        <!-- Experience Centre & WhatsApp -->
+        <div class="text-center md:text-left flex flex-col items-center md:items-start">
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-1.5 sm:mb-4">Experience Centre</h5>
+          <p class="mb-3 text-gray-400 leading-relaxed max-w-xs">Plot 42, Luxury Design Corridor, Race Course Road, Coimbatore.</p>
+          <button onclick="quickWhatsappChat()" class="w-full max-w-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 sm:py-2.5 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-md">
+            <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
             <span>Chat on WhatsApp</span>
           </button>
         </div>
 
       </div>
 
-      <!-- Footer Bottom: Clean Centered Copyright Line -->
-      <div class="pt-8 text-center text-xs text-gray-500">
+      <!-- Clean Centered Copyright Line -->
+      <div class="pt-6 sm:pt-8 text-center text-[11px] sm:text-xs text-gray-500">
         <p id="footerCopyright">© 2026 RightAngle Interiors. All rights reserved. Designed with Red, White & Orange Theme.</p>
       </div>
     </div>
   </footer>
 
   <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
-  <div class="fixed bottom-6 right-6 z-30">
-    <button onclick="quickWhatsappChat()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl flex items-center justify-center text-2xl transform hover:scale-110 transition-all duration-300 group" title="Chat on WhatsApp">
+  <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-30">
+    <button onclick="quickWhatsappChat()" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl flex items-center justify-center text-xl sm:text-2xl transform hover:scale-110 transition-all duration-300 group" title="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
-      <span class="absolute right-16 bg-slate-900 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+      <span class="absolute right-14 sm:right-16 bg-slate-900 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
         Chat with Designer
       </span>
     </button>
@@ -630,29 +652,29 @@
 
   <!-- ================= DEDICATED SEPARATE FULLSCREEN GALLERY PAGE ================= -->
   <div id="separateGalleryPage" class="fixed inset-0 z-50 bg-white hidden overflow-y-auto">
-    <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-orange-100 px-4 sm:px-8 py-4 shadow-sm">
+    <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-orange-100 px-3 sm:px-8 py-3 sm:py-4 shadow-sm">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-          <button onclick="closeSeparateGalleryPage()" class="gradient-bg text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 hover:opacity-95 shadow">
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <button onclick="closeSeparateGalleryPage()" class="gradient-bg text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 hover:opacity-95 shadow">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back to Home</span>
           </button>
           <div>
-            <h3 class="font-display font-extrabold text-lg sm:text-xl text-brand-dark">Portfolio Gallery</h3>
-            <p class="text-[11px] text-gray-500 hidden sm:block">Select a category to view high-resolution interior designs</p>
+            <h3 class="font-display font-extrabold text-base sm:text-xl text-brand-dark">Portfolio Gallery</h3>
+            <p class="text-[10px] sm:text-[11px] text-gray-500 hidden sm:block">Select a category to view high-resolution interior designs</p>
           </div>
         </div>
-        <button onclick="closeSeparateGalleryPage()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-brand-red flex items-center justify-center text-lg">
+        <button onclick="closeSeparateGalleryPage()" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-brand-red flex items-center justify-center text-base sm:text-lg">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
-      <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-3" id="separateCategoryTabsContainer"></div>
+    <div class="max-w-7xl mx-auto px-3 sm:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8">
+      <div class="flex items-center justify-center flex-wrap gap-1.5 sm:gap-3" id="separateCategoryTabsContainer"></div>
 
       <div class="flex flex-col sm:flex-row items-center justify-between pb-3 border-b border-gray-100 gap-3">
-        <h4 class="font-display font-bold text-xl text-gray-900 flex items-center gap-2">
+        <h4 class="font-display font-bold text-lg sm:text-xl text-gray-900 flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
           <span id="separateCategoryHeading">All Categories</span>
         </h4>
@@ -662,7 +684,7 @@
         </div>
       </div>
 
-      <div id="separateGalleryImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+      <div id="separateGalleryImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"></div>
 
       <div id="separateGalleryEmptyState" class="hidden text-center py-16">
         <div class="w-16 h-16 rounded-full bg-orange-100 text-brand-orange mx-auto flex items-center justify-center text-2xl mb-4">
@@ -676,23 +698,23 @@
   </div>
 
   <!-- ================= LIGHTBOX MODAL ================= -->
-  <div id="imageLightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
-    <div class="relative max-w-5xl w-full bg-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col">
-      <div class="flex items-center justify-between px-6 py-4 bg-slate-900/80 border-b border-slate-800 text-white">
-        <div class="flex items-center space-x-3">
-          <span id="lightboxCategoryBadge" class="bg-brand-red text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">Category</span>
-          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white truncate max-w-md">Project Title</h4>
+  <div id="imageLightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-3 sm:p-4">
+    <div class="relative max-w-5xl w-full bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col">
+      <div class="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-slate-900/80 border-b border-slate-800 text-white">
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <span id="lightboxCategoryBadge" class="bg-brand-red text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-2 sm:px-2.5 py-0.5 rounded-full">Category</span>
+          <h4 id="lightboxTitle" class="text-xs sm:text-base font-bold text-white truncate max-w-xs sm:max-w-md">Project Title</h4>
         </div>
-        <button onclick="closeLightbox()" class="text-gray-400 hover:text-white text-xl p-1.5 rounded-lg hover:bg-slate-800"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-white text-lg sm:text-xl p-1 rounded-lg hover:bg-slate-800"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="relative bg-black flex items-center justify-center min-h-[350px] sm:min-h-[500px] max-h-[75vh] overflow-hidden">
-        <img id="lightboxImage" src="" alt="Enlarged Interior" class="max-h-[70vh] max-w-full object-contain mx-auto transition-transform duration-300">
-        <button onclick="prevLightboxImage()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-left text-lg"></i></button>
-        <button onclick="nextLightboxImage()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-right text-lg"></i></button>
+      <div class="relative bg-black flex items-center justify-center min-h-[280px] sm:min-h-[500px] max-h-[75vh] overflow-hidden">
+        <img id="lightboxImage" src="" alt="Enlarged Interior" class="max-h-[68vh] sm:max-h-[70vh] max-w-full object-contain mx-auto transition-transform duration-300">
+        <button onclick="prevLightboxImage()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-left text-sm sm:text-lg"></i></button>
+        <button onclick="nextLightboxImage()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-900/70 hover:bg-brand-red text-white flex items-center justify-center transition-all"><i class="fa-solid fa-chevron-right text-sm sm:text-lg"></i></button>
       </div>
-      <div class="px-6 py-4 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <p id="lightboxDesc" class="text-gray-300">Detailed interior architectural notes and custom material specs.</p>
-        <button onclick="enquireFromLightbox()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-2 shrink-0">
+      <div class="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 text-xs">
+        <p id="lightboxDesc" class="text-gray-300 text-[11px] sm:text-xs">Detailed interior architectural notes and custom material specs.</p>
+        <button onclick="enquireFromLightbox()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl flex items-center gap-1.5 shrink-0 text-xs">
           <i class="fa-brands fa-whatsapp text-sm"></i>
           <span>Enquire for this Design</span>
         </button>
@@ -733,7 +755,7 @@
     </div>
   </div>
 
-  <!-- ================= ADMIN PASSWORD VERIFICATION MODAL (#admin access with Right2026) ================= -->
+  <!-- ================= ADMIN PASSWORD VERIFICATION MODAL (#admin with Right2026) ================= -->
   <div id="adminPasswordModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
     <div class="relative max-w-sm w-full bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-700">
       <div class="text-center mb-6">
@@ -966,7 +988,7 @@
             </div>
           </div>
 
-          <!-- TAB 3: ALL WORDING & TEXT CMS WITH 10 SEPARATE SUB-TABS (INCLUDING SEO & GOOGLE SEARCH CONSOLE) -->
+          <!-- TAB 3: ALL WORDING & TEXT CMS WITH 10 SEPARATE SUB-TABS -->
           <div id="adminTab_text_cms_tab" class="admin-tab-content hidden space-y-6">
             <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
               <div>
@@ -1143,7 +1165,7 @@
               </div>
             </div>
 
-            <!-- SUB-TAB 10: SEO & GOOGLE SEARCH CONSOLE -->
+            <!-- SUB-TAB 10: SEO & GOOGLE CONSOLE -->
             <div id="subtabContent_seo" class="cms-subtab-panel hidden space-y-4 text-xs">
               <div class="bg-amber-50/50 border border-amber-200 rounded-2xl p-5 space-y-4">
                 <h5 class="font-bold text-amber-900 text-sm flex items-center gap-2">
@@ -1254,7 +1276,7 @@
             </div>
           </div>
 
-          <!-- TAB 7: CLOUD LIVE SYNC (SUPABASE & REST API) -->
+          <!-- TAB 7: CLOUD LIVE SYNC (SUPABASE) -->
           <div id="adminTab_cloud_sync_tab" class="admin-tab-content hidden space-y-6 text-xs">
             <div class="pb-3 border-b border-gray-100 flex items-center justify-between">
               <div>
@@ -1383,8 +1405,8 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
         badge: "Signature Architectural Interior Projects",
         heading: "Crafting Luxury Homes With Timeless Elegance",
         subheading: "From concept sketches to custom modular executions, explore our premier turnkey interior design portfolio crafted across premium residences and villas.",
-        btnPrimary: "Explore Portfolio Gallery",
-        btnSecondary: "Get WhatsApp Estimate"
+        btnPrimary: "Explore Gallery",
+        btnSecondary: "WhatsApp Estimate"
       },
       stats: {
         s1_val: "350+", s1_label: "Completed Sites",
@@ -1587,7 +1609,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       leads: []
     };
 
-    const STORAGE_KEY = "RIGHTANGLE_INTERIORS_DATA_V4";
+    const STORAGE_KEY = "RIGHTANGLE_INTERIORS_DATA_V5";
     let appData = {};
 
     function loadAppData() {
@@ -1625,10 +1647,12 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
     const ADMIN_SECRET_PASSWORD = "Right2026";
     let isAdminAuthenticated = false;
 
-    // --- ROBUST #admin HASH DETECTION (BUG-FREE) ---
+    // Touch Swipe Variables for Hero on Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
     function checkAdminHash() {
       if (window.location.hash.toLowerCase().includes('admin')) {
-        // Reset hash cleanly in browser address bar to allow re-triggering anytime
         try {
           history.replaceState(null, document.title, window.location.pathname + window.location.search);
         } catch (e) {}
@@ -1647,12 +1671,37 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       loadAppData();
       renderAll();
       startHeroAutoplay();
+      initHeroTouchSwipe();
       checkAdminHash();
     });
     window.addEventListener('load', checkAdminHash);
-
-    // Periodic check guarantees #admin is NEVER missed
     setInterval(checkAdminHash, 350);
+
+    // TOUCH SWIPE FOR HERO SLIDER ON MOBILE
+    function initHeroTouchSwipe() {
+      const slider = document.getElementById('home');
+      if (!slider) return;
+
+      slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleHeroSwipe();
+      }, { passive: true });
+    }
+
+    function handleHeroSwipe() {
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 45) {
+        if (diff < 0) {
+          nextHeroSlide(); // swipe left
+        } else {
+          prevHeroSlide(); // swipe right
+        }
+      }
+    }
 
     function openAdminPasswordModal() {
       document.getElementById('adminPasswordInput').value = '';
@@ -1712,7 +1761,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       }
     });
 
-    // --- SLEEK INSTANT SAVE ALERT (Fraction of a second auto-fadeout) ---
+    // Sleek minimal instant save alert
     function showInstantSave(msg = "✓ Changes Saved") {
       const banner = document.getElementById('minimalSaveAlert');
       const text = document.getElementById('minimalSaveAlertText');
@@ -1798,7 +1847,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       `).join('');
 
       dotsContainer.innerHTML = heroSlides.map((_, i) => `
-        <button onclick="setHeroSlide(${i})" class="w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentHeroIndex ? 'w-8 bg-brand-orange' : 'bg-white/40 hover:bg-white'}"></button>
+        <button onclick="setHeroSlide(${i})" class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full transition-all duration-300 ${i === currentHeroIndex ? 'w-6 sm:w-8 bg-brand-orange' : 'bg-white/40 hover:bg-white'}"></button>
       `).join('');
 
       const current = heroSlides[currentHeroIndex];
@@ -1833,7 +1882,6 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       heroAutoTimer = setInterval(nextHeroSlide, 5500);
     }
 
-    // --- BRANDING (CLEAN: EXACT MATCH, ZERO HARDCODED 'LUXE') ---
     function renderWordingAndBranding() {
       const b = appData.branding;
       const iconWrapper = document.getElementById('headerLogoIconWrapper');
@@ -1925,31 +1973,33 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       document.getElementById('adminPortalTitleText').textContent = `${b.name || 'RightAngle'} - Admin CMS Portal`;
     }
 
-    // --- 4. RENDER 6 CATEGORY CARDS ON FRONT PAGE ---
+    // --- 4. RENDER 2*2 CATEGORY CARDS ON MOBILE (4 CARDS), 6 ON DESKTOP ---
     function renderFront6Categories() {
       const container = document.getElementById('frontCategoryCardsGrid');
       if (!container) return;
 
       const sixCats = appData.categories.slice(0, 6);
 
-      container.innerHTML = sixCats.map(cat => {
+      container.innerHTML = sixCats.map((cat, idx) => {
         const coverImg = cat.cover || "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80";
         const count = appData.galleryImages.filter(img => img.category.toLowerCase() === cat.name.toLowerCase()).length;
+        // On mobile: show first 4 cards (2*2 grid); on desktop (lg:), show all 6 cards
+        const visibilityClass = idx >= 4 ? "hidden lg:flex" : "flex";
         
         return `
-          <div onclick="openSeparateGalleryPage('${cat.name}')" class="group cursor-pointer relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 bg-slate-900 h-80 flex flex-col justify-end p-6">
+          <div onclick="openSeparateGalleryPage('${cat.name}')" class="${visibilityClass} group cursor-pointer relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1 bg-slate-900 h-44 sm:h-64 lg:h-80 flex-col justify-end p-3.5 sm:p-6">
             <img src="${coverImg}" alt="${cat.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
             
             <div class="relative z-10 text-white">
-              <span class="bg-brand-red text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full mb-2 inline-block">
+              <span class="bg-brand-red text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full mb-1 sm:mb-2 inline-block">
                 ${count} Designs
               </span>
-              <h4 class="font-display font-bold text-2xl text-white group-hover:text-brand-orange transition-colors">${cat.name}</h4>
+              <h4 class="font-display font-bold text-sm sm:text-2xl text-white group-hover:text-brand-orange transition-colors truncate">${cat.name}</h4>
               
-              <div class="mt-4 flex items-center gap-2 text-xs font-bold text-orange-300 group-hover:text-white transition-colors">
-                <span>View Collection</span>
-                <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+              <div class="mt-1.5 sm:mt-4 flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-orange-300 group-hover:text-white transition-colors">
+                <span>View</span>
+                <i class="fa-solid fa-arrow-right text-[9px] sm:text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
               </div>
             </div>
           </div>
@@ -1983,7 +2033,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       container.innerHTML = cats.map(cat => {
         const isActive = activeSeparateCategory.toLowerCase() === cat.toLowerCase();
         return `
-          <button onclick="filterSeparateGallery('${cat}')" class="px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-200 ${isActive ? 'gradient-bg text-white shadow-md shadow-red-500/30' : 'bg-gray-100 hover:bg-orange-100 text-gray-700'}">
+          <button onclick="filterSeparateGallery('${cat}')" class="px-3.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full font-bold text-[11px] sm:text-sm transition-all duration-200 ${isActive ? 'gradient-bg text-white shadow-md shadow-red-500/30' : 'bg-gray-100 hover:bg-orange-100 text-gray-700'}">
             ${cat}
           </button>
         `;
@@ -2026,36 +2076,36 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       emptyState.classList.add('hidden');
 
       grid.innerHTML = filteredGalleryItems.map((item, index) => `
-        <div class="group relative bg-brand-cream rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col">
-          <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(${index})">
+        <div class="group relative bg-brand-cream rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col">
+          <div class="relative h-48 sm:h-72 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(${index})">
             <img src="${item.url}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
-            <div class="absolute top-4 left-4 z-10">
-              <span class="bg-brand-red text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md">
+            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
+              <span class="bg-brand-red text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg shadow-md">
                 ${item.category}
               </span>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="w-12 h-12 rounded-full bg-white/90 text-brand-red flex items-center justify-center text-base shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 text-brand-red flex items-center justify-center text-sm sm:text-base shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
                 <i class="fa-solid fa-expand"></i>
               </div>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between bg-white">
+          <div class="p-3.5 sm:p-5 flex-1 flex flex-col justify-between bg-white">
             <div>
-              <h4 class="font-display font-bold text-base sm:text-lg text-gray-900 mb-1.5 group-hover:text-brand-red transition-colors">
+              <h4 class="font-display font-bold text-sm sm:text-lg text-gray-900 mb-1 group-hover:text-brand-red transition-colors">
                 ${item.title}
               </h4>
-              <p class="text-xs text-gray-500 leading-relaxed line-clamp-2">
+              <p class="text-[11px] sm:text-xs text-gray-500 leading-relaxed line-clamp-2">
                 ${item.desc || "Bespoke customized residential execution with German hardware and architectural lighting."}
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
-              <button onclick="openLightbox(${index})" class="text-brand-orangeDark font-bold hover:underline flex items-center gap-1">
+            <div class="mt-3 pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs">
+              <button onclick="openLightbox(${index})" class="text-brand-orangeDark font-bold hover:underline flex items-center gap-1 text-[11px]">
                 <span>View Full Size</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </button>
-              <button onclick="quickEnquireForImage('${item.title}', '${item.category}')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold px-3 py-1.5 rounded-lg flex items-center gap-1">
-                <i class="fa-brands fa-whatsapp"></i>
+              <button onclick="quickEnquireForImage('${item.title}', '${item.category}')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold px-2.5 py-1 rounded-lg flex items-center gap-1 text-[11px]">
+                <i class="fa-brands fa-whatsapp text-xs"></i>
                 <span>Enquire</span>
               </button>
             </div>
@@ -2110,25 +2160,20 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       window.open(`https://wa.me/${whatsapp}?text=${message}`, '_blank');
     }
 
-    // --- 7. REVIEWS / FEEDBACK ---
+    // --- 7. REVIEWS / FEEDBACK (CENTERED ALIGNMENT AS REQUESTED) ---
     function renderFeedback() {
       const grid = document.getElementById('feedbackGrid');
       grid.innerHTML = appData.feedback.map(fb => `
-        <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-lg shadow-orange-950/5 border border-orange-100 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-1 text-amber-400 text-xs mb-3">
+        <div class="bg-white rounded-xl sm:rounded-3xl p-3 sm:p-7 shadow-md sm:shadow-lg shadow-orange-950/5 border border-orange-100 flex flex-col justify-between text-center items-center">
+          <div class="w-full flex flex-col items-center">
+            <div class="flex items-center justify-center space-x-1 text-amber-400 text-xs mb-2 sm:mb-3">
               ${'<i class="fa-solid fa-star"></i>'.repeat(fb.rating)}
             </div>
-            <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed mb-6 font-light">"${fb.comment}"</p>
+            <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed mb-4 sm:mb-6 font-light text-center">"${fb.comment}"</p>
           </div>
-          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div>
-              <h5 class="font-bold text-gray-900 text-xs sm:text-sm">${fb.name}</h5>
-              <p class="text-[11px] text-brand-orangeDark font-medium">${fb.project}</p>
-            </div>
-            <div class="w-8 h-8 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs">
-              <i class="fa-solid fa-check-double"></i>
-            </div>
+          <div class="pt-3 sm:pt-4 border-t border-gray-100 w-full flex flex-col items-center justify-center text-center">
+            <h5 class="font-bold text-gray-900 text-xs sm:text-sm">${fb.name}</h5>
+            <p class="text-[10px] sm:text-[11px] text-brand-orangeDark font-medium">${fb.project}</p>
           </div>
         </div>
       `).join('');
@@ -2434,7 +2479,6 @@ ${tpl.footer}`;
         document.getElementById('cms_footer_copyright').value = appData.footerWording.copyright;
       }
 
-      // SEO & Google Console
       if (appData.seo) {
         document.getElementById('cms_seo_google_console').value = appData.seo.googleConsole || "";
         document.getElementById('cms_seo_title').value = appData.seo.title || "";
@@ -2510,7 +2554,6 @@ ${footer}`;
       }
     }
 
-    // --- SUPABASE CLOUD LIVE SYNC LOGIC ---
     async function testCloudSync() {
       saveCloudFormValues();
       const c = appData.cloudSync;
@@ -2679,7 +2722,6 @@ ${footer}`;
       renderAll();
       showInstantSave("✓ Saved");
 
-      // Auto sync to cloud if enabled
       if (appData.cloudSync && appData.cloudSync.enabled && appData.cloudSync.autoSync && appData.cloudSync.supabaseUrl) {
         testCloudSync();
       }
