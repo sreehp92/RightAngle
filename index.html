@@ -121,6 +121,53 @@
       background: linear-gradient(135deg, #DC2626 0%, #EA580C 100%);
     }
 
+    
+    /* Glitter / Shimmer Animation for Signature Badge */
+    @keyframes shimmerGlitter {
+      0% {
+        background-position: -200% 0;
+      }
+      50% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+    .badge-glitter {
+      position: relative;
+      overflow: hidden;
+    }
+    .badge-glitter::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 20%,
+        rgba(255, 215, 0, 0.6) 45%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(255, 215, 0, 0.6) 55%,
+        rgba(255, 255, 255, 0.1) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-size: 200% 100%;
+      animation: shimmerGlitter 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+    .shimmer-star {
+      animation: starGlitter 2s ease-in-out infinite alternate;
+    }
+    @keyframes starGlitter {
+      0% { opacity: 0.4; transform: scale(0.9) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.2) rotate(15deg); }
+      100% { opacity: 0.4; transform: scale(0.9) rotate(0deg); }
+    }
+
     .glass-card {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
@@ -218,7 +265,7 @@
   <section id="home" class="relative bg-brand-dark min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] flex items-center overflow-hidden">
     <div id="heroSliderContainer" class="absolute inset-0 z-0"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 w-full text-white">
-      <div class="max-w-3xl">
+      <div class="max-w-3xl text-center md:text-left flex flex-col items-center md:items-start mx-auto md:mx-0">
         <div class="inline-flex items-center space-x-2 bg-black/40 backdrop-blur-md border border-orange-500/40 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 mb-4 sm:mb-6 text-[10px] sm:text-xs uppercase tracking-wider font-semibold text-orange-300">
           <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-orange animate-ping"></span>
           <span id="heroBadgeText">Signature Architectural Interior Projects</span>
@@ -241,7 +288,7 @@
         </div>
 
         <!-- HERO BUTTONS: SIDE-BY-SIDE ON MOBILE AS REQUESTED -->
-        <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none">
+        <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none mx-auto md:mx-0">
           <button onclick="openSeparateGalleryPage('All')" id="heroBtnGallery" class="gradient-bg text-white font-bold px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-full shadow-md hover:scale-105 transition-all text-[11px] sm:text-sm flex items-center justify-center gap-1.5 text-center">
             <span id="heroBtnGalleryText" class="truncate">Explore Gallery</span>
             <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs shrink-0"></i>
@@ -378,28 +425,44 @@
     </div>
   </section>
 
-  <!-- ================= FEEDBACK SECTION (2*2 SIDE-BY-SIDE ON MOBILE, CENTERED) ================= -->
+  <!-- ================= FEEDBACK / GOOGLE REVIEWS SECTION (STRICTLY 2*2 ON MOBILE/DESKTOP, SHOW MORE BUTTON) ================= -->
   <section id="feedback" class="py-12 sm:py-20 bg-brand-cream relative">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 sm:mb-12 gap-4 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-6 sm:mb-10 gap-4 text-center sm:text-left">
         <div>
-          <div class="inline-flex items-center space-x-2 text-brand-red font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1.5 sm:mb-2">
-            <i class="fa-solid fa-star"></i>
-            <span id="feedbackBadgeText">Real Client Testimonials</span>
+          <div class="inline-flex items-center space-x-2 bg-white border border-gray-200 px-3 py-1 rounded-full text-brand-slate font-bold text-[10px] sm:text-xs uppercase tracking-wider mb-2 shadow-xs">
+            <i class="fa-brands fa-google text-red-500"></i>
+            <span class="text-amber-500 font-extrabold flex items-center gap-0.5">
+              <i class="fa-solid fa-star text-[10px]"></i> 4.9/5
+            </span>
+            <span class="text-gray-400">|</span>
+            <span id="feedbackBadgeText" class="text-gray-700">Google Verified Reviews</span>
           </div>
           <h2 id="feedbackHeading" class="font-display font-extrabold text-2xl sm:text-4xl text-brand-dark tracking-tight">
             Loved By Over <span class="gradient-text">350+ Homeowners</span>
           </h2>
-          <p id="feedbackSubHeading" class="text-gray-500 text-xs sm:text-sm mt-1">Read feedback from clients across various completed residential sites.</p>
+          <p id="feedbackSubHeading" class="text-gray-500 text-xs sm:text-sm mt-1">Verified reviews from homeowners across Coimbatore & Tamil Nadu residential projects.</p>
         </div>
-        <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md hover:shadow-lg flex items-center space-x-2">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <span>Leave Your Feedback</span>
+        <div class="flex items-center gap-2">
+          <button onclick="openFeedbackModal()" class="gradient-bg text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md hover:shadow-lg flex items-center space-x-2">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Write a Google Review</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Strictly 2*2 Grid on Mobile and 2*2 Grid by default (4 cards shown) -->
+      <div id="feedbackGrid" class="grid grid-cols-2 lg:grid-cols-2 gap-2.5 sm:gap-6 max-w-5xl mx-auto"></div>
+
+      <!-- Show More Reviews Button -->
+      <div id="feedbackShowMoreContainer" class="text-center pt-6 sm:pt-8">
+        <button id="feedbackShowMoreBtn" onclick="toggleShowMoreReviews()" class="bg-white hover:bg-orange-50 border border-orange-200 text-brand-dark hover:text-brand-red font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all inline-flex items-center gap-2">
+          <i class="fa-brands fa-google text-red-500 text-xs sm:text-sm"></i>
+          <span id="feedbackShowMoreBtnText">Show More Reviews</span>
+          <i id="feedbackShowMoreIcon" class="fa-solid fa-chevron-down text-[10px]"></i>
         </button>
       </div>
 
-      <!-- Reviews 2*2 on Mobile/Tablet, Centered -->
-      <div id="feedbackGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8"></div>
     </div>
   </section>
 
@@ -722,6 +785,89 @@
     </div>
   </div>
 
+    <!-- ================= DEDICATED ENQUIRY & 3D WALKTHROUGH MODAL ================= -->
+  <div id="enquiryModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-3 sm:p-4 overflow-y-auto">
+    <div class="relative max-w-lg w-full bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl border border-orange-100 my-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-100 mb-4">
+        <div>
+          <h4 class="font-display font-bold text-base sm:text-xl text-gray-900 flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+            <span>Get Free Quote & 3D Walkthrough</span>
+          </h4>
+          <p class="text-[10px] sm:text-xs text-gray-500">Prefilled WhatsApp message directly to Principal Architect</p>
+        </div>
+        <button onclick="closeEnquiryModal()" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-red-50 text-gray-500 hover:text-brand-red flex items-center justify-center text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="enquiryModalForm" onsubmit="handleEnquirySubmitModal(event)" class="space-y-3 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Your Full Name *</label>
+            <input type="text" id="eqModalName" required placeholder="e.g. Anand Kumar" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">WhatsApp Number *</label>
+            <input type="tel" id="eqModalPhone" required placeholder="e.g. 9876543210" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Space Needed *</label>
+            <select id="eqModalCategory" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+              <option value="Full Home Interior">Full Home Interior</option>
+              <option value="Modular Kitchen">Modular Kitchen</option>
+              <option value="Living Room Interior">Living Room Interior</option>
+              <option value="Master Bedroom">Master Bedroom Suite</option>
+              <option value="Luxury Villa Design">Luxury Villa Design</option>
+              <option value="Renovation / Makeover">Complete Renovation</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Property Type *</label>
+            <select id="eqModalProperty" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+              <option value="2 BHK Apartment">2 BHK Apartment</option>
+              <option value="3 BHK Apartment">3 BHK Apartment</option>
+              <option value="4 BHK / Penthouse">4 BHK / Penthouse</option>
+              <option value="Independent Villa">Independent Villa</option>
+              <option value="Commercial Space">Commercial Space</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Estimated Budget *</label>
+            <select id="eqModalBudget" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none bg-white">
+              <option value="₹10,000 - ₹50,000">₹10,000 - ₹50,000 (Consultation)</option>
+              <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 (Room Styling)</option>
+              <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000 (Kitchen)</option>
+              <option value="₹3,00,000 - ₹5,00,000" selected>₹3,00,000 - ₹5,00,000 (2/3 BHK)</option>
+              <option value="₹5,00,000 - ₹10,00,000">₹5,00,000 - ₹10,00,000 (Full Home)</option>
+              <option value="₹10,00,000+">₹10,00,000+ (Turnkey Villa)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Site Location *</label>
+            <input type="text" id="eqModalLocation" required placeholder="e.g. Coimbatore / Chennai" class="w-full text-xs px-3 py-2 rounded-xl border border-gray-200 focus:border-brand-red outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Specific Design Ideas (Optional)</label>
+          <textarea id="eqModalMessage" rows="2" placeholder="e.g. Italian marble finish, warm cove LEDs..." class="w-full text-xs p-2.5 rounded-xl border border-gray-200 focus:border-brand-red outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md flex items-center justify-center space-x-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Send Requirement to WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- ================= SUBMIT FEEDBACK MODAL ================= -->
   <div id="feedbackModal" class="fixed inset-0 z-50 hidden flex items-center justify-center modal-backdrop p-4">
     <div class="relative max-w-md w-full bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-orange-100">
@@ -859,6 +1005,12 @@
           <button onclick="switchAdminTab('cloud_sync_tab')" id="tabBtn_cloud_sync_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100 border-l-2 border-indigo-500">
             <i class="fa-solid fa-cloud-bolt w-4 text-center text-indigo-600"></i>
             <span>Cloud Live Sync (Supabase)</span>
+          </button>
+
+          <!-- TAB 11: BILLING & QUOTATION INVOICE SYSTEM (AS REQUESTED) -->
+          <button onclick="switchAdminTab('billing_tab')" id="tabBtn_billing_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100 border-l-2 border-amber-500">
+            <i class="fa-solid fa-file-invoice-dollar w-4 text-center text-amber-600"></i>
+            <span class="font-bold text-gray-800">11. Billing & Quotation</span>
           </button>
 
           <button onclick="switchAdminTab('settings_tab')" id="tabBtn_settings_tab" class="admin-tab-btn w-full text-left px-3.5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2.5 text-gray-600 hover:bg-gray-100">
@@ -1352,6 +1504,206 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
             </div>
           </div>
 
+          <!-- TAB 11: BILLING & QUOTATION INVOICE GENERATOR WITH CUSTOM HTML EMBED (A-TO-Z INVOICE ENGINE) -->
+          <div id="adminTab_billing_tab" class="admin-tab-content hidden space-y-6 text-xs">
+            <div class="pb-3 border-b border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <h4 class="font-display font-bold text-lg text-gray-800 flex items-center gap-2">
+                  <i class="fa-solid fa-file-invoice-dollar text-amber-600 text-xl"></i>
+                  <span>Billing, Quotation & Invoice Management</span>
+                </h4>
+                <p class="text-xs text-gray-500">Create itemized client estimates, generate official tax invoices, or embed your custom HTML billing app code.</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="printQuotationInvoice()" class="bg-slate-900 hover:bg-black text-white font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow">
+                  <i class="fa-solid fa-print"></i>
+                  <span>Print / Save PDF</span>
+                </button>
+                <button onclick="shareInvoiceWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                  <span>Share on WhatsApp</span>
+                </button>
+                <button onclick="saveBillingData()" class="gradient-bg text-white font-bold px-3.5 py-2 rounded-xl shadow">
+                  <i class="fa-solid fa-floppy-disk"></i>
+                  <span>Save Invoice</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- SUB-SWITCHER: (A) Built-in Quotation Generator vs (B) Custom HTML Billing App Embed -->
+            <div class="flex items-center gap-2 border-b border-gray-200 pb-2">
+              <button onclick="switchBillingMode('generator')" id="billingModeBtn_generator" class="px-4 py-1.5 rounded-lg font-bold text-xs bg-amber-500 text-white shadow-sm flex items-center gap-1.5">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Interactive Invoice Generator</span>
+              </button>
+              <button onclick="switchBillingMode('html_embed')" id="billingModeBtn_html_embed" class="px-4 py-1.5 rounded-lg font-bold text-xs bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-code"></i>
+                <span>Custom HTML App Embed & Live Runner</span>
+              </button>
+            </div>
+
+            <!-- MODE A: INTERACTIVE INVOICE GENERATOR -->
+            <div id="billingView_generator" class="space-y-6">
+              <!-- Invoice Header Details -->
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-4">
+                <h5 class="font-bold text-gray-800 text-sm flex items-center justify-between">
+                  <span>Client & Project Particulars</span>
+                  <span class="text-[11px] font-normal text-gray-500">Invoice No: <strong id="billInvNumber">RA-2026-001</strong></span>
+                </h5>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Invoice / Quote Type</label>
+                    <select id="billDocType" onchange="renderInvoicePreview()" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white font-semibold">
+                      <option value="ESTIMATE / QUOTATION">Project Estimate / Quotation</option>
+                      <option value="PROFORMA INVOICE">Proforma Invoice</option>
+                      <option value="TAX INVOICE">Tax Invoice (Final)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Date Issued</label>
+                    <input type="date" id="billDate" onchange="renderInvoicePreview()" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white font-medium">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Project Site / Reference</label>
+                    <input type="text" id="billProjectRef" oninput="renderInvoicePreview()" placeholder="e.g. Emerald Palm 3 BHK Villa" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Client Full Name *</label>
+                    <input type="text" id="billClientName" oninput="renderInvoicePreview()" placeholder="e.g. Mr. Rajesh Kumar" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white font-medium">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Client Mobile / WhatsApp *</label>
+                    <input type="tel" id="billClientPhone" oninput="renderInvoicePreview()" placeholder="e.g. 9876543210" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white font-mono">
+                  </div>
+                  <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Client Address / Site Location</label>
+                    <input type="text" id="billClientAddress" oninput="renderInvoicePreview()" placeholder="e.g. Race Course, Coimbatore" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Itemized Scope of Work Table -->
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-4">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-bold text-gray-800 text-sm">Scope of Work & Material Specifications</h5>
+                  <button onclick="addBillingItem()" class="gradient-bg text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-plus text-[10px]"></i>
+                    <span>Add Item / Service</span>
+                  </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                      <tr class="bg-gray-100 text-gray-700 border-b border-gray-200">
+                        <th class="p-2.5 font-bold w-10 text-center">#</th>
+                        <th class="p-2.5 font-bold min-w-[200px]">Description & Specifications</th>
+                        <th class="p-2.5 font-bold w-20 text-center">Qty</th>
+                        <th class="p-2.5 font-bold w-24 text-center">Unit</th>
+                        <th class="p-2.5 font-bold w-28 text-right">Rate (₹)</th>
+                        <th class="p-2.5 font-bold w-32 text-right">Amount (₹)</th>
+                        <th class="p-2.5 font-bold w-12 text-center"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="billItemsTableBody" class="divide-y divide-gray-200 bg-white"></tbody>
+                  </table>
+                </div>
+
+                <!-- Calculation Summary Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-gray-200">
+                  <div class="space-y-3">
+                    <label class="block font-semibold text-gray-700">Terms & Payment Schedule Notes</label>
+                    <textarea id="billNotes" rows="3" oninput="renderInvoicePreview()" class="w-full p-2.5 rounded-xl border border-gray-200 bg-white" placeholder="Payment terms: 50% advance upon design approval, 40% on material delivery, 10% on handover. 10 years hardware warranty."></textarea>
+                  </div>
+
+                  <div class="bg-white border border-gray-200 rounded-xl p-4 space-y-2 text-right">
+                    <div class="flex justify-between text-gray-600">
+                      <span>Subtotal:</span>
+                      <span id="billSubtotalDisplay" class="font-bold font-mono">₹0</span>
+                    </div>
+                    <div class="flex justify-between items-center text-gray-600">
+                      <span>Discount (₹):</span>
+                      <input type="number" id="billDiscount" value="0" min="0" oninput="calcBillingTotals()" class="w-24 p-1 text-right border border-gray-200 rounded font-mono">
+                    </div>
+                    <div class="flex justify-between items-center text-gray-600">
+                      <span class="flex items-center gap-1">GST Tax:
+                        <select id="billGstPercent" onchange="calcBillingTotals()" class="border border-gray-200 rounded text-[11px] p-0.5">
+                          <option value="0">0% (Nil)</option>
+                          <option value="5">5%</option>
+                          <option value="12">12%</option>
+                          <option value="18" selected>18% (Standard)</option>
+                        </select>
+                      </span>
+                      <span id="billGstDisplay" class="font-bold font-mono">₹0</span>
+                    </div>
+                    <div class="flex justify-between text-brand-dark text-sm sm:text-base font-extrabold pt-2 border-t border-gray-200">
+                      <span>Grand Total:</span>
+                      <span id="billGrandTotalDisplay" class="text-brand-red font-mono">₹0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LIVE PRINTABLE INVOICE PREVIEW -->
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-bold text-gray-800 text-sm">Official Printable Document Preview</h5>
+                  <span class="text-[11px] text-gray-500">Live preview dynamically synchronized</span>
+                </div>
+                <div id="printableInvoiceWrapper" class="bg-white border border-gray-300 rounded-xl p-6 sm:p-10 shadow-inner max-w-4xl mx-auto text-gray-800 font-sans">
+                  <!-- Dynamic Invoice Render injected here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- MODE B: CUSTOM HTML CODE EMBED & LIVE APP RUNNER -->
+            <div id="billingView_html_embed" class="hidden space-y-4">
+              <div class="bg-slate-900 text-white rounded-2xl p-5 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-bold text-sm text-amber-300 flex items-center gap-2">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Custom Billing HTML/App Code Insertion</span>
+                  </h5>
+                  <button onclick="runCustomBillingHtml()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Render & Test App</span>
+                  </button>
+                </div>
+                <p class="text-[11px] text-gray-300">
+                  நீங்கள் உருவாக்கியுள்ள தனிப்பயன் HTML/CSS/JavaScript பில்லிங் அப்ளிகேஷன் கோடை இங்கே நேரடியாக பேஸ்ட் செய்யலாம். "Render & Test App" கொடுத்தால் கீழே உள்ள பிரேமில் லைவாக இயங்கும்.
+                </p>
+                <textarea id="customBillingHtmlInput" rows="10" placeholder="<!-- Paste your custom HTML / CSS / JS Billing App code here -->" class="w-full p-3.5 rounded-xl bg-slate-950 border border-slate-700 text-emerald-400 font-mono text-xs focus:border-amber-400 outline-none"></textarea>
+                <div class="flex justify-end">
+                  <button onclick="saveCustomBillingCode()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <span>Save Custom HTML Code</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Live Sandboxed Runner Container -->
+              <div class="bg-white border border-gray-200 rounded-2xl p-5 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-bold text-gray-800 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-window-maximize text-brand-orange"></i>
+                    <span>Live App Runner Preview</span>
+                  </h5>
+                  <button onclick="reloadCustomBillingFrame()" class="text-xs text-brand-red hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-rotate"></i>
+                    <span>Reload App</span>
+                  </button>
+                </div>
+                <div class="border border-gray-300 rounded-xl overflow-hidden min-h-[450px] bg-gray-50">
+                  <iframe id="customBillingIframe" class="w-full h-[550px] border-0" sandbox="allow-scripts allow-modals allow-forms allow-same-origin"></iframe>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
           <!-- TAB 8: BACKUP & RESET -->
           <div id="adminTab_settings_tab" class="admin-tab-content hidden space-y-6 text-xs">
             <div class="pb-3 border-b border-gray-100">
@@ -1464,6 +1816,61 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
         tableName: "rightangle_cms",
         autoSync: true,
         lastSync: "Never"
+      },
+      billing: {
+        docType: "ESTIMATE / QUOTATION",
+        invoiceNo: "RA-2026-001",
+        date: new Date().toISOString().split('T')[0],
+        projectRef: "Emerald Palm 3 BHK Villa",
+        clientName: "Mr. Rajesh Kumar",
+        clientPhone: "9876543210",
+        clientAddress: "Race Course Road, Coimbatore",
+        notes: "1. 50% advance on design confirmation, 40% on material delivery, 10% on completion.\n2. 10 Years warranty on German modular hardware.\n3. Project delivery within 45 working days.",
+        discount: 0,
+        gstPercent: 18,
+        items: [
+          { desc: "Living Room: Customized acoustic fluted wall paneling with ambient LED cove profile", qty: 1, unit: "Lot", rate: 45000, amount: 45000 },
+          { desc: "Modular Kitchen: Marine-grade acrylic shutter cabinetry with Hafele soft-close fittings", qty: 1, unit: "Set", rate: 125000, amount: 125000 },
+          { desc: "Master Bedroom: Floor-to-ceiling sliding wardrobe with tinted glass & vanity dresser", qty: 1, unit: "Set", rate: 85000, amount: 85000 },
+          { desc: "False Ceiling & Lighting: Gypsum board grid with magnetic track lights & dimmable spots", qty: 450, unit: "Sq.Ft", rate: 120, amount: 54000 }
+        ],
+        customHtml: `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Interior Quick Bill</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #fafafa; color: #333; }
+    .box { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    h2 { color: #dc2626; margin-top: 0; }
+    input, button { padding: 8px 12px; margin: 4px 0; border: 1px solid #ccc; border-radius: 6px; }
+    button { background: #dc2626; color: white; border: none; font-weight: bold; cursor: pointer; }
+    button:hover { background: #ea580c; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #eee; padding: 8px; text-align: left; }
+    th { background: #fff7ed; color: #c2410c; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>RightAngle Interiors - Quick Bill</h2>
+    <p>Custom HTML Billing App loaded successfully.</p>
+    <div>
+      <input type="text" id="custName" placeholder="Client Name" value="Sample Client">
+      <input type="number" id="custAmount" placeholder="Amount (INR)" value="150000">
+      <button onclick="addBill()">Generate Receipt</button>
+    </div>
+    <div id="output" style="margin-top: 20px;"></div>
+  </div>
+  <script>
+    function addBill() {
+      var n = document.getElementById('custName').value;
+      var a = document.getElementById('custAmount').value;
+      document.getElementById('output').innerHTML = '<div style="padding:15px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px;"><strong>Receipt for:</strong> ' + n + '<br><strong>Total:</strong> ₹' + Number(a).toLocaleString('en-IN') + '</div>';
+    }
+  <` + `/script>
+</body>
+</html>`
       },
       categories: [
         {
@@ -1704,6 +2111,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
     }
 
     function openAdminPasswordModal() {
+      pushNavHistory("modal", "adminPasswordModal");
       document.getElementById('adminPasswordInput').value = '';
       document.getElementById('adminPasswordError').classList.add('hidden');
       document.getElementById('adminPasswordModal').classList.remove('hidden');
@@ -1792,6 +2200,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
       populateAdminCategorySelects();
       populateAdminWordingForm();
       populateCloudSyncForm();
+      initBillingDefaults();
       renderAdminLeads();
       renderAdminReviews();
       updateWhatsappPreview();
@@ -2009,6 +2418,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
 
     // --- 5. DEDICATED SEPARATE FULLSCREEN GALLERY OVERLAY ---
     function openSeparateGalleryPage(category) {
+      pushNavHistory("page", "separateGalleryPage");
       activeSeparateCategory = category || "All";
       separateSearchQuery = "";
       const searchInput = document.getElementById('separateGallerySearchInput');
@@ -2116,6 +2526,7 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
 
     // --- 6. LIGHTBOX FUNCTIONALITY ---
     function openLightbox(index) {
+      pushNavHistory("modal", "imageLightboxModal");
       if (!filteredGalleryItems || filteredGalleryItems.length === 0) return;
       currentLightboxIndex = index;
       const item = filteredGalleryItems[currentLightboxIndex];
@@ -2161,25 +2572,116 @@ create policy "Allow all operations" on rightangle_cms for all using (true);</pr
     }
 
     // --- 7. REVIEWS / FEEDBACK (CENTERED ALIGNMENT AS REQUESTED) ---
+    let showAllFeedback = false;
+
     function renderFeedback() {
       const grid = document.getElementById('feedbackGrid');
-      grid.innerHTML = appData.feedback.map(fb => `
-        <div class="bg-white rounded-xl sm:rounded-3xl p-3 sm:p-7 shadow-md sm:shadow-lg shadow-orange-950/5 border border-orange-100 flex flex-col justify-between text-center items-center">
+      if (!grid) return;
+
+      const items = showAllFeedback ? appData.feedback : appData.feedback.slice(0, 4);
+
+      grid.innerHTML = items.map(fb => `
+        <div class="bg-white rounded-xl sm:rounded-2xl p-3.5 sm:p-6 shadow-md shadow-orange-950/5 border border-orange-100 flex flex-col justify-between text-center items-center hover:shadow-lg transition-shadow">
           <div class="w-full flex flex-col items-center">
-            <div class="flex items-center justify-center space-x-1 text-amber-400 text-xs mb-2 sm:mb-3">
-              ${'<i class="fa-solid fa-star"></i>'.repeat(fb.rating)}
+            <div class="flex items-center justify-center gap-1.5 mb-2">
+              <i class="fa-brands fa-google text-red-500 text-xs"></i>
+              <div class="flex items-center text-amber-400 text-[10px] sm:text-xs">
+                ${'<i class="fa-solid fa-star"></i>'.repeat(fb.rating || 5)}
+              </div>
             </div>
-            <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed mb-4 sm:mb-6 font-light text-center">"${fb.comment}"</p>
+            <p class="text-[11px] sm:text-xs text-gray-700 italic leading-snug sm:leading-relaxed mb-3 sm:mb-5 font-light text-center line-clamp-3 sm:line-clamp-4">"${fb.comment}"</p>
           </div>
-          <div class="pt-3 sm:pt-4 border-t border-gray-100 w-full flex flex-col items-center justify-center text-center">
-            <h5 class="font-bold text-gray-900 text-xs sm:text-sm">${fb.name}</h5>
-            <p class="text-[10px] sm:text-[11px] text-brand-orangeDark font-medium">${fb.project}</p>
+          <div class="pt-2 sm:pt-3 border-t border-gray-100 w-full flex flex-col items-center justify-center text-center">
+            <div class="flex items-center gap-1 justify-center">
+              <h5 class="font-bold text-gray-900 text-xs sm:text-sm truncate max-w-[140px] sm:max-w-none">${fb.name}</h5>
+              <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]" title="Verified Google Review"></i>
+            </div>
+            <p class="text-[9px] sm:text-[11px] text-brand-orangeDark font-medium truncate max-w-full">${fb.project}</p>
           </div>
         </div>
       `).join('');
+
+      const btnContainer = document.getElementById('feedbackShowMoreContainer');
+      const btnText = document.getElementById('feedbackShowMoreBtnText');
+      const btnIcon = document.getElementById('feedbackShowMoreIcon');
+      if (btnContainer) {
+        if (appData.feedback.length <= 4) {
+          btnContainer.classList.add('hidden');
+        } else {
+          btnContainer.classList.remove('hidden');
+          if (btnText) btnText.textContent = showAllFeedback ? "Show Less Reviews" : `Show More (${appData.feedback.length - 4}+ Reviews)`;
+          if (btnIcon) {
+            btnIcon.className = showAllFeedback ? "fa-solid fa-chevron-up text-[10px]" : "fa-solid fa-chevron-down text-[10px]";
+          }
+        }
+      }
+    }
+
+    function toggleShowMoreReviews() {
+      showAllFeedback = !showAllFeedback;
+      renderFeedback();
+    }
+
+        // ENQUIRY MODAL HELPERS (FOR MOBILE 2x2 ACTION)
+    function openEnquiryModal() {
+      pushNavHistory('modal', 'enquiryModal');
+      document.getElementById('enquiryModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeEnquiryModal() {
+      document.getElementById('enquiryModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function handleEnquirySubmitModal(e) {
+      e.preventDefault();
+      const name = document.getElementById('eqModalName').value.trim();
+      const phone = document.getElementById('eqModalPhone').value.trim();
+      const category = document.getElementById('eqModalCategory').value;
+      const property = document.getElementById('eqModalProperty').value;
+      const budget = document.getElementById('eqModalBudget').value;
+      const location = document.getElementById('eqModalLocation').value.trim();
+      const message = document.getElementById('eqModalMessage').value.trim();
+
+      const newLead = {
+        id: "lead_" + Date.now(),
+        date: new Date().toLocaleString(),
+        name, phone, category, property, budget, location, message
+      };
+      if (!appData.leads) appData.leads = [];
+      appData.leads.unshift(newLead);
+      saveAppData();
+      renderAdminLeads();
+
+      const tpl = appData.whatsappTemplate || DEFAULT_DATA.whatsappTemplate;
+      const textLines = [
+        tpl.header,
+        "",
+        `${tpl.labelName} ${name}`,
+        `${tpl.labelPhone} ${phone}`,
+        `${tpl.labelService} ${category}`,
+        `${tpl.labelProperty} ${property}`,
+        `${tpl.labelBudget} ${budget}`,
+        `${tpl.labelLocation} ${location}`,
+        `${tpl.labelNotes} ${message || "Interested in full turnkey home interior"}`,
+        "",
+        tpl.footer
+      ];
+      const encodedMsg = encodeURIComponent(textLines.join("\n"));
+      const targetPhone = (appData.branding && appData.branding.whatsappPhone) || "919876543210";
+      const cleanPhone = targetPhone.replace(/[^0-9]/g, '');
+
+      closeEnquiryModal();
+      showInstantSave("✓ Opening WhatsApp...");
+      setTimeout(() => {
+        window.open(`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodedMsg}`, '_blank');
+      }, 300);
+      e.target.reset();
     }
 
     function openFeedbackModal() {
+      pushNavHistory("modal", "feedbackModal");
       document.getElementById('feedbackModal').classList.remove('hidden');
     }
 
@@ -2257,6 +2759,7 @@ ${tpl.footer}`;
 
     // --- 9. ADMIN PANEL FUNCTIONALITY ---
     function openAdminPanel() {
+      pushNavHistory("modal", "adminPanelModal");
       populateAdminCategorySelects();
       populateAdminWordingForm();
       populateCloudSyncForm();
@@ -2642,6 +3145,426 @@ ${footer}`;
       appData.cloudSync.tableName = document.getElementById('cms_supabase_table').value.trim() || "rightangle_cms";
       appData.cloudSync.autoSync = document.getElementById('cms_cloud_autosync').checked;
     }
+
+    
+    // ================= 11. BILLING & QUOTATION ENGINE =================
+    function initBillingDefaults() {
+      if (!appData.billing) {
+        appData.billing = JSON.parse(JSON.stringify(DEFAULT_DATA.billing));
+      }
+      populateBillingForm();
+      renderInvoicePreview();
+    }
+
+    function switchBillingMode(mode) {
+      const btnGen = document.getElementById('billingModeBtn_generator');
+      const btnHtml = document.getElementById('billingModeBtn_html_embed');
+      const viewGen = document.getElementById('billingView_generator');
+      const viewHtml = document.getElementById('billingView_html_embed');
+
+      if (mode === 'generator') {
+        btnGen.className = "px-4 py-1.5 rounded-lg font-bold text-xs bg-amber-500 text-white shadow-sm flex items-center gap-1.5";
+        btnHtml.className = "px-4 py-1.5 rounded-lg font-bold text-xs bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center gap-1.5";
+        viewGen.classList.remove('hidden');
+        viewHtml.classList.add('hidden');
+      } else {
+        btnHtml.className = "px-4 py-1.5 rounded-lg font-bold text-xs bg-amber-500 text-white shadow-sm flex items-center gap-1.5";
+        btnGen.className = "px-4 py-1.5 rounded-lg font-bold text-xs bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center gap-1.5";
+        viewHtml.classList.remove('hidden');
+        viewGen.classList.add('hidden');
+        if (!document.getElementById('customBillingHtmlInput').value) {
+          document.getElementById('customBillingHtmlInput').value = appData.billing.customHtml || "";
+        }
+        runCustomBillingHtml();
+      }
+    }
+
+    function populateBillingForm() {
+      const b = appData.billing;
+      if (!b) return;
+
+      document.getElementById('billDocType').value = b.docType || "ESTIMATE / QUOTATION";
+      document.getElementById('billDate').value = b.date || new Date().toISOString().split('T')[0];
+      document.getElementById('billProjectRef').value = b.projectRef || "";
+      document.getElementById('billClientName').value = b.clientName || "";
+      document.getElementById('billClientPhone').value = b.clientPhone || "";
+      document.getElementById('billClientAddress').value = b.clientAddress || "";
+      document.getElementById('billNotes').value = b.notes || "";
+      document.getElementById('billDiscount').value = b.discount || 0;
+      document.getElementById('billGstPercent').value = b.gstPercent !== undefined ? b.gstPercent : 18;
+      document.getElementById('customBillingHtmlInput').value = b.customHtml || "";
+
+      renderBillingItemsTable();
+      calcBillingTotals();
+    }
+
+    function renderBillingItemsTable() {
+      const tbody = document.getElementById('billItemsTableBody');
+      if (!tbody) return;
+      const items = (appData.billing && appData.billing.items) || [];
+
+      tbody.innerHTML = items.map((it, idx) => `
+        <tr class="hover:bg-gray-50">
+          <td class="p-2.5 text-center text-gray-400 font-bold">${idx + 1}</td>
+          <td class="p-2.5">
+            <input type="text" value="${it.desc}" oninput="updateBillingItem(${idx}, 'desc', this.value)" class="w-full p-1.5 rounded border border-gray-200 text-xs" placeholder="Item description">
+          </td>
+          <td class="p-2.5 text-center">
+            <input type="number" min="1" value="${it.qty}" oninput="updateBillingItem(${idx}, 'qty', this.value)" class="w-16 p-1.5 rounded border border-gray-200 text-xs text-center font-mono">
+          </td>
+          <td class="p-2.5 text-center">
+            <input type="text" value="${it.unit || 'Sq.Ft'}" oninput="updateBillingItem(${idx}, 'unit', this.value)" class="w-16 p-1.5 rounded border border-gray-200 text-xs text-center">
+          </td>
+          <td class="p-2.5 text-right">
+            <input type="number" min="0" value="${it.rate}" oninput="updateBillingItem(${idx}, 'rate', this.value)" class="w-24 p-1.5 rounded border border-gray-200 text-xs text-right font-mono">
+          </td>
+          <td class="p-2.5 text-right font-bold text-gray-800 font-mono">
+            ₹${((it.qty || 0) * (it.rate || 0)).toLocaleString('en-IN')}
+          </td>
+          <td class="p-2.5 text-center">
+            <button onclick="removeBillingItem(${idx})" class="text-red-500 hover:text-red-700 p-1" title="Delete Item">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function addBillingItem() {
+      if (!appData.billing) appData.billing = {};
+      if (!appData.billing.items) appData.billing.items = [];
+
+      appData.billing.items.push({
+        desc: "New Interior Service / Material specification",
+        qty: 1,
+        unit: "Lot",
+        rate: 10000,
+        amount: 10000
+      });
+      renderBillingItemsTable();
+      calcBillingTotals();
+      renderInvoicePreview();
+    }
+
+    function updateBillingItem(idx, key, val) {
+      if (!appData.billing || !appData.billing.items || !appData.billing.items[idx]) return;
+      if (key === 'qty' || key === 'rate') {
+        appData.billing.items[idx][key] = parseFloat(val) || 0;
+        appData.billing.items[idx].amount = (appData.billing.items[idx].qty || 0) * (appData.billing.items[idx].rate || 0);
+      } else {
+        appData.billing.items[idx][key] = val;
+      }
+      calcBillingTotals();
+      renderInvoicePreview();
+    }
+
+    function removeBillingItem(idx) {
+      if (!appData.billing || !appData.billing.items) return;
+      appData.billing.items.splice(idx, 1);
+      renderBillingItemsTable();
+      calcBillingTotals();
+      renderInvoicePreview();
+    }
+
+    function calcBillingTotals() {
+      const items = (appData.billing && appData.billing.items) || [];
+      const subtotal = items.reduce((acc, it) => acc + ((it.qty || 0) * (it.rate || 0)), 0);
+      const discount = parseFloat(document.getElementById('billDiscount').value) || 0;
+      const gstPercent = parseFloat(document.getElementById('billGstPercent').value) || 0;
+
+      const taxable = Math.max(0, subtotal - discount);
+      const gstAmount = Math.round(taxable * (gstPercent / 100));
+      const grandTotal = taxable + gstAmount;
+
+      document.getElementById('billSubtotalDisplay').textContent = "₹" + subtotal.toLocaleString('en-IN');
+      document.getElementById('billGstDisplay').textContent = "₹" + gstAmount.toLocaleString('en-IN') + ` (${gstPercent}%)`;
+      document.getElementById('billGrandTotalDisplay').textContent = "₹" + grandTotal.toLocaleString('en-IN');
+
+      return { subtotal, discount, gstPercent, gstAmount, grandTotal };
+    }
+
+    function saveBillingData() {
+      if (!appData.billing) appData.billing = {};
+      appData.billing.docType = document.getElementById('billDocType').value;
+      appData.billing.date = document.getElementById('billDate').value;
+      appData.billing.projectRef = document.getElementById('billProjectRef').value.trim();
+      appData.billing.clientName = document.getElementById('billClientName').value.trim();
+      appData.billing.clientPhone = document.getElementById('billClientPhone').value.trim();
+      appData.billing.clientAddress = document.getElementById('billClientAddress').value.trim();
+      appData.billing.notes = document.getElementById('billNotes').value.trim();
+      appData.billing.discount = parseFloat(document.getElementById('billDiscount').value) || 0;
+      appData.billing.gstPercent = parseFloat(document.getElementById('billGstPercent').value) || 0;
+      appData.billing.customHtml = document.getElementById('customBillingHtmlInput').value;
+
+      saveAppData();
+      showInstantSave("✓ Billing Data Saved");
+      renderInvoicePreview();
+    }
+
+    function renderInvoicePreview() {
+      const wrapper = document.getElementById('printableInvoiceWrapper');
+      if (!wrapper) return;
+
+      const docType = document.getElementById('billDocType').value || "ESTIMATE / QUOTATION";
+      const date = document.getElementById('billDate').value || new Date().toISOString().split('T')[0];
+      const projectRef = document.getElementById('billProjectRef').value || "Residential Interior Project";
+      const clientName = document.getElementById('billClientName').value || "Client Name";
+      const clientPhone = document.getElementById('billClientPhone').value || "Phone Number";
+      const clientAddress = document.getElementById('billClientAddress').value || "Coimbatore, Tamil Nadu";
+      const notes = document.getElementById('billNotes').value || "";
+
+      const totals = calcBillingTotals();
+      const items = (appData.billing && appData.billing.items) || [];
+      const brandName = (appData.branding && appData.branding.name) || "RightAngle";
+      const brandPhone = (appData.branding && appData.branding.contactPhone) || "+91 98765 43210";
+      const brandEmail = (appData.branding && appData.branding.contactEmail) || "design@auraluxeinteriors.com";
+      const brandAddress = (appData.branding && appData.branding.contactAddress) || "Race Course Road, Coimbatore";
+
+      wrapper.innerHTML = `
+        <div id="printArea" class="space-y-6 text-gray-800">
+          <!-- Header -->
+          <div class="flex items-start justify-between border-b-2 border-red-600 pb-5">
+            <div>
+              <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center text-white font-bold"><i class="fa-solid fa-couch"></i></div>
+                <h2 class="font-display font-black text-2xl text-red-600 tracking-tight">${brandName}</h2>
+              </div>
+              <p class="text-[10px] text-orange-600 font-bold tracking-widest uppercase mt-0.5">PREMIUM HOME INTERIORS</p>
+              <p class="text-xs text-gray-500 mt-2 max-w-xs leading-tight">${brandAddress}</p>
+              <p class="text-xs text-gray-500">Phone: <strong>${brandPhone}</strong> | Email: <strong>${brandEmail}</strong></p>
+            </div>
+            <div class="text-right">
+              <span class="inline-block bg-red-600 text-white px-3 py-1 rounded font-black text-xs tracking-wider uppercase mb-1">${docType}</span>
+              <p class="text-xs text-gray-600">Ref: <strong>#RA-2026-001</strong></p>
+              <p class="text-xs text-gray-600">Date: <strong>${date}</strong></p>
+              <p class="text-xs text-gray-600">Valid Until: <strong>30 Days</strong></p>
+            </div>
+          </div>
+
+          <!-- Client & Project Info -->
+          <div class="grid grid-cols-2 gap-6 bg-orange-50/60 p-4 rounded-xl border border-orange-100 text-xs">
+            <div>
+              <p class="font-bold text-gray-500 uppercase tracking-wider text-[10px]">BILLED TO / CLIENT:</p>
+              <h4 class="font-bold text-base text-gray-900 mt-0.5">${clientName}</h4>
+              <p class="text-gray-600 mt-0.5">Phone: <strong>${clientPhone}</strong></p>
+              <p class="text-gray-600">${clientAddress}</p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-500 uppercase tracking-wider text-[10px]">PROJECT SITE DETAILS:</p>
+              <h4 class="font-bold text-base text-gray-900 mt-0.5">${projectRef}</h4>
+              <p class="text-gray-600 mt-0.5">Execution Timeline: <strong>45 Days Move-in Guarantee</strong></p>
+              <p class="text-gray-600">Hardware Warranty: <strong>10 Years German Warranty</strong></p>
+            </div>
+          </div>
+
+          <!-- Items Table -->
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="bg-slate-900 text-white">
+                <th class="p-2.5 text-center w-8">#</th>
+                <th class="p-2.5">Scope of Work & Specification</th>
+                <th class="p-2.5 text-center w-16">Qty</th>
+                <th class="p-2.5 text-center w-16">Unit</th>
+                <th class="p-2.5 text-right w-24">Rate</th>
+                <th class="p-2.5 text-right w-28">Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              ${items.map((it, i) => `
+                <tr class="${i % 2 === 1 ? 'bg-gray-50/70' : 'bg-white'}">
+                  <td class="p-2.5 text-center text-gray-400 font-bold">${i + 1}</td>
+                  <td class="p-2.5 font-medium text-gray-800">${it.desc}</td>
+                  <td class="p-2.5 text-center font-mono">${it.qty}</td>
+                  <td class="p-2.5 text-center text-gray-500">${it.unit}</td>
+                  <td class="p-2.5 text-right font-mono">₹${Number(it.rate).toLocaleString('en-IN')}</td>
+                  <td class="p-2.5 text-right font-bold text-gray-900 font-mono">₹${((it.qty || 0) * (it.rate || 0)).toLocaleString('en-IN')}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+
+          <!-- Calculation Totals -->
+          <div class="flex justify-between items-start pt-4 border-t border-gray-200 text-xs">
+            <div class="max-w-md text-gray-600">
+              <p class="font-bold text-gray-800 uppercase tracking-wider text-[10px] mb-1">TERMS & CONDITIONS:</p>
+              <p class="whitespace-pre-line text-[11px] leading-relaxed">${notes || "Standard RightAngle Interiors contract terms apply."}</p>
+            </div>
+
+            <div class="w-64 space-y-1.5 text-right">
+              <div class="flex justify-between text-gray-600">
+                <span>Subtotal:</span>
+                <span class="font-bold font-mono">₹${totals.subtotal.toLocaleString('en-IN')}</span>
+              </div>
+              ${totals.discount > 0 ? `
+                <div class="flex justify-between text-emerald-600">
+                  <span>Discount:</span>
+                  <span class="font-bold font-mono">-₹${totals.discount.toLocaleString('en-IN')}</span>
+                </div>
+              ` : ''}
+              <div class="flex justify-between text-gray-600">
+                <span>GST Tax (${totals.gstPercent}%):</span>
+                <span class="font-bold font-mono">₹${totals.gstAmount.toLocaleString('en-IN')}</span>
+              </div>
+              <div class="flex justify-between text-base font-extrabold text-red-600 pt-2 border-t-2 border-red-600">
+                <span>Total Payable:</span>
+                <span class="font-mono">₹${totals.grandTotal.toLocaleString('en-IN')}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signatures -->
+          <div class="pt-8 mt-6 border-t border-gray-200 flex justify-between items-end text-xs text-gray-500">
+            <div>
+              <p class="font-bold text-gray-800">Authorized Signatory</p>
+              <p class="text-[10px] mt-8 border-t border-gray-300 pt-1">${brandName} Architecture Studio</p>
+            </div>
+            <div class="text-right">
+              <p class="font-bold text-gray-800">Client Acceptance Signature</p>
+              <p class="text-[10px] mt-8 border-t border-gray-300 pt-1">I agree to the above design quote & terms</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function printQuotationInvoice() {
+      const printContents = document.getElementById('printableInvoiceWrapper').innerHTML;
+      const originalContents = document.body.innerHTML;
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Quotation / Invoice - RightAngle Interiors</title>
+          <script src="https://cdn.tailwindcss.com"><` + `/script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <style>
+            body { font-family: sans-serif; padding: 25px; }
+            @media print {
+              body { padding: 0; }
+            }
+          </style>
+        </head>
+        <body>
+          ${printContents}
+          <script>
+            window.onload = function() {
+              window.print();
+            };
+          <` + `/script>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+    }
+
+    function shareInvoiceWhatsApp() {
+      saveBillingData();
+      const b = appData.billing;
+      const totals = calcBillingTotals();
+      const clientPhone = (b.clientPhone || "").replace(/[^0-9]/g, '');
+      const brandName = (appData.branding && appData.branding.name) || "RightAngle";
+
+      const lines = [
+        `📄 *${b.docType || "ESTIMATE / QUOTATION"}* from *${brandName}*`,
+        `• *Client:* ${b.clientName || "Valued Client"}`,
+        `• *Project:* ${b.projectRef || "Interior Design"}`,
+        `• *Date:* ${b.date}`,
+        `• *Total Estimate:* ₹${totals.grandTotal.toLocaleString('en-IN')}`,
+        `• *Move-in Guarantee:* 45 Days`,
+        `• *Hardware Warranty:* 10 Years`,
+        ``,
+        `_Detailed scope and formal invoice have been generated on the studio portal._`
+      ];
+
+      const encoded = encodeURIComponent(lines.join("\n"));
+      const target = clientPhone.length >= 10 ? (clientPhone.startsWith('91') ? clientPhone : '91' + clientPhone) : ((appData.branding && appData.branding.whatsappPhone) || "919876543210");
+      window.open(`https://api.whatsapp.com/send?phone=${target}&text=${encoded}`, '_blank');
+    }
+
+    // --- CUSTOM HTML BILLING RUNNER ---
+    function runCustomBillingHtml() {
+      const code = document.getElementById('customBillingHtmlInput').value;
+      const iframe = document.getElementById('customBillingIframe');
+      if (iframe) {
+        iframe.srcdoc = code;
+      }
+    }
+
+    function saveCustomBillingCode() {
+      if (!appData.billing) appData.billing = {};
+      appData.billing.customHtml = document.getElementById('customBillingHtmlInput').value;
+      saveAppData();
+      runCustomBillingHtml();
+      showInstantSave("✓ Custom HTML Code Saved & Loaded");
+    }
+
+    function reloadCustomBillingFrame() {
+      runCustomBillingHtml();
+      showInstantSave("✓ App Reloaded");
+    }
+
+
+    // ================= STEP-BY-STEP BACK BUTTON & FREEZE HANDLING =================
+    // Ensures browser/phone back button exits step-by-step (modals -> overlays -> home)
+    let navigationStack = ['home'];
+
+    function pushNavHistory(type, id) {
+      navigationStack.push({ type, id });
+      window.history.pushState({ navState: type, id: id }, "");
+    }
+
+    window.addEventListener('popstate', (e) => {
+      // Step-by-step modal closing on phone back button
+      const openModals = [
+        { id: 'imageLightboxModal', close: closeLightbox },
+        { id: 'enquiryModal', close: closeEnquiryModal },
+        { id: 'feedbackModal', close: closeFeedbackModal },
+        { id: 'adminPasswordModal', close: closeAdminPasswordModal },
+        { id: 'separateGalleryPage', close: closeSeparateGalleryPage }
+      ];
+
+      for (let m of openModals) {
+        const el = document.getElementById(m.id);
+        if (el && !el.classList.contains('hidden')) {
+          m.close();
+          // Keep URL clean
+          if (window.location.hash) {
+            history.replaceState(null, "", window.location.pathname);
+          }
+          return;
+        }
+      }
+
+      const adminPanel = document.getElementById('adminPanelModal');
+      if (adminPanel && !adminPanel.classList.contains('hidden')) {
+        closeAdminPanel();
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname);
+        }
+        return;
+      }
+
+      // If at home, ensure state is preserved
+      history.pushState({ page: 'home' }, "", window.location.pathname);
+    });
+
+    // Initialize root history state to enable back-button trapping
+    window.history.replaceState({ page: 'home' }, "", window.location.href);
+    window.history.pushState({ page: 'home' }, "", window.location.href);
+
+    // FREEZE PROTECTION: Prevent accidental page refresh / loss of uncommitted inputs
+    window.addEventListener('beforeunload', (e) => {
+      // Only prompt if admin panel is open or form has user inputs
+      const adminOpen = document.getElementById('adminPanelModal') && !document.getElementById('adminPanelModal').classList.contains('hidden');
+      const eqName = document.getElementById('eqName') && document.getElementById('eqName').value;
+      if (adminOpen || eqName) {
+        e.preventDefault();
+        e.returnValue = 'You have unsaved changes or active sessions. Are you sure you want to leave?';
+        return e.returnValue;
+      }
+    });
 
     function saveAdminChanges() {
       appData.branding.logoUrl = document.getElementById('cms_logo_url').value.trim();
